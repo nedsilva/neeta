@@ -1,0 +1,974 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01FXC1VLNA5QR1BaIfYI6nytvWxMYKwdqBR",
+    "name": "\u003c\u003c---ND-AMQP-Automation---\u003e\u003e",
+    "title": "\u003c\u003c---ND-AMQP-Automation---\u003e\u003e",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "All Actions Results",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FXC1VLDW5CZ63WM2Jag0lxAHz2UIW3MR4",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Atomic",
+          "scope": "input",
+          "name": "Enter Worklfow Name",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FXC1VLDW8PS2aUIl7Rf89mriVbmZnLbrb",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "Email  AtomicTable Results",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FXC1VLDWBW11i2HdP1YmMvFmpZ7qj00qc",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "Email Parent Table Results",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FXC1VLDVV4A6b8DhwzCEnAUF4lC4bVskn",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "Email Deletion Table",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FXC1VLDW1SH2tKvGwmSBtUWFvg7WcXYN5",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "description": "\n\u003c\u003c---ND-AMQP-Automation---\u003e\u003e",
+      "display_name": "\u003c\u003c---ND-AMQP-Automation---\u003e\u003e",
+      "favorite": false,
+      "runtime_user": {
+        "override_target_runtime_user": false,
+        "specify_on_workflow_start": false,
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": false,
+        "execute_on_workflow_target": false,
+        "no_target": true,
+        "specify_on_workflow_start": false
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01FXC1XMXD0080TGgYAIcIaltZRvLnLfzP9",
+        "name": "Generic CCS API Request",
+        "title": "Generic Token",
+        "type": "ccs.api_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "api_call_method": "GET",
+          "continue_on_failure": false,
+          "display_name": "Generic Token",
+          "relative_url": "suite-auth/api/v1/token",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "override_workflow_target": true,
+            "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01FXC1XSUNBVL6s6NLOaLpKezpzwoVAdqO2",
+        "name": "JSONPath Query",
+        "title": "Extract Token",
+        "type": "corejava.jsonpathquery",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "Extract Token",
+          "input_json": "$activity.definition_activity_01FXC1XMXD0080TGgYAIcIaltZRvLnLfzP9.output.response_body$",
+          "jsonpath_queries": [
+            {
+              "jsonpath_query": "$.token",
+              "jsonpath_query_name": "token",
+              "jsonpath_query_type": "string"
+            }
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01FXC1Y0R1LTX0wCxNxrCMWFYxax37W9DPv",
+        "name": "%--Get Workflow Schema--%",
+        "title": "%--Get Workflow Schema--%",
+        "type": "workflow.sub_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "description": "%--ND-Get Workflow Schema--%",
+          "display_name": "%--Get Workflow Schema--%",
+          "input": {
+            "variable_workflow_01FXC1VX952Z95ZA6KUSCDOqKmZYg7yjB8k": "$activity.definition_activity_01FXC1XSUNBVL6s6NLOaLpKezpzwoVAdqO2.output.jsonpath_queries.token$",
+            "variable_workflow_01FXC1VX956OE7cmx1NA4OzuXYt8KHYyJWa": "$.[1].schema_id",
+            "variable_workflow_01FXC1VX95A1K6ra6bRDzvSb825ncVYid06": "workflows"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "execute_on_this_target": true,
+            "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa",
+            "target_type": "web-service.endpoint"
+          },
+          "workflow_id": "definition_workflow_01FXC1VXKIPS06W8dbcuyUHaJWKFBwPydus"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01FXCHUPJAF1L5MRDlK5B9DlKh22sSHPyKa",
+        "name": "Parallel Block",
+        "title": "AMQP Targets",
+        "type": "logic.parallel",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "AMQP Targets",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01FXCHURV5RYK3Gil9qyPO7iYvMwFRCkjiC",
+            "name": "Parallel Branch",
+            "title": "%--Password-Based--%",
+            "type": "logic.parallel_block",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "%--Password-Based--%",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01FXCIA3AOZIW599kNe9IY6cS14nDrH8YiV",
+                "name": "%--Password-Based--%",
+                "title": "%--Password-Based--%",
+                "type": "workflow.sub_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "%--Password-Based--%",
+                  "input": {
+                    "variable_workflow_01FTRSKJN64ZS7g0G9t4WOObiL0dtV5iXdp": "{\n\"schema_id\": \"AK_Schema_ID\",\n\"name\":\"AMQP Password Based Account Key\",\n\"title\":\"AMQP Password Based Account Key\",\n\"properties\":\n{\n\"display_name\":\"AMQP Password Based Account Key\",\n\"password\":\"admin\",\n\"username\":\"admin\",\n\"description\":\"test\"\n}\n}",
+                    "variable_workflow_01FTRSKJN6BA24qHIJSXZB3JwTCGDdQFG5h": "$activity.definition_activity_01FXC1XSUNBVL6s6NLOaLpKezpzwoVAdqO2.output.jsonpath_queries.token$",
+                    "variable_workflow_01FTRSKJN6HY55C5QiV4NUlNiJxtxznjdUd": "{\n\"schema_id\":\"Tar_Schema_ID\",\n\"name\": \"amqp_PBC\",\n\"type\": \"amqp.endpoint\",\n\"base_type\": \"target\",\n\"valid\": true,\n\"def_access_meta\": {\n\"is_internal\": false\n},\n\"title\": \"amqp_PBC\",\n\"properties\": {\n\"default_runtime_user_id\": \"AK_ID\",\n\"display_name\": \"amqp_PBC\",\n\"no_runtime_user\": false,\n\"port\": 5672,\n\"host\": \"10.88.38.124\",\n\"vhost\": \"/\",\n\"description\": \"test\"\n}\n}",
+                    "variable_workflow_01FX9IFHOZ79F2UOdOzIbIPl6QENdPEnw6H": "amqp_password_credentials",
+                    "variable_workflow_01FX9IL6UXVZG77fprWogNFoFxfYLJ9SMAB": "amqp.endpoint"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "no_target": true
+                  },
+                  "workflow_id": "definition_workflow_01FTRSKJWJGSO6xHItcWDGQQsLcZsIPQTQv"
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01FXCHUSUJZQZ4206Vmso6ODGotjHiUuneW",
+            "name": "Parallel Branch",
+            "title": "Parallel Branch",
+            "type": "logic.parallel_block",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Parallel Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01FZJB7A20VV92ptb31AbsOFbrhd0ZFscYH",
+        "name": "HTTP Request",
+        "title": "HTTP Request",
+        "type": "web-service.http_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "allow_auto_redirect": true,
+          "body": "{\n\"schema_id\": \"[$activity.Extract AMQP Pwd-less Certificate AK schema Id.output.Jsonpath Queries.AMQP event Id$]\",\n\"name\":\"AMQP Automation Event\",\n\"title\":\"AMQP Automation Event\",\n\"properties\":\n\t{\n\t\t\"display_name\":\"AMQP Automation Event\",\n    \"queue_name\": \"Automation_test\",\n\t\t\"description\":\"AMQP Automation Event\"\n\t}\n}",
+          "continue_on_error_status_code": false,
+          "continue_on_failure": false,
+          "display_name": "HTTP Request",
+          "method": "POST",
+          "relative_url": "be-console/api/v1/events",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "override_workflow_target": true
+          }
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_01A6G0DX5INHM6ldk8Lqix0oZCVNmTckhEd"
+    ]
+  },
+  "categories": {
+    "category_01A6G0DX5INHM6ldk8Lqix0oZCVNmTckhEd": {
+      "unique_name": "category_01A6G0DX5INHM6ldk8Lqix0oZCVNmTckhEd",
+      "name": "Regression",
+      "title": "Regression",
+      "type": "basic.category",
+      "base_type": "category",
+      "category_type": "custom",
+      "object_type": "category"
+    }
+  },
+  "targets": {
+    "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa": {
+      "unique_name": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa",
+      "name": "Internaltar",
+      "title": "Internaltar",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "disable_certificate_validation": true,
+        "display_name": "Internaltar",
+        "host": "qetest01.tidalsoft.local",
+        "ignore_proxy": false,
+        "no_runtime_user": true,
+        "port": 31653,
+        "protocol": "https"
+      }
+    }
+  },
+  "subworkflows": [
+    {
+      "workflow": {
+        "unique_name": "definition_workflow_01FXC1VXKIPS06W8dbcuyUHaJWKFBwPydus",
+        "name": "Copy(1)-\u003c--ND-JSON Extract-Single--\u003e",
+        "title": "Copy(1)-\u003c--ND-JSON Extract-Single--\u003e",
+        "type": "generic.workflow",
+        "base_type": "workflow",
+        "variables": [
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "output",
+              "name": "ExtractID",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01FXC1VX94WD91Ga2DDx6DWJALlk4mhrw47",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "BearerToken",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01FXC1VX952Z95ZA6KUSCDOqKmZYg7yjB8k",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "PathID",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01FXC1VX956OE7cmx1NA4OzuXYt8KHYyJWa",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "RelativeUrl",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01FXC1VX95A1K6ra6bRDzvSb825ncVYid06",
+            "object_type": "variable_workflow"
+          }
+        ],
+        "properties": {
+          "atomic": {
+            "is_atomic": false
+          },
+          "delete_workflow_instance": false,
+          "description": "Part of ND-JSON Extract-Single\n)(*\u0026^%$#@!\u003e\u003c?:\"|~",
+          "display_name": "Copy(1)-\u003c--ND-JSON Extract-Single--\u003e",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "specify_on_workflow_start": false,
+            "target_default": true
+          },
+          "target": {
+            "target_type": "web-service.endpoint",
+            "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa",
+            "execute_on_workflow_target": true
+          }
+        },
+        "object_type": "definition_workflow",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01FXC1WL9CZ7R2L7REYvWunatCxROIkyOh6",
+            "name": "HTTP Request",
+            "title": "Web Query Request",
+            "type": "web-service.http_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "allow_auto_redirect": true,
+              "content_type": "application/json",
+              "continue_on_error_status_code": false,
+              "continue_on_failure": false,
+              "custom_headers": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer $workflow.definition_workflow_01FXC1VXKIPS06W8dbcuyUHaJWKFBwPydus.input.variable_workflow_01FXC1VX952Z95ZA6KUSCDOqKmZYg7yjB8k$"
+                }
+              ],
+              "description": "Part of ND-JSON Extract-Single\n)(*\u0026^%$#@!\u003e\u003c?:\"|~",
+              "display_name": "Web Query Request",
+              "method": "GET",
+              "relative_url": "be-console/api/v1/$workflow.definition_workflow_01FXC1VXKIPS06W8dbcuyUHaJWKFBwPydus.input.variable_workflow_01FXC1VX95A1K6ra6bRDzvSb825ncVYid06$",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": false,
+                "override_workflow_target_group_criteria": false,
+                "use_workflow_target": true,
+                "use_workflow_target_group": false
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01FXC1WQUS1A74ARtRENVVHOqZ0FWBbHqWS",
+            "name": "JSONPath Query",
+            "title": "JSONPath Query",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "description": "Part of ND-JSON Extract-Single\n)(*\u0026^%$#@!\u003e\u003c?:\"|~",
+              "display_name": "JSONPath Query",
+              "input_json": "$activity.definition_activity_01FXC1WL9CZ7R2L7REYvWunatCxROIkyOh6.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$workflow.definition_workflow_01FXC1VXKIPS06W8dbcuyUHaJWKFBwPydus.input.variable_workflow_01FXC1VX956OE7cmx1NA4OzuXYt8KHYyJWa$",
+                  "jsonpath_query_name": "PathID",
+                  "jsonpath_query_type": "string"
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01FXC1WWYD31I2rFLcKaZmuStQzXGtXOHoJ",
+            "name": "Set Variables",
+            "title": "Set Extract ID",
+            "type": "core.set_multiple_variables",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "description": "Part of ND-JSON Extract-Single\n)(*\u0026^%$#@!\u003e\u003c?:\"|~",
+              "display_name": "Set Extract ID",
+              "skip_execution": false,
+              "variables_to_update": [
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01FXC1VXKIPS06W8dbcuyUHaJWKFBwPydus.output.variable_workflow_01FXC1VX94WD91Ga2DDx6DWJALlk4mhrw47$",
+                  "variable_value_new": "$activity.definition_activity_01FXC1WQUS1A74ARtRENVVHOqZ0FWBbHqWS.output.jsonpath_queries.PathID$"
+                }
+              ]
+            },
+            "object_type": "definition_activity"
+          }
+        ],
+        "categories": [
+          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+        ]
+      }
+    },
+    {
+      "workflow": {
+        "unique_name": "definition_workflow_01FTRSKJWJGSO6xHItcWDGQQsLcZsIPQTQv",
+        "name": "\u003c--ND-Create-Target-and-AccountKey--\u003e",
+        "title": "\u003c--ND-Create-Target-and-AccountKey--\u003e",
+        "type": "generic.workflow",
+        "base_type": "workflow",
+        "variables": [
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "output",
+              "name": "Target_ID",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01FTRZXFWJXLI5bWdSbSTicIaRTxgJ9zN1F",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "output",
+              "name": "AccountKey_ID",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01FTS03ZPFUH264I8LqydYZMsJCo7hJbsOc",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "AK_schema_url",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01FX9IFHOZ79F2UOdOzIbIPl6QENdPEnw6H",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "Target_schema_url",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01FX9IL6UXVZG77fprWogNFoFxfYLJ9SMAB",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "Target_Request",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01FTRSKJN6HY55C5QiV4NUlNiJxtxznjdUd",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "AccountKey_Request",
+              "type": "datatype.string",
+              "is_required": true
+            },
+            "unique_name": "variable_workflow_01FTRSKJN64ZS7g0G9t4WOObiL0dtV5iXdp",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "inToken",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01FTRSKJN6BA24qHIJSXZB3JwTCGDdQFG5h",
+            "object_type": "variable_workflow"
+          }
+        ],
+        "properties": {
+          "atomic": {
+            "is_atomic": false
+          },
+          "delete_workflow_instance": false,
+          "description": "Part of \u003c--ND-Create-Target-and-AccountKey--\u003e\n!@#$%^\u0026*()?\u003e\u003c}{\":;'~",
+          "display_name": "\u003c--ND-Create-Target-and-AccountKey--\u003e",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "specify_on_workflow_start": false,
+            "target_default": true
+          },
+          "target": {
+            "execute_on_target_group": false,
+            "execute_on_workflow_target": false,
+            "no_target": true,
+            "specify_on_workflow_start": false
+          }
+        },
+        "object_type": "definition_workflow",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01FTRSL6SGLDO2BWqE1GKCbSDqiZWCFhAo8",
+            "name": "Generic CCS API Request",
+            "title": "Generic CCS API Request",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "GET",
+              "continue_on_failure": false,
+              "display_name": "Generic CCS API Request",
+              "relative_url": "suite-auth/api/v1/token",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01FTRSLBZ99WA0Cc5EdQ424UXvrHFBg2R3h",
+            "name": "JSONPath Query",
+            "title": "Get Token",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Get Token",
+              "input_json": "$activity.definition_activity_01FTRSL6SGLDO2BWqE1GKCbSDqiZWCFhAo8.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$.token",
+                  "jsonpath_query_name": "token",
+                  "jsonpath_query_type": "string"
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01FX9HCH4PJCM2L9XF3xm7qnxAM5YmDiuVj",
+            "name": "Parallel Block",
+            "title": "Extract Schema ID",
+            "type": "logic.parallel",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Extract Schema ID",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "blocks": [
+              {
+                "unique_name": "definition_activity_01FX9HCJT8XQZ6GwgjZBPS9OAww5oEWccKh",
+                "name": "Parallel Branch",
+                "title": "Account Key",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Account Key",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01FX9HFQ4SW1A4rtVgvd0XZ1dpreBRkB6Vz",
+                    "name": "HTTP Request",
+                    "title": "Get Account Key SchemaID",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "accept": "application/json",
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $workflow.definition_workflow_01FTRSKJWJGSO6xHItcWDGQQsLcZsIPQTQv.input.variable_workflow_01FTRSKJN6BA24qHIJSXZB3JwTCGDdQFG5h$"
+                        }
+                      ],
+                      "description": "Part of \u003c--ND-Create-Target-and-AccountKey--\u003e",
+                      "display_name": "Get Account Key SchemaID",
+                      "method": "GET",
+                      "relative_url": "be-console/api/v1/schemas/runtime_user.$workflow.definition_workflow_01FTRSKJWJGSO6xHItcWDGQQsLcZsIPQTQv.input.variable_workflow_01FX9IFHOZ79F2UOdOzIbIPl6QENdPEnw6H$?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01FX9HMKK6DDP63Eu2WTPaPhasLNckkOg67",
+                    "name": "JSONPath Query",
+                    "title": "Extract Account Key SchemaID",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "description": "\u003c--ND-Create-Target-and-AccountKey--\u003e",
+                      "display_name": "Extract Account Key SchemaID",
+                      "input_json": "$activity.definition_activity_01FX9HFQ4SW1A4rtVgvd0XZ1dpreBRkB6Vz.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "ak_schema_id",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01FX9OWZBUIH66XqcaOQl1wYH46z2CH7Jrh",
+                    "name": "Replace String",
+                    "title": "Replace String",
+                    "type": "core.replacestring",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Replace String",
+                      "input_string": "$workflow.definition_workflow_01FTRSKJWJGSO6xHItcWDGQQsLcZsIPQTQv.input.variable_workflow_01FTRSKJN64ZS7g0G9t4WOObiL0dtV5iXdp$",
+                      "replace_list": [
+                        {
+                          "replaced_string": "AK_Schema_ID",
+                          "replacement_string": "$activity.definition_activity_01FX9HMKK6DDP63Eu2WTPaPhasLNckkOg67.output.jsonpath_queries.ak_schema_id$"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01FX9JDBCISQ45I7Ja66bXl93pQW4wTR0CF",
+                "name": "Parallel Branch",
+                "title": "Target",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Target",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01FX9JDCU8S2A7mFK5WgKwtkIgFgWOmuwRV",
+                    "name": "HTTP Request",
+                    "title": "Get Target SchemaID",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "accept": "application/json",
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $workflow.definition_workflow_01FTRSKJWJGSO6xHItcWDGQQsLcZsIPQTQv.input.variable_workflow_01FTRSKJN6BA24qHIJSXZB3JwTCGDdQFG5h$"
+                        }
+                      ],
+                      "description": "Part of \u003c--ND-Create-Target-and-AccountKey--\u003e",
+                      "display_name": "Get Target SchemaID",
+                      "method": "GET",
+                      "relative_url": "be-console/api/v1/schemas/$workflow.definition_workflow_01FTRSKJWJGSO6xHItcWDGQQsLcZsIPQTQv.input.variable_workflow_01FX9IL6UXVZG77fprWogNFoFxfYLJ9SMAB$?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01FX9JDE1HZ8I6lcUtOrn2auYpflDYBDETK",
+                    "name": "JSONPath Query",
+                    "title": "Extract Target Schema ID",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "description": "\u003c--ND-Create-Target-and-AccountKey--\u003e",
+                      "display_name": "Extract Target Schema ID",
+                      "input_json": "$activity.definition_activity_01FX9JDCU8S2A7mFK5WgKwtkIgFgWOmuwRV.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "tar_schema_id",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01FTRSLRFF9TR2yB2g4dTQMGo7g8PQh6zFV",
+            "name": "HTTP Request",
+            "title": "Create Account Key",
+            "type": "web-service.http_request",
+            "base_type": "activity",
+            "properties": {
+              "accept": "application/json",
+              "action_timeout": 180,
+              "allow_auto_redirect": true,
+              "body": "$activity.definition_activity_01FX9OWZBUIH66XqcaOQl1wYH46z2CH7Jrh.output.result_string$",
+              "content_type": "application/json",
+              "continue_on_error_status_code": false,
+              "continue_on_failure": false,
+              "custom_headers": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer $workflow.definition_workflow_01FTRSKJWJGSO6xHItcWDGQQsLcZsIPQTQv.input.variable_workflow_01FTRSKJN6BA24qHIJSXZB3JwTCGDdQFG5h$"
+                }
+              ],
+              "description": "Part of \u003c--ND-Create-Target-and-AccountKey--\u003e",
+              "display_name": "Create Account Key",
+              "method": "POST",
+              "relative_url": "be-console/api/v1/runtime_users",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01FTRSLY0MJ9J7XIui7XYHYGQf1EqhqmwUR",
+            "name": "JSONPath Query",
+            "title": "Extract Account Key ID",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "description": "\u003c--ND-Create-Target-and-AccountKey--\u003e",
+              "display_name": "Extract Account Key ID",
+              "input_json": "$activity.definition_activity_01FTRSLRFF9TR2yB2g4dTQMGo7g8PQh6zFV.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "ak_id",
+                  "jsonpath_query_type": "string"
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01FTS84J0CJID1KQTxMHwripwzvlCZmdmIB",
+            "name": "Replace String",
+            "title": "Replace String",
+            "type": "core.replacestring",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Replace String",
+              "input_string": "$workflow.definition_workflow_01FTRSKJWJGSO6xHItcWDGQQsLcZsIPQTQv.input.variable_workflow_01FTRSKJN6HY55C5QiV4NUlNiJxtxznjdUd$",
+              "replace_list": [
+                {
+                  "replaced_string": "AK_ID",
+                  "replacement_string": "$activity.definition_activity_01FTRSLY0MJ9J7XIui7XYHYGQf1EqhqmwUR.output.jsonpath_queries.ak_id$"
+                },
+                {
+                  "replaced_string": "Tar_Schema_ID",
+                  "replacement_string": "$activity.definition_activity_01FX9JDE1HZ8I6lcUtOrn2auYpflDYBDETK.output.jsonpath_queries.tar_schema_id$"
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01FTRVA33KRKP4pp0zpyr64rsHWJ95ajBqp",
+            "name": "HTTP Request",
+            "title": "Create Target",
+            "type": "web-service.http_request",
+            "base_type": "activity",
+            "properties": {
+              "accept": "application/json",
+              "action_timeout": 180,
+              "allow_auto_redirect": true,
+              "body": "$activity.definition_activity_01FTS84J0CJID1KQTxMHwripwzvlCZmdmIB.output.result_string$",
+              "content_type": "application/json",
+              "continue_on_error_status_code": false,
+              "continue_on_failure": false,
+              "custom_headers": [
+                {
+                  "name": "Authorization",
+                  "value": "Bearer $workflow.definition_workflow_01FTRSKJWJGSO6xHItcWDGQQsLcZsIPQTQv.input.variable_workflow_01FTRSKJN6BA24qHIJSXZB3JwTCGDdQFG5h$"
+                }
+              ],
+              "description": "Part of \u003c--ND-Create-Target-and-AccountKey--\u003e",
+              "display_name": "Create Target",
+              "method": "POST",
+              "relative_url": "be-console/api/v1/targets",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01FTRVFX4D0PB07IfanUx8xhn9cUDFJLCtw",
+            "name": "JSONPath Query",
+            "title": "Extract Target ID",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "description": "\u003c--ND-Create-Target-and-AccountKey--\u003e",
+              "display_name": "Extract Target ID",
+              "input_json": "$activity.definition_activity_01FTRSLRFF9TR2yB2g4dTQMGo7g8PQh6zFV.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "tar_id",
+                  "jsonpath_query_type": "string"
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01FTS0PC09FBJ5YoN9l9rGXq07fLfbjiiQ4",
+            "name": "Set Variables",
+            "title": "Set Target and Account Key ID's as Output",
+            "type": "core.set_multiple_variables",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "description": "\u003c--ND-Create-Target-and-AccountKey--\u003e",
+              "display_name": "Set Target and Account Key ID's as Output",
+              "skip_execution": false,
+              "variables_to_update": [
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01FTRSKJWJGSO6xHItcWDGQQsLcZsIPQTQv.output.variable_workflow_01FTS03ZPFUH264I8LqydYZMsJCo7hJbsOc$",
+                  "variable_value_new": "$activity.definition_activity_01FTRSLY0MJ9J7XIui7XYHYGQf1EqhqmwUR.output.jsonpath_queries.ak_id$"
+                },
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01FTRSKJWJGSO6xHItcWDGQQsLcZsIPQTQv.output.variable_workflow_01FTRZXFWJXLI5bWdSbSTicIaRTxgJ9zN1F$",
+                  "variable_value_new": "$activity.definition_activity_01FTRVFX4D0PB07IfanUx8xhn9cUDFJLCtw.output.jsonpath_queries.tar_id$"
+                }
+              ]
+            },
+            "object_type": "definition_activity"
+          }
+        ],
+        "categories": [
+          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+        ]
+      }
+    }
+  ]
+}
