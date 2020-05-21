@@ -1,0 +1,181 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01FRXU68V7YNP7HR7QtpcHcOu9c93Kv3Acf",
+    "name": "\u003c--ND-JSON Extract-Single--\u003e",
+    "title": "\u003c--ND-JSON Extract-Single--\u003e",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "PathID",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FRXU68NNP8M75jomvHKEBm727BNvsG82j",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "RelativeUrl",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FRXU68NNSPH7eX2XEvQbYxUORS6tYTpwt",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "ExtractID",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FRXU68NNW6S4cGiM8yq0eGdibOurScAqi",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "BearerToken",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FRXU68NN94Q4XTwNoMkBxafHnukbHOwgz",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "description": "Part of ND-JSON Extract-Single\n)(*\u0026^%$#@!\u003e\u003c?:\"|~",
+      "display_name": "\u003c--ND-JSON Extract-Single--\u003e",
+      "runtime_user": {
+        "override_target_runtime_user": false,
+        "specify_on_workflow_start": false,
+        "target_default": true
+      },
+      "target": {
+        "target_type": "web-service.endpoint",
+        "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa",
+        "execute_on_workflow_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01FRXU716PD2E0FwLSFbaDaDygyfyzdKmip",
+        "name": "HTTP Request",
+        "title": "Web Query Request",
+        "type": "web-service.http_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "allow_auto_redirect": true,
+          "content_type": "application/json",
+          "continue_on_error_status_code": false,
+          "continue_on_failure": false,
+          "custom_headers": [
+            {
+              "name": "Authorization",
+              "value": "Bearer $workflow.definition_workflow_01FRXU68V7YNP7HR7QtpcHcOu9c93Kv3Acf.input.variable_workflow_01FRXU68NN94Q4XTwNoMkBxafHnukbHOwgz$"
+            }
+          ],
+          "description": "Part of ND-JSON Extract-Single\n)(*\u0026^%$#@!\u003e\u003c?:\"|~",
+          "display_name": "Web Query Request",
+          "method": "GET",
+          "relative_url": "be-console/api/v1/$workflow.definition_workflow_01FRXU68V7YNP7HR7QtpcHcOu9c93Kv3Acf.input.variable_workflow_01FRXU68NNSPH7eX2XEvQbYxUORS6tYTpwt$",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "override_workflow_target": false,
+            "override_workflow_target_group_criteria": false,
+            "use_workflow_target": true,
+            "use_workflow_target_group": false
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01FRXU7C2KWV24cL0M323i5m6iwaC3VSwzE",
+        "name": "JSONPath Query",
+        "title": "JSONPath Query",
+        "type": "corejava.jsonpathquery",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "description": "Part of ND-JSON Extract-Single\n)(*\u0026^%$#@!\u003e\u003c?:\"|~",
+          "display_name": "JSONPath Query",
+          "input_json": "$activity.definition_activity_01FRXU716PD2E0FwLSFbaDaDygyfyzdKmip.output.response_body$",
+          "jsonpath_queries": [
+            {
+              "jsonpath_query": "$workflow.definition_workflow_01FRXU68V7YNP7HR7QtpcHcOu9c93Kv3Acf.input.variable_workflow_01FRXU68NNP8M75jomvHKEBm727BNvsG82j$",
+              "jsonpath_query_name": "PathID",
+              "jsonpath_query_type": "string"
+            }
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01FRXU7PWZ9NE5she52xeyCvdmdPJ9vXe29",
+        "name": "Set Variables",
+        "title": "Set Extract ID",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "description": "Part of ND-JSON Extract-Single\n)(*\u0026^%$#@!\u003e\u003c?:\"|~",
+          "display_name": "Set Extract ID",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01FRXU68V7YNP7HR7QtpcHcOu9c93Kv3Acf.output.variable_workflow_01FRXU68NNW6S4cGiM8yq0eGdibOurScAqi$",
+              "variable_value_new": "$activity.definition_activity_01FRXU7C2KWV24cL0M323i5m6iwaC3VSwzE.output.jsonpath_queries.PathID$"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "targets": {
+    "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa": {
+      "unique_name": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa",
+      "name": "Internaltar",
+      "title": "Internaltar",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "disable_certificate_validation": true,
+        "display_name": "Internaltar",
+        "host": "qetest01.tidalsoft.local",
+        "ignore_proxy": false,
+        "no_runtime_user": true,
+        "port": 31653,
+        "protocol": "https"
+      }
+    }
+  }
+}
