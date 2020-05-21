@@ -1,0 +1,475 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe",
+    "name": "\u003c--ND-Delete Workflow-Components--\u003e",
+    "title": "\u003c--ND-Delete Workflow-Components--\u003e",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "AccountKeyID",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FSQUQR0S0BX0i2t1fOe1yqW8HCuawLTch",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "inToken",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "WorkflowID",
+          "type": "datatype.string",
+          "is_required": true
+        },
+        "unique_name": "variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "TargetID",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FSQUJ00XAED36oGpRaJgdLvpCdkMLMZt1",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "description": "Part of \u003c--ND-Delete Workflow-Components--\u003e\n!@#$%^\u0026*()?\u003e\u003c}{\":;'~",
+      "display_name": "\u003c--ND-Delete Workflow-Components--\u003e",
+      "runtime_user": {
+        "override_target_runtime_user": false,
+        "specify_on_workflow_start": false,
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": false,
+        "execute_on_workflow_target": false,
+        "no_target": true,
+        "specify_on_workflow_start": false
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01FSPX7PUX05Z4cwt8yoPlyP8zrtVQYgbAk",
+        "name": "Generic CCS API Request",
+        "title": "Generic CCS API Request",
+        "type": "ccs.api_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "api_call_method": "GET",
+          "continue_on_failure": false,
+          "display_name": "Generic CCS API Request",
+          "relative_url": "suite-auth/api/v1/token",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "override_workflow_target": true,
+            "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01FSPX7TYTO6A4MvqzkoVCxOYzNwKnu8VS3",
+        "name": "JSONPath Query",
+        "title": "Get Token",
+        "type": "corejava.jsonpathquery",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "Get Token",
+          "input_json": "$activity.definition_activity_01FSPX7PUX05Z4cwt8yoPlyP8zrtVQYgbAk.output.response_body$",
+          "jsonpath_queries": [
+            {
+              "jsonpath_query": "$.token",
+              "jsonpath_query_name": "token",
+              "jsonpath_query_type": "string"
+            }
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01FSQ8A6QENNT3tP0P6tG3pjRyfCPAxn1dX",
+        "name": "Parallel Block",
+        "title": "Delete Components",
+        "type": "logic.parallel",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Delete Components",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01FSQ8AB0O0IX5Ivwj1ja3DAhijzB86kedp",
+            "name": "Parallel Branch",
+            "title": "Instances and Workflow",
+            "type": "logic.parallel_block",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "description": "\u003c--ND-Delete Workflow-Components--\u003e",
+              "display_name": "Instances and Workflow",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01FSPX80ZX6112sUxAQT3zTQJtkYDTAlbOb",
+                "name": "HTTP Request",
+                "title": "Get Workflow Instances",
+                "type": "web-service.http_request",
+                "base_type": "activity",
+                "properties": {
+                  "accept": "application/json",
+                  "action_timeout": 180,
+                  "allow_auto_redirect": true,
+                  "content_type": "application/json",
+                  "continue_on_error_status_code": false,
+                  "continue_on_failure": false,
+                  "custom_headers": [
+                    {
+                      "name": "Authorization",
+                      "value": "Bearer $workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL$"
+                    }
+                  ],
+                  "description": "\u003c--ND-Delete Workflow-Components--\u003e",
+                  "display_name": "Get Workflow Instances",
+                  "method": "GET",
+                  "relative_url": "be-console/api/v1/instances?workflow_id=$workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1$",
+                  "runtime_user": {
+                    "override_target_runtime_user": false,
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "override_workflow_target": true,
+                    "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa"
+                  }
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01FSPX874CEZV1nAlCJkhnaf6F66ApLGNSJ",
+                "name": "JSONPath Query",
+                "title": "Extract Instance ID",
+                "type": "corejava.jsonpathquery",
+                "base_type": "activity",
+                "properties": {
+                  "action_timeout": 180,
+                  "continue_on_failure": false,
+                  "description": "\u003c--ND-Delete Workflow-Components--\u003e",
+                  "display_name": "Extract Instance ID",
+                  "input_json": "$activity.definition_activity_01FSPX80ZX6112sUxAQT3zTQJtkYDTAlbOb.output.response_body$",
+                  "jsonpath_queries": [
+                    {
+                      "jsonpath_query": "$..id",
+                      "jsonpath_query_name": "inst_id",
+                      "jsonpath_query_type": "string"
+                    }
+                  ],
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01FSTPGDIXV6754C2IhCVG81c5sIyRpSd1B",
+                "name": "Replace String",
+                "title": "Replace String",
+                "type": "core.replacestring",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": true,
+                  "description": "\u003c--ND-Delete Workflow-Components--\u003e",
+                  "display_name": "Replace String",
+                  "input_string": "$activity.definition_activity_01FSPX874CEZV1nAlCJkhnaf6F66ApLGNSJ.output.jsonpath_queries.inst_id$",
+                  "replace_list": [
+                    {
+                      "replaced_string": "[\"",
+                      "replacement_string": ""
+                    },
+                    {
+                      "replaced_string": "\"]",
+                      "replacement_string": ""
+                    },
+                    {
+                      "replaced_string": "\"",
+                      "replacement_string": ""
+                    }
+                  ],
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01FSTOQBI59VG7aLOSlvmJmd95vvENLZaMu",
+                "name": "Split String",
+                "title": "Split String",
+                "type": "core.splitstring",
+                "base_type": "activity",
+                "properties": {
+                  "boundaries": [
+                    {
+                      "boundary": ","
+                    }
+                  ],
+                  "continue_on_failure": false,
+                  "description": "\u003c--ND-Delete Workflow-Components--\u003e",
+                  "display_name": "Split String",
+                  "input_string": "$activity.definition_activity_01FSTPGDIXV6754C2IhCVG81c5sIyRpSd1B.output.result_string$",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01FSTLZG86F3R21F3qtmIqt2AsWRjFPwsdi",
+                "name": "For Each",
+                "title": "For Each",
+                "type": "logic.for_each",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "description": "\u003c--ND-Delete Workflow-Components--\u003e",
+                  "display_name": "For Each",
+                  "skip_execution": false,
+                  "source_array": "$activity.definition_activity_01FSTOQBI59VG7aLOSlvmJmd95vvENLZaMu.output.parts$"
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01FSQ5SSTCSOL5aEMxy6APqOxZcljpMTPn6",
+                    "name": "HTTP Request",
+                    "title": "Delete Instances",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "accept": "application/json",
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL$"
+                        }
+                      ],
+                      "display_name": "Delete Instances",
+                      "method": "DELETE",
+                      "relative_url": "be-console/api/v1/instances/$activity.definition_activity_01FSTLZG86F3R21F3qtmIqt2AsWRjFPwsdi.input.source_array[@]$",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01FSQ6YIP36XA6Cp5Y9Xk5YG2csJUdnlY2S",
+                "name": "HTTP Request",
+                "title": "Delete Workflow",
+                "type": "web-service.http_request",
+                "base_type": "activity",
+                "properties": {
+                  "accept": "application/json",
+                  "action_timeout": 180,
+                  "allow_auto_redirect": true,
+                  "content_type": "application/json",
+                  "continue_on_error_status_code": false,
+                  "continue_on_failure": false,
+                  "custom_headers": [
+                    {
+                      "name": "Authorization",
+                      "value": "Bearer $workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL$"
+                    }
+                  ],
+                  "display_name": "Delete Workflow",
+                  "method": "DELETE",
+                  "relative_url": "be-console/api/v1/workflows/$workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1$",
+                  "runtime_user": {
+                    "override_target_runtime_user": false,
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "override_workflow_target": true,
+                    "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa"
+                  }
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01FSQ9YJBJ8W74CLAVWkJMnRC0n77RcMlZC",
+                "name": "Condition Block",
+                "title": "isTarget",
+                "type": "logic.if_else",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "isTarget",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "blocks": [
+                  {
+                    "unique_name": "definition_activity_01FSQ9YLJOA856fHbrf1as63MVrnziXtgwe",
+                    "name": "Condition Branch",
+                    "title": "Delete AK \u0026 Target",
+                    "type": "logic.condition_block",
+                    "base_type": "activity",
+                    "properties": {
+                      "condition": {
+                        "left_operand": "$workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSQUJ00XAED36oGpRaJgdLvpCdkMLMZt1$",
+                        "operator": "mw",
+                        "right_operand": "*"
+                      },
+                      "continue_on_failure": false,
+                      "display_name": "Delete AK \u0026 Target",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01FSQBUMI8IA72q66ajYVxJGCvXQRS6QY54",
+                        "name": "HTTP Request",
+                        "title": "Delete Target",
+                        "type": "web-service.http_request",
+                        "base_type": "activity",
+                        "properties": {
+                          "accept": "application/json",
+                          "action_timeout": 180,
+                          "allow_auto_redirect": true,
+                          "content_type": "application/json",
+                          "continue_on_error_status_code": false,
+                          "continue_on_failure": false,
+                          "custom_headers": [
+                            {
+                              "name": "Authorization",
+                              "value": "Bearer $workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL$"
+                            }
+                          ],
+                          "display_name": "Delete Target",
+                          "method": "DELETE",
+                          "relative_url": "be-console/api/v1/targets/$workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSQUJ00XAED36oGpRaJgdLvpCdkMLMZt1$",
+                          "runtime_user": {
+                            "override_target_runtime_user": false,
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "override_workflow_target": true,
+                            "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa"
+                          }
+                        },
+                        "object_type": "definition_activity"
+                      },
+                      {
+                        "unique_name": "definition_activity_01FSQVL2IABPK1RC908m9y1oXfovKgAzKMB",
+                        "name": "HTTP Request",
+                        "title": "Delete Account Key",
+                        "type": "web-service.http_request",
+                        "base_type": "activity",
+                        "properties": {
+                          "accept": "application/json",
+                          "action_timeout": 180,
+                          "allow_auto_redirect": true,
+                          "content_type": "application/json",
+                          "continue_on_error_status_code": false,
+                          "continue_on_failure": true,
+                          "custom_headers": [
+                            {
+                              "name": "Authorization",
+                              "value": "Bearer $workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL$"
+                            }
+                          ],
+                          "display_name": "Delete Account Key",
+                          "method": "DELETE",
+                          "relative_url": "be-console/api/v1/runtime_users/$workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSQUQR0S0BX0i2t1fOe1yqW8HCuawLTch$",
+                          "runtime_user": {
+                            "override_target_runtime_user": false,
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "override_workflow_target": true,
+                            "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa"
+                          }
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "targets": {
+    "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa": {
+      "unique_name": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa",
+      "name": "Internaltar",
+      "title": "Internaltar",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "disable_certificate_validation": true,
+        "display_name": "Internaltar",
+        "host": "qetest01.tidalsoft.local",
+        "ignore_proxy": false,
+        "no_runtime_user": true,
+        "port": 31653,
+        "protocol": "https"
+      }
+    }
+  }
+}
