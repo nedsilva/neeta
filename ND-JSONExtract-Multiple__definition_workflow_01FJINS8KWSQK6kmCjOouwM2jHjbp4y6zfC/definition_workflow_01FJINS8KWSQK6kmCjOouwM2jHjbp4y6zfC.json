@@ -1,0 +1,299 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01FJINS8KWSQK6kmCjOouwM2jHjbp4y6zfC",
+    "name": "\u003c--ND-JSON Extract-Multiple--\u003e",
+    "title": "\u003c--ND-JSON Extract-Multiple--\u003e",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "PathID",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FJIOMKLGWZY0haC1ONizpjiIyHaUzLTdi",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "RelativeUrl",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FJIP3UHN3IQ7LZLOWg7A4chr1zB31KAtI",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "ExtractID",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FJIR28J2LBH1aEVC9N5sIMqEwms0DdTmo",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "BearerToken",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FJIU9WMSOPI3i0osXyR7hN3LQFr1actyV",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "tabletype_01FRUTQ9WC9AB2cVelD4hSKNKEEgCxzbm4e",
+        "properties": {
+          "scope": "input",
+          "name": "inQP",
+          "type": "datatype.table",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FRVKY8ROES75qwmaXUB1OBOIaQnlicvfu",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "tabletype_01FRUTQ9WC9AB2cVelD4hSKNKEEgCxzbm4e",
+        "properties": {
+          "scope": "output",
+          "name": "outQP",
+          "type": "datatype.table",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01FRVLABUNJQ15bkm8zD4PdgsnhSlWRHaGv",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "description": "ND-JSON Extract-Multiple",
+      "display_name": "\u003c--ND-JSON Extract-Multiple--\u003e",
+      "runtime_user": {
+        "override_target_runtime_user": false,
+        "specify_on_workflow_start": false,
+        "target_default": true
+      },
+      "target": {
+        "target_type": "web-service.endpoint",
+        "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa",
+        "execute_on_workflow_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01FJINXNB7WKC0TO0x4v3c2T0n3i1jtJHNV",
+        "name": "HTTP Request",
+        "title": "Web Request Query",
+        "type": "web-service.http_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "allow_auto_redirect": true,
+          "content_type": "application/json",
+          "continue_on_error_status_code": false,
+          "continue_on_failure": false,
+          "custom_headers": [
+            {
+              "name": "Authorization",
+              "value": "Bearer $workflow.definition_workflow_01FJINS8KWSQK6kmCjOouwM2jHjbp4y6zfC.input.variable_workflow_01FJIU9WMSOPI3i0osXyR7hN3LQFr1actyV$"
+            }
+          ],
+          "description": "Part of \u003c--ND-JSON Extract-Multiple--\u003e\n!@#$%^\u0026*()_+\u003c\u003e?{}[]\\|~",
+          "display_name": "Web Request Query",
+          "method": "GET",
+          "relative_url": "$workflow.definition_workflow_01FJINS8KWSQK6kmCjOouwM2jHjbp4y6zfC.input.variable_workflow_01FJIP3UHN3IQ7LZLOWg7A4chr1zB31KAtI$",
+          "runtime_user": {
+            "override_target_runtime_user": false,
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "override_workflow_target": false,
+            "override_workflow_target_group_criteria": false,
+            "use_workflow_target": true,
+            "use_workflow_target_group": false
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01FRUWAHAPIX57kd94YzmqiSZabQpOtO6Hz",
+        "name": "For Each",
+        "title": "For Each query item",
+        "type": "logic.for_each",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "description": "Part of ND-JSON Extract-Multiple\n!@#$%^\u0026*()_+\u003c\u003e?{}[]\\|~",
+          "display_name": "For Each query item",
+          "skip_execution": false,
+          "source_array": "$workflow.definition_workflow_01FJINS8KWSQK6kmCjOouwM2jHjbp4y6zfC.input.variable_workflow_01FRVKY8ROES75qwmaXUB1OBOIaQnlicvfu$"
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01FJIO17SF4QM2kObKQKxTEHBhKOjwYEgig",
+            "name": "JSONPath Query",
+            "title": "JSONPath Query",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "description": "Part of \u003c--ND-JSON Extract-Multiple--\u003e\n!@#$%^\u0026*()_+\u003c\u003e?{}[]\\|~",
+              "display_name": "JSONPath Query",
+              "input_json": "$activity.definition_activity_01FJINXNB7WKC0TO0x4v3c2T0n3i1jtJHNV.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$activity.definition_activity_01FRUWAHAPIX57kd94YzmqiSZabQpOtO6Hz.input.source_array[@].query$",
+                  "jsonpath_query_name": "PathID",
+                  "jsonpath_query_type": "string"
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01FRVR2S5JX0R3BbBfg51e0iTSi63dKtfuU",
+            "name": "Update Row in Table",
+            "title": "Update Row  in Query Table",
+            "type": "core.updaterowintable",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "columns": [
+                {
+                  "column_name": "jsonid",
+                  "column_type": "string"
+                }
+              ],
+              "continue_on_failure": false,
+              "description": "Part of \u003c--ND-JSON Extract-Multiple--\u003e\n!@#$%^\u0026*()_+\u003c\u003e?{}[]\\|~",
+              "display_name": "Update Row  in Query Table",
+              "input_table": "$workflow.definition_workflow_01FJINS8KWSQK6kmCjOouwM2jHjbp4y6zfC.input.variable_workflow_01FRVKY8ROES75qwmaXUB1OBOIaQnlicvfu$",
+              "row": [
+                {
+                  "key": "jsonid",
+                  "type": "string",
+                  "value": "$activity.definition_activity_01FJIO17SF4QM2kObKQKxTEHBhKOjwYEgig.output.jsonpath_queries.PathID$"
+                }
+              ],
+              "rows": {
+                "rows_matching_criteria": true,
+                "where_clause": "query == '$activity.definition_activity_01FRUWAHAPIX57kd94YzmqiSZabQpOtO6Hz.input.source_array[@].query$'"
+              },
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01FJIR8CCARCG1wzboD7lFsYb96f4jD8bCQ",
+        "name": "Set Variables",
+        "title": "Set Table",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "description": "Part of \u003c--ND-JSON Extract-Multiple--\u003e\n!@#$%^\u0026*()_+\u003c\u003e?{}[]\\|~",
+          "display_name": "Set Table",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01FJINS8KWSQK6kmCjOouwM2jHjbp4y6zfC.output.variable_workflow_01FRVLABUNJQ15bkm8zD4PdgsnhSlWRHaGv$",
+              "variable_value_new": "$workflow.definition_workflow_01FJINS8KWSQK6kmCjOouwM2jHjbp4y6zfC.input.variable_workflow_01FRVKY8ROES75qwmaXUB1OBOIaQnlicvfu$"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01FRW8FR2W0LE68XbKvdfp1FhBehWv4hvcN",
+        "name": "Select from Table",
+        "title": "Select from Table",
+        "type": "core.selectfromtable",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "description": "Part of \u003c--ND-JSON Extract-Multiple--\u003e\n!@#$%^\u0026*()_+\u003c\u003e?{}[]\\|~",
+          "display_name": "Select from Table",
+          "input_table": "$workflow.definition_workflow_01FJINS8KWSQK6kmCjOouwM2jHjbp4y6zfC.output.variable_workflow_01FRVLABUNJQ15bkm8zD4PdgsnhSlWRHaGv$",
+          "number_of_rows": {
+            "all_rows": true,
+            "at_most": false
+          },
+          "persist_output": false,
+          "skip_execution": false,
+          "sorting": {
+            "no_sort": true,
+            "sort_by": false
+          }
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "targets": {
+    "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa": {
+      "unique_name": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa",
+      "name": "Internaltar",
+      "title": "Internaltar",
+      "type": "web-service.endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "disable_certificate_validation": true,
+        "display_name": "Internaltar",
+        "host": "qetest01.tidalsoft.local",
+        "ignore_proxy": false,
+        "no_runtime_user": true,
+        "port": 31653,
+        "protocol": "https"
+      }
+    }
+  },
+  "table_types": {
+    "tabletype_01FRUTQ9WC9AB2cVelD4hSKNKEEgCxzbm4e": {
+      "unique_name": "tabletype_01FRUTQ9WC9AB2cVelD4hSKNKEEgCxzbm4e",
+      "data_type": "datatype.tabletype",
+      "display_name": "QueryPathTable",
+      "columns": [
+        {
+          "name": "jsonid",
+          "title": "jsonid",
+          "type": "string"
+        },
+        {
+          "name": "query",
+          "title": "query",
+          "type": "string"
+        }
+      ],
+      "base_type": "datatype",
+      "object_type": "tabletype"
+    }
+  }
+}
