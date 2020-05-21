@@ -1,0 +1,2534 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ",
+    "name": "Copy-Regression  Creation of Atomic worklfow",
+    "title": "Copy-Regression  Creation of Atomic worklfow",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "Atomic",
+          "scope": "input",
+          "name": "Enter Worklfow Name",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01ED39RIKYCOO2TweBXvMz4TJvFIwhbp0uZ",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "Email  AtomicTable Results",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01ED39RIKYHID6iTHaDZUwD7Pr2GXSdmYZX",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.file",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Enter File",
+          "type": "datatype.file",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01ED39RIKYLUL4puQnWGjxKfAJiSrQnnKhJ",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "Email Parent Table Results",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01ED39RIKYQ021PXUwgQxjs484M1uqkhkAx",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "Email Deletion Table",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01ED39RIKYU8M5Q5W6bQF9WXn3DKMK70Xbj",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "All Actions Results",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01ED39RIKY3JN46vGUznfc3mPhnVVY4ekKI",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "description": "\n",
+      "display_name": "Copy-Regression  Creation of Atomic worklfow",
+      "favorite": false,
+      "runtime_user": {
+        "override_target_runtime_user": false,
+        "specify_on_workflow_start": false,
+        "target_default": true
+      },
+      "target": {
+        "execute_on_target_group": false,
+        "execute_on_workflow_target": false,
+        "no_target": true,
+        "specify_on_workflow_start": false
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01ED39SLZIIZX32LQCoIwvet2e7LMu5zSpw",
+        "name": "Group",
+        "title": "Step 1 : Atomic workflow creation and validation",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Step 1 : Atomic workflow creation and validation",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01ED39T26TD1F0KtA5Lds8zZMxt1njCFwow",
+            "name": "Generic CCS API Request",
+            "title": "GET Workflow Schema",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "GET",
+              "continue_on_failure": false,
+              "display_name": "GET Workflow Schema",
+              "relative_url": "be-console/api/v1/workflows",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED39TGZ1C2Z4eOEr2iYsspzo1ffbJwoBc",
+            "name": "JSONPath Query",
+            "title": "Extract workflow schema Id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extract workflow schema Id",
+              "input_json": "$activity.definition_activity_01ED39T26TD1F0KtA5Lds8zZMxt1njCFwow.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$.[1].schema_id",
+                  "jsonpath_query_name": "workflow schema Id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED39TVU6ZFE0Nc1MaO9ac7eQfMirmtoCj",
+            "name": "Parallel Block",
+            "title": "Parallel Block",
+            "type": "logic.parallel",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Parallel Block",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "blocks": [
+              {
+                "unique_name": "definition_activity_01ED39U1U0YD11ZJpec92CjQwp46FF91W8v",
+                "name": "Parallel Branch",
+                "title": "String data type",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "String data type",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED39UEF497K71bhU8WtwM7KhKQ0BuzIit",
+                    "name": "Generic CCS API Request",
+                    "title": "GET String Variable type Schema",
+                    "type": "ccs.api_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "api_call_method": "GET",
+                      "continue_on_failure": false,
+                      "display_name": "GET String Variable type Schema",
+                      "relative_url": "be-console/api/v1/schemas/datatype.string?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01ED39UQN43H63q7PnRSPQtOK7evQ6Mp5pj",
+                    "name": "JSONPath Query",
+                    "title": "Extract String variable type schema Id",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract String variable type schema Id",
+                      "input_json": "$activity.definition_activity_01ED39UEF497K71bhU8WtwM7KhKQ0BuzIit.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "datatype schema Id",
+                          "jsonpath_query_type": "string",
+                          "zdate_type_format": ""
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01ED39UZ670GM0OvpMOmbyXRINdzcOEtm8C",
+                "name": "Parallel Branch",
+                "title": "DateTime data type",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "DateTime data type",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED39VBQETSO4G415XodJ3S3cEfV0859KW",
+                    "name": "Generic CCS API Request",
+                    "title": "GET Date Variable type Schema",
+                    "type": "ccs.api_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "api_call_method": "GET",
+                      "continue_on_failure": false,
+                      "display_name": "GET Date Variable type Schema",
+                      "relative_url": "be-console/api/v1/schemas/datatype.date?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01ED39VNRKHGP27c1ttapp5DdH7PM01DN5t",
+                    "name": "JSONPath Query",
+                    "title": "Extract Date variable type schema Id",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Date variable type schema Id",
+                      "input_json": "$activity.definition_activity_01ED39VBQETSO4G415XodJ3S3cEfV0859KW.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "DateSchema Id",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01ED39VW5O2AA2XXOZ93RHlabQjR2V2ITcu",
+                "name": "Parallel Branch",
+                "title": "Number data type",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Number data type",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED39W9GXTYP4IvQSY836by0WqO1jFGWMc",
+                    "name": "Generic CCS API Request",
+                    "title": "GET Number Variable type Schema",
+                    "type": "ccs.api_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "api_call_method": "GET",
+                      "continue_on_failure": false,
+                      "display_name": "GET Number Variable type Schema",
+                      "relative_url": "be-console/api/v1/schemas/datatype.number?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01ED39WMT0PFV1GUsY6x461KTMCpnLWthqk",
+                    "name": "JSONPath Query",
+                    "title": "Extract Number variable type schema Id",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Number variable type schema Id",
+                      "input_json": "$activity.definition_activity_01ED39W9GXTYP4IvQSY836by0WqO1jFGWMc.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "NumberSchema Id",
+                          "jsonpath_query_type": "string",
+                          "zdate_type_format": ""
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01ED39WYYIBO76sgkVetwW2ZlcoSIHeYlM2",
+                "name": "Parallel Branch",
+                "title": "Boolean data type",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Boolean data type",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED39XAMOMRP2h7LKafzJvAFqx8hSgPzbd",
+                    "name": "Generic CCS API Request",
+                    "title": "GET Boolean Variable type Schema",
+                    "type": "ccs.api_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "api_call_method": "GET",
+                      "continue_on_failure": false,
+                      "display_name": "GET Boolean Variable type Schema",
+                      "relative_url": "be-console/api/v1/schemas/datatype.boolean?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01ED39XM5KOQ86hYgtuFlVKBaYxMTlQFtmw",
+                    "name": "JSONPath Query",
+                    "title": "Extract Boolean variable type schema Id",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Boolean variable type schema Id",
+                      "input_json": "$activity.definition_activity_01ED39XAMOMRP2h7LKafzJvAFqx8hSgPzbd.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "BooleanSchema Id",
+                          "jsonpath_query_type": "string",
+                          "zdate_type_format": ""
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01ED39XV0NEIR7ANTYsOpZ2sgm08HSQjPTC",
+                "name": "Parallel Branch",
+                "title": "Secure String data type",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Secure String data type",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED39Y6PWV2I02IDFYhTHQPoi8ctGYNK3E",
+                    "name": "Generic CCS API Request",
+                    "title": "GET Secure String Variable type Schema",
+                    "type": "ccs.api_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "api_call_method": "GET",
+                      "continue_on_failure": false,
+                      "display_name": "GET Secure String Variable type Schema",
+                      "relative_url": "be-console/api/v1/schemas/datatype.secure_string?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01ED39YIB9BTP0ORrsOsBRyyqIjcTihbJ5j",
+                    "name": "JSONPath Query",
+                    "title": "Extract Secure String variable type schema Id",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Secure String variable type schema Id",
+                      "input_json": "$activity.definition_activity_01ED39Y6PWV2I02IDFYhTHQPoi8ctGYNK3E.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "SecStrSchema Id",
+                          "jsonpath_query_type": "string",
+                          "zdate_type_format": ""
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01ED39YQENX4Q21Yy7UB9ev2AOGIbgT9fJN",
+                "name": "Parallel Branch",
+                "title": "File data type",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "File data type",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity"
+              },
+              {
+                "unique_name": "definition_activity_01ED39ZLKMACM3Gnl9XizYk2yenoFKmEy4p",
+                "name": "Parallel Branch",
+                "title": "SMTP Account Key",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": true,
+                  "display_name": "SMTP Account Key",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED3A098QTIE5jldIdRMYgv8syyAktOyI4",
+                    "name": "Generic CCS API Request",
+                    "title": "GET SMTP AK Schema ID",
+                    "type": "ccs.api_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "api_call_method": "GET",
+                      "continue_on_failure": false,
+                      "display_name": "GET SMTP AK Schema ID",
+                      "relative_url": "be-console/api/v1/schemas/runtime_user.email_credentials?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01ED3A0KFSDWA5BYwdafAYnC8cv0hq9dikE",
+                    "name": "JSONPath Query",
+                    "title": "Extract SMTP AK schema Id",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract SMTP AK schema Id",
+                      "input_json": "$activity.definition_activity_01ED3A098QTIE5jldIdRMYgv8syyAktOyI4.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "SMTP AK Id",
+                          "jsonpath_query_type": "string",
+                          "zdate_type_format": ""
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01ED3A0T32UH643CK0arBfKJIcnmH7vxDr4",
+                "name": "Parallel Branch",
+                "title": "SMTP Target",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": true,
+                  "display_name": "SMTP Target",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED3A14Z2G4W4q9dbyYoXMkhVxdnJ7IetP",
+                    "name": "Generic CCS API Request",
+                    "title": "GET SMTP Target Schema ID",
+                    "type": "ccs.api_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "api_call_method": "GET",
+                      "continue_on_failure": false,
+                      "display_name": "GET SMTP Target Schema ID",
+                      "relative_url": "be-console/api/v1/schemas/email.smtp_endpoint?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01ED3A1H7CIZ46qi8LtwVyYJJu7ceQstZ0y",
+                    "name": "JSONPath Query",
+                    "title": "Extract SMTP Target schema Id",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract SMTP Target schema Id",
+                      "input_json": "$activity.definition_activity_01ED3A14Z2G4W4q9dbyYoXMkhVxdnJ7IetP.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "SMTP Target Id",
+                          "jsonpath_query_type": "string",
+                          "zdate_type_format": ""
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01ED3A1UPLJWS1iKUldUKBB9rVuSQ6jFT1U",
+            "name": "Generic CCS API Request",
+            "title": "Create child workflow",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n  \"schema_id\": \"$activity.definition_activity_01ED39TGZ1C2Z4eOEr2iYsspzo1ffbJwoBc.output.jsonpath_queries.workflow schema Id$\",\n  \"properties\": {\n    \"display_name\": \"Atomic\",\n    \"atomic\": {\n      \"is_atomic\": false\n    },\n    \"delete_workflow_instance\": false,\n    \"runtime_user\": {\n      \"override_target_runtime_user\": false,\n      \"specify_on_workflow_start\": false,\n      \"target_default\": true\n    },\n    \"target\": {\n      \"execute_on_target_group\": false,\n      \"execute_on_workflow_target\": false,\n      \"no_target\": true,\n      \"specify_on_workflow_start\": false\n    }  \n  }\n}",
+              "api_call_method": "POST",
+              "continue_on_failure": false,
+              "display_name": "Create child workflow",
+              "relative_url": "be-console/api/v1/workflows",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB",
+            "name": "JSONPath Query",
+            "title": "Extract  child Workflow Id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extract  child Workflow Id",
+              "input_json": "$activity.definition_activity_01ED3A1UPLJWS1iKUldUKBB9rVuSQ6jFT1U.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "workflow_id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                },
+                {
+                  "jsonpath_query": "$..display_name",
+                  "jsonpath_query_name": "displayname",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3A2MMKB056wQYDlafXkgYLAynoNWhEB",
+            "name": "Generic CCS API Request",
+            "title": "Create  SMTP Account Key ",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n\"schema_id\": \"$activity.definition_activity_01ED3A0KFSDWA5BYwdafAYnC8cv0hq9dikE.output.jsonpath_queries.SMTP AK Id$\",\n\"name\":\"SMTP Account Key\",\n\"title\":\"SMTP Account Key\",\n\"properties\":\n\t{\n\t\t\"display_name\":\"SMTP Account Key\",\n\t\t\"password\":\"Welc0me8!\",\n\t\t\"sender\":\"neetadsilv@gmail.com\",\n\t\t\"description\":\"test\"\n\t}\n}",
+              "api_call_method": "POST",
+              "continue_on_failure": false,
+              "display_name": "Create  SMTP Account Key ",
+              "relative_url": "be-console/api/v1/runtime_users",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3A30SV8K6210edcUdETSNwj4OduLOm5",
+            "name": "JSONPath Query",
+            "title": "Extract  SMTP Account Key Id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extract  SMTP Account Key Id",
+              "input_json": "$activity.definition_activity_01ED3A2MMKB056wQYDlafXkgYLAynoNWhEB.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "account_key_id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3A3INCMN47Kx6UVcUet5Nc71fegqvMJ",
+            "name": "Generic CCS API Request",
+            "title": "Create  SMTP Target",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n  \"schema_id\":\"$activity.definition_activity_01ED3A1H7CIZ46qi8LtwVyYJJu7ceQstZ0y.output.jsonpath_queries.SMTP Target Id$\",\n  \"name\": \"smtptar\",\n  \"type\": \"email.smtp_endpoint\",\n  \"base_type\": \"target\",\n  \"valid\": true,\n  \"def_access_meta\": {\n    \"is_internal\": false\n  },\n  \"title\": \"smtptar\",\n  \"properties\": {\n    \"default_runtime_user_id\": \"$activity.definition_activity_01ED3A30SV8K6210edcUdETSNwj4OduLOm5.output.jsonpath_queries.account_key_id$\",\n    \"display_name\": \"smtptar\",\n    \"no_runtime_user\": false,\n    \"port\": 587,\n    \"protocol\": \"SMTP\",\n    \"server\": \"smtp.gmail.com\",\n    \"description\": \"test\"\n  }\n}",
+              "api_call_method": "POST",
+              "continue_on_failure": false,
+              "display_name": "Create  SMTP Target",
+              "relative_url": "be-console/api/v1/targets",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3A3XQ0MG63ceeHOziRqWCIS5xApq9Sf",
+            "name": "JSONPath Query",
+            "title": "Extract  SMTP Target",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extract  SMTP Target",
+              "input_json": "$activity.definition_activity_01ED3A3INCMN47Kx6UVcUet5Nc71fegqvMJ.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "Target_id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3A46F41DS7gpL6g0SoS2FzrfGChbvJl",
+            "name": "Parallel Block",
+            "title": "Get Action schema ID",
+            "type": "logic.parallel",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Get Action schema ID",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "blocks": [
+              {
+                "unique_name": "definition_activity_01ED3A4CUUC172be8ANr2B7iC0ZAFvJvy7S",
+                "name": "Parallel Branch",
+                "title": "Send Email",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Send Email",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED3A4OCYB300uVAoydRhNCqKLMqy94kne",
+                    "name": "Generic CCS API Request",
+                    "title": "GET Send Email Schema",
+                    "type": "ccs.api_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "api_call_method": "GET",
+                      "continue_on_failure": false,
+                      "display_name": "GET Send Email Schema",
+                      "relative_url": "be-console/api/v1/schemas/email.smtp_send_email?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01ED3A50AD7766lytSX7rASTDMTFH6FffcN",
+                    "name": "JSONPath Query",
+                    "title": "Extracting Send Email schema id",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extracting Send Email schema id",
+                      "input_json": "$activity.definition_activity_01ED3A4OCYB300uVAoydRhNCqKLMqy94kne.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "Send Email schema Id",
+                          "jsonpath_query_type": "string",
+                          "zdate_type_format": ""
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01ED3A58XKCGQ1pcFtSNuGX7W3FJQo6Vsh2",
+                "name": "Parallel Branch",
+                "title": "Set Variable",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Set Variable",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED3A5L9M6U07Adw8DT3ejWtUOqal92v4w",
+                    "name": "Generic CCS API Request",
+                    "title": "GET Set Variable Schema",
+                    "type": "ccs.api_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "api_call_method": "GET",
+                      "continue_on_failure": false,
+                      "display_name": "GET Set Variable Schema",
+                      "relative_url": "be-console/api/v1/schemas/core.set_multiple_variables?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01ED3A5YAENP25jfexe8XLUv5cUylx6dJ3z",
+                    "name": "JSONPath Query",
+                    "title": "Extracting Set Variable schema id",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extracting Set Variable schema id",
+                      "input_json": "$activity.definition_activity_01ED3A5L9M6U07Adw8DT3ejWtUOqal92v4w.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "Set Var schema Id",
+                          "jsonpath_query_type": "string",
+                          "zdate_type_format": ""
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01ED3A67OSZWH5HLUffwkaXKkU7xsjccAj3",
+                "name": "Parallel Branch",
+                "title": "To Upper",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "To Upper",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED3A6IWMC3F7DM2xAf5CCCmf1VUTdH1pE",
+                    "name": "Generic CCS API Request",
+                    "title": "GET Upper Action Schema",
+                    "type": "ccs.api_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "api_call_method": "GET",
+                      "continue_on_failure": false,
+                      "display_name": "GET Upper Action Schema",
+                      "relative_url": "be-console/api/v1/schemas/core.string2upper?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01ED3A6UHMNU73cL57VIIkKCjPbsW4RgGWi",
+                    "name": "JSONPath Query",
+                    "title": "Extracting upper action schema id",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extracting upper action schema id",
+                      "input_json": "$activity.definition_activity_01ED3A6IWMC3F7DM2xAf5CCCmf1VUTdH1pE.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "Upper Action schema Id",
+                          "jsonpath_query_type": "string",
+                          "zdate_type_format": ""
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01ED3A73JEWKX4e8MPFGFNgoMCmnjzDuJYX",
+                "name": "Parallel Branch",
+                "title": "Python",
+                "type": "logic.parallel_block",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Python",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED3A7ER0SIT4FxYjlC1olicW7uSWlhkYk",
+                    "name": "Generic CCS API Request",
+                    "title": "GET Python Action Schema",
+                    "type": "ccs.api_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "api_call_method": "GET",
+                      "continue_on_failure": false,
+                      "display_name": "GET Python Action Schema",
+                      "relative_url": "be-console/api/v1/schemas/python3.script?schema_type=view",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": true,
+                        "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01ED3A7Q4UWHI6gMZ25Lp4n2UxjPhYbXhyR",
+                    "name": "JSONPath Query",
+                    "title": "Extracting python action schema id",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extracting python action schema id",
+                      "input_json": "$activity.definition_activity_01ED3A7ER0SIT4FxYjlC1olicW7uSWlhkYk.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..schema_id",
+                          "jsonpath_query_name": "Python schema Id",
+                          "jsonpath_query_type": "string",
+                          "zdate_type_format": ""
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01ED3A83UYG660Q0N3mnL1opGWvje0hAb0W",
+            "name": "Generic CCS API Request",
+            "title": "Adding Upper Action",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n  \"previous_action\": {\n    \"id\": \"$activity.definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB.output.jsonpath_queries.workflow_id$\"\n  },\n  \"action\": {\n    \"schema_id\": \"$activity.definition_activity_01ED3A6UHMNU73cL57VIIkKCjPbsW4RgGWi.output.jsonpath_queries.Upper Action schema Id$\",\n    \"type\": \"core.string2upper\",\n    \"base_type\": \"activity\",\n    \"name\": \"To Upper\",\n    \"properties\": {\n      \"continue_on_failure\": false,\n      \"display_name\": \"To Upper\"\n    },\n    \"title\": \"To Upper\"\n  }\n}",
+              "api_call_method": "POST",
+              "continue_on_failure": false,
+              "display_name": "Adding Upper Action",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB.output.jsonpath_queries.workflow_id$/actions",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3A8IY53JA6eLvIpI0yBK4UPyve1qWwh",
+            "name": "JSONPath Query",
+            "title": "Extracting upper action Id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extracting upper action Id",
+              "input_json": "$activity.definition_activity_01ED3A83UYG660Q0N3mnL1opGWvje0hAb0W.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "Upper action Id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3A8X6SA213vjWNSqbG6fC6oX6gYlr5L",
+            "name": "Generic CCS API Request",
+            "title": "Adding Source to Upper Action",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n  \"id\": \"$activity.definition_activity_01ED3A8IY53JA6eLvIpI0yBK4UPyve1qWwh.output.jsonpath_queries.Upper action Id$\",\n  \"title\": \"To Upper\",\n  \"properties\": {\n    \"continue_on_failure\": false,\n    \"display_name\": \"To Upper\",\n    \"source\": \"This workflow created by automation\"\n  }\n}",
+              "api_call_method": "PUT",
+              "continue_on_failure": false,
+              "display_name": "Adding Source to Upper Action",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB.output.jsonpath_queries.workflow_id$/actions/$activity.definition_activity_01ED3A8IY53JA6eLvIpI0yBK4UPyve1qWwh.output.jsonpath_queries.Upper action Id$",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3A9CE94XR0EtmxJGLUHpaRe6InGxN17",
+            "name": "JSONPath Query",
+            "title": "Extracting upper output ",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extracting upper output ",
+              "input_json": "$activity.definition_activity_01ED3A83UYG660Q0N3mnL1opGWvje0hAb0W.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "Upper action Id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": true
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3A9T3W5JJ1YbW5T4ah7mlRip4oHXBpK",
+            "name": "Generic CCS API Request",
+            "title": "Updating Workflow",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n  \"id\": \"$activity.Extract  child Workflow Id.output.Jsonpath Queries.workflow_id$\",\n  \"valid\": true,\n  \"variables\":[{\n      \"schema_id\":\"$activity.definition_activity_01ED39UQN43H63q7PnRSPQtOK7evQ6Mp5pj.output.jsonpath_queries.datatype schema Id$\",\n\t    \"title\":\"Output String\",\n      \"properties\":{\n         \"scope\":\"output\",\n         \"is_required\":false,\n         \"name\":\"Output String\",\n         \"value\":\"Output String\"\n      }\n    },\n    {\n      \"schema_id\":\"$activity.definition_activity_01ED39VNRKHGP27c1ttapp5DdH7PM01DN5t.output.jsonpath_queries.DateSchema Id$\",\n\t    \"title\":\"Input DateTime\",\n      \"properties\":{\n         \"scope\":\"input\",\n         \"is_required\":false,\n         \"name\":\"Input DateTime\",\n         \"value\":\"0001-01-01T00:00:00+00:00\"\n      }\n    },\n    {\n      \"schema_id\":\"$activity.definition_activity_01ED39WMT0PFV1GUsY6x461KTMCpnLWthqk.output.jsonpath_queries.NumberSchema Id$\",\n\t    \"title\":\"Output Number\",\n      \"properties\":{\n         \"scope\":\"output\",\n         \"is_required\":false,\n         \"name\":\"Output Number\",\n         \"value\":1.0\n      }\n    },\n    {\n      \"schema_id\":\"$activity.definition_activity_01ED39XM5KOQ86hYgtuFlVKBaYxMTlQFtmw.output.jsonpath_queries.BooleanSchema Id$\",\n\t    \"title\":\"Output Boolean\",\n      \"properties\":{\n         \"scope\":\"output\",\n         \"is_required\":false,\n         \"name\":\"Output Boolean\",\n         \"value\":false\n      }\n    },\n    {\n      \"schema_id\":\"$activity.definition_activity_01ED39YIB9BTP0ORrsOsBRyyqIjcTihbJ5j.output.jsonpath_queries.SecStrSchema Id$\",\n\t    \"title\":\"Input Secure String\",\n      \"properties\":{\n         \"scope\":\"input\",\n         \"is_required\":false,\n         \"name\":\"Input Secure String\",\n         \"value\":\"Input Secure String\"\n      }\n    }\n   \n]\n}",
+              "api_call_method": "PUT",
+              "continue_on_failure": false,
+              "display_name": "Updating Workflow",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB.output.jsonpath_queries.workflow_id$",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AAFBX15A1pTgS1Wl6eGoDg1Df0tb6L",
+            "name": "Generic CCS API Request",
+            "title": "GET Workflow Variable ID",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "GET",
+              "continue_on_failure": false,
+              "display_name": "GET Workflow Variable ID",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB.output.jsonpath_queries.workflow_id$",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY",
+            "name": "JSONPath Query",
+            "title": "Extracting WF Variable id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extracting WF Variable id",
+              "input_json": "$activity.definition_activity_01ED3AAFBX15A1pTgS1Wl6eGoDg1Df0tb6L.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..variables[?(@.properties.type=='datatype.string')]..id",
+                  "jsonpath_query_name": "StringID",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                },
+                {
+                  "jsonpath_query": "$..variables[?(@.properties.type=='datatype.number')]..id",
+                  "jsonpath_query_name": "NumberID",
+                  "jsonpath_query_type": "string"
+                },
+                {
+                  "jsonpath_query": "$..variables[?(@.properties.type=='datatype.date')]..id",
+                  "jsonpath_query_name": "DateID",
+                  "jsonpath_query_type": "string"
+                },
+                {
+                  "jsonpath_query": "$..variables[?(@.properties.type=='datatype.boolean')]..id",
+                  "jsonpath_query_name": "BooleanID",
+                  "jsonpath_query_type": "string"
+                },
+                {
+                  "jsonpath_query": "$..variables[?(@.properties.type=='datatype.secure_string')]..id",
+                  "jsonpath_query_name": "SecStrID",
+                  "jsonpath_query_type": "string"
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AB7O1BXX5iwcVzxIyuPWesyIZLb4wd",
+            "name": "Generic CCS API Request",
+            "title": "Adding Set Variable",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n  \"previous_action\": {\n    \"id\": \"$activity.definition_activity_01ED3A8IY53JA6eLvIpI0yBK4UPyve1qWwh.output.jsonpath_queries.Upper action Id$\",\n    \"schema_id\": \"$activity.definition_activity_01ED3A6UHMNU73cL57VIIkKCjPbsW4RgGWi.output.jsonpath_queries.Upper Action schema Id$\",\n    \"type\": \"core.string2upper\",\n    \"base_type\": \"activity\"\n  },\n  \"action\": {\n    \"schema_id\": \"$activity.definition_activity_01ED3A5YAENP25jfexe8XLUv5cUylx6dJ3z.output.jsonpath_queries.Set Var schema Id$\",\n    \"type\": \"core.set_multiple_variables\",\n    \"base_type\": \"activity\",\n    \"name\": \"Set Atomic Output\",\n    \"properties\": {\n      \"continue_on_failure\": false,\n      \"display_name\": \"Set Atomic Output\"      \n    },\n    \"title\": \"Set Atomic Output\"\n  }\n}",
+              "api_call_method": "POST",
+              "continue_on_failure": false,
+              "display_name": "Adding Set Variable",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB.output.jsonpath_queries.workflow_id$/actions",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3ABN7SOTD0Ked8WvVECnaoc9rjAY2ej",
+            "name": "JSONPath Query",
+            "title": "Extracting Set Variable action id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extracting Set Variable action id",
+              "input_json": "$activity.definition_activity_01ED3AB7O1BXX5iwcVzxIyuPWesyIZLb4wd.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "Set Var action id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AC1DUA6L6EiU6PBuHdRhsSLuUIW2DZ",
+            "name": "Generic CCS API Request",
+            "title": "Updating Set Variable",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n  \"id\": \"$activity.definition_activity_01ED3ABN7SOTD0Ked8WvVECnaoc9rjAY2ej.output.jsonpath_queries.Set Var action id$\",\n  \"title\": \"Set Atomic Output\",\n  \"properties\": {\n    \"continue_on_failure\": false,\n    \"display_name\": \"Set Atomic Output\",\n    \"skip_execution\": false,\n    \"variables_to_update\": [\n      {\n        \"variable_to_update\": \"$workflow.$activity.definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB.output.jsonpath_queries.workflow_id$.output.$activity.definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY.output.jsonpath_queries.StringID$$\",\n        \"variable_value_new\": \"$activity.$activity.definition_activity_01ED3A8IY53JA6eLvIpI0yBK4UPyve1qWwh.output.jsonpath_queries.Upper action Id$.output.uppercase_text$\"\n      }\n    ]\n  }\n}",
+              "api_call_method": "PUT",
+              "continue_on_failure": false,
+              "display_name": "Updating Set Variable",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB.output.jsonpath_queries.workflow_id$/actions/$activity.definition_activity_01ED3ABN7SOTD0Ked8WvVECnaoc9rjAY2ej.output.jsonpath_queries.Set Var action id$",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3ADLNBISA3Ce1F1pnjKrMlPZY8lRsja",
+            "name": "Generic CCS API Request",
+            "title": "Validate worklfow",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "POST",
+              "continue_on_failure": false,
+              "display_name": "Validate worklfow",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB.output.jsonpath_queries.workflow_id$/validate",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AE2C9N202JpXuYG9rNbmymYZCBPC6x",
+            "name": "Generic CCS API Request",
+            "title": "Marking as atomic Workflow",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n  \"id\": \"$activity.Extract  child Workflow Id.output.Jsonpath Queries.workflow_id$\",\n  \"schema_id\": \"$activity.Extract workflow schema Id.output.Jsonpath Queries.workflow schema Id$\",\n  \"type\": \"generic.workflow\",\n  \"base_type\": \"workflow\",\n  \"name\": \"Atomic\",\n  \"title\": \"Atomic \",\n  \"valid\": true,\n  \"properties\": {\n    \"atomic\": {\n      \"is_atomic\": true,\n      \"atomic_group\": \"Atomic\"\n    },\n    \"delete_workflow_instance\": true,\n    \"runtime_user\": {\n      \"override_target_runtime_user\": false,\n      \"specify_on_workflow_start\": false,\n      \"target_default\": true\n    },\n    \"target\": {\n      \"execute_on_target_group\": false,\n      \"execute_on_workflow_target\": false,\n      \"no_target\": true,\n      \"specify_on_workflow_start\": false\n    },\n    \"display_name\": \"Atomic\"\n  },\n  \"variables\": [\n    {\n      \"id\": \"$activity.definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY.output.jsonpath_queries.StringID$\",\n      \"schema_id\": \"$activity.definition_activity_01ED39UQN43H63q7PnRSPQtOK7evQ6Mp5pj.output.jsonpath_queries.datatype schema Id$\",\n      \"properties\": {\n        \"value\": \"Output String\",\n        \"scope\": \"output\",\n        \"name\": \"Output String\",\n        \"type\": \"datatype.string\",\n        \"is_required\": false\n      },\n\n      \"object_type\": \"variable_workflow\"\n    },\n    {\n      \"id\": \"$activity.definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY.output.jsonpath_queries.DateID$\",\n      \"schema_id\": \"$activity.definition_activity_01ED39VNRKHGP27c1ttapp5DdH7PM01DN5t.output.jsonpath_queries.DateSchema Id$\",\n      \"properties\": {\n        \"value\":\"0001-01-01T00:00:00+00:00\",\n        \"scope\":\"input\",\n        \"name\":\"Input DateTime\",\n        \"type\": \"datatype.date\",\n        \"is_required\": false\n      },\n\n      \"object_type\": \"variable_workflow\"\n    },\n    {\n      \"id\": \"$activity.definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY.output.jsonpath_queries.NumberID$\",\n      \"schema_id\": \"$activity.definition_activity_01ED39WMT0PFV1GUsY6x461KTMCpnLWthqk.output.jsonpath_queries.NumberSchema Id$\",\n      \"properties\": {\n        \"value\":1.0,\n        \"scope\":\"output\",\n        \"name\":\"Output Number\",\n        \"type\": \"datatype.number\",\n        \"is_required\": false\n      },\n\n      \"object_type\": \"variable_workflow\"\n    },\n    {\n      \"id\": \"$activity.definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY.output.jsonpath_queries.BooleanID$\",\n      \"schema_id\": \"$activity.definition_activity_01ED39XM5KOQ86hYgtuFlVKBaYxMTlQFtmw.output.jsonpath_queries.BooleanSchema Id$\",\n      \"properties\": {\n        \"value\":false,\n        \"scope\":\"output\",\n        \"name\":\"Output Boolean\",\n        \"type\": \"datatype.boolean\",\n        \"is_required\": false\n      },\n\n      \"object_type\": \"variable_workflow\"\n    },\n    {\n      \"id\": \"$activity.definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY.output.jsonpath_queries.SecStrID$\",\n      \"schema_id\": \"$activity.definition_activity_01ED39YIB9BTP0ORrsOsBRyyqIjcTihbJ5j.output.jsonpath_queries.SecStrSchema Id$\",\n      \"properties\": {\n        \"value\":\"Input Secure String\",\n        \"scope\":\"input\",\n        \"name\":\"Input Secure String\",\n        \"type\": \"datatype.secure_string\",\n        \"is_required\": false\n      },\n\n      \"object_type\": \"variable_workflow\"\n    }\n  ]\n}",
+              "api_call_method": "PUT",
+              "continue_on_failure": false,
+              "description": "Note: To run this workflow User should have Adapter Author role",
+              "display_name": "Marking as atomic Workflow",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB.output.jsonpath_queries.workflow_id$",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AEJ1BWO41cZbBHniwvbZZegFVntzcP",
+            "name": "Condition Block",
+            "title": "All Actions Results",
+            "type": "logic.if_else",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": true,
+              "display_name": "All Actions Results",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "blocks": [
+              {
+                "unique_name": "definition_activity_01ED3AESUDV6J7d6zM5T5Qw2cOv620x6to5",
+                "name": "Condition Branch",
+                "title": "Pass == 200",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": {
+                      "left_operand": {
+                        "left_operand": {
+                          "left_operand": {
+                            "left_operand": {
+                              "left_operand": {
+                                "left_operand": "$activity.definition_activity_01ED39T26TD1F0KtA5Lds8zZMxt1njCFwow.output.succeeded$",
+                                "operator": "eq",
+                                "right_operand": true
+                              },
+                              "operator": "and",
+                              "right_operand": {
+                                "left_operand": "$activity.definition_activity_01ED3A1UPLJWS1iKUldUKBB9rVuSQ6jFT1U.output.succeeded$",
+                                "operator": "eq",
+                                "right_operand": true
+                              }
+                            },
+                            "operator": "and",
+                            "right_operand": {
+                              "left_operand": "$activity.definition_activity_01ED3A83UYG660Q0N3mnL1opGWvje0hAb0W.output.succeeded$",
+                              "operator": "eq",
+                              "right_operand": true
+                            }
+                          },
+                          "operator": "and",
+                          "right_operand": {
+                            "left_operand": "$activity.definition_activity_01ED3A8X6SA213vjWNSqbG6fC6oX6gYlr5L.output.succeeded$",
+                            "operator": "eq",
+                            "right_operand": true
+                          }
+                        },
+                        "operator": "and",
+                        "right_operand": {
+                          "left_operand": "$activity.definition_activity_01ED3A9T3W5JJ1YbW5T4ah7mlRip4oHXBpK.output.succeeded$",
+                          "operator": "eq",
+                          "right_operand": true
+                        }
+                      },
+                      "operator": "and",
+                      "right_operand": {
+                        "left_operand": "$activity.definition_activity_01ED3ADLNBISA3Ce1F1pnjKrMlPZY8lRsja.output.succeeded$",
+                        "operator": "eq",
+                        "right_operand": true
+                      }
+                    },
+                    "operator": "and",
+                    "right_operand": {
+                      "left_operand": "$activity.definition_activity_01ED3AE2C9N202JpXuYG9rNbmymYZCBPC6x.output.succeeded$",
+                      "operator": "eq",
+                      "right_operand": true
+                    }
+                  },
+                  "continue_on_failure": true,
+                  "display_name": "Pass == 200",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED3AF3FYXU0165ZfRTXWoYOg5gr7DY2Wj",
+                    "name": "Set Variables",
+                    "title": "All Actions Should Pass",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": true,
+                      "display_name": "All Actions Should Pass",
+                      "skip_execution": false,
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.variable_workflow_01ED39RIKY3JN46vGUznfc3mPhnVVY4ekKI$",
+                          "variable_value_new": "All Atomic workflow Actions Passed"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01ED3AFF6KXQ624TtmP0ScFIWzdK7OO0A76",
+                "name": "Condition Branch",
+                "title": "Fail == 400",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": {
+                      "left_operand": {
+                        "left_operand": {
+                          "left_operand": {
+                            "left_operand": {
+                              "left_operand": {
+                                "left_operand": "$activity.definition_activity_01ED39T26TD1F0KtA5Lds8zZMxt1njCFwow.output.succeeded$",
+                                "operator": "eq",
+                                "right_operand": false
+                              },
+                              "operator": "or",
+                              "right_operand": {
+                                "left_operand": "$activity.definition_activity_01ED3A1UPLJWS1iKUldUKBB9rVuSQ6jFT1U.output.succeeded$",
+                                "operator": "eq",
+                                "right_operand": false
+                              }
+                            },
+                            "operator": "or",
+                            "right_operand": {
+                              "left_operand": "$activity.definition_activity_01ED3A83UYG660Q0N3mnL1opGWvje0hAb0W.output.succeeded$",
+                              "operator": "eq",
+                              "right_operand": false
+                            }
+                          },
+                          "operator": "or",
+                          "right_operand": {
+                            "left_operand": "$activity.definition_activity_01ED3A8X6SA213vjWNSqbG6fC6oX6gYlr5L.output.succeeded$",
+                            "operator": "eq",
+                            "right_operand": false
+                          }
+                        },
+                        "operator": "or",
+                        "right_operand": {
+                          "left_operand": "$activity.definition_activity_01ED3A9T3W5JJ1YbW5T4ah7mlRip4oHXBpK.output.succeeded$",
+                          "operator": "eq",
+                          "right_operand": false
+                        }
+                      },
+                      "operator": "or",
+                      "right_operand": {
+                        "left_operand": "$activity.definition_activity_01ED3ADLNBISA3Ce1F1pnjKrMlPZY8lRsja.output.succeeded$",
+                        "operator": "eq",
+                        "right_operand": false
+                      }
+                    },
+                    "operator": "or",
+                    "right_operand": {
+                      "left_operand": "$activity.definition_activity_01ED3AE2C9N202JpXuYG9rNbmymYZCBPC6x.output.succeeded$",
+                      "operator": "eq",
+                      "right_operand": false
+                    }
+                  },
+                  "continue_on_failure": true,
+                  "display_name": "Fail == 400",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED3AFRNVGXB0WtauysE2ElmR85rap4iez",
+                    "name": "Set Variables",
+                    "title": "IF any Action fails",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": true,
+                      "display_name": "IF any Action fails",
+                      "skip_execution": false,
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.variable_workflow_01ED39RIKY3JN46vGUznfc3mPhnVVY4ekKI$",
+                          "variable_value_new": "Some Atomcic Workflow Actions Failed Please check the Instance : $workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.instance_id$"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01ED3AG06KNG501PS5bd2U31CQCtNWlfx00",
+            "name": "Set Variables",
+            "title": "Output Results Table Email",
+            "type": "core.set_multiple_variables",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": true,
+              "display_name": "Output Results Table Email",
+              "skip_execution": false,
+              "variables_to_update": [
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.variable_workflow_01ED39RIKYHID6iTHaDZUwD7Pr2GXSdmYZX$",
+                  "variable_value_new": "\u003ch2\u003eAtomic Workflow\u003c/h2\u003e\n\n\u003ctable\u003e\n\u003ctr\u003e\n\u003cth\u003eActivity Name\u003c/th\u003e\n\u003cth\u003eTrue/False\u003c/th\u003e\n\u003cth\u003eError Code\u003c/th\u003e\n\u003cth\u003eError Message\u003c/th\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eCreate Workflow\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3A1UPLJWS1iKUldUKBB9rVuSQ6jFT1U.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eAdding Actions\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3A83UYG660Q0N3mnL1opGWvje0hAb0W.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eAdding Source to actions\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3A8X6SA213vjWNSqbG6fC6oX6gYlr5L.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eUpdating Actions\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3A9T3W5JJ1YbW5T4ah7mlRip4oHXBpK.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eValidate Workflow\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3ADLNBISA3Ce1F1pnjKrMlPZY8lRsja.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eMarking As Atomic\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3AE2C9N202JpXuYG9rNbmymYZCBPC6x.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003c/table\u003e"
+                }
+              ]
+            },
+            "object_type": "definition_activity"
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01ED3AGCDOCBB2DuytNJBmAKnMVT9ZwEtK8",
+        "name": "Group",
+        "title": "Step 2 Create Generic WF and add atomic to Generic WF",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Step 2 Create Generic WF and add atomic to Generic WF",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01ED3AGR8MNC16MUNwM5FAfLcLVw7GYCRHP",
+            "name": "Generic CCS API Request",
+            "title": "GET Workflow Schema",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "GET",
+              "continue_on_failure": false,
+              "display_name": "GET Workflow Schema",
+              "relative_url": "be-console/api/v1/workflows",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AH3QXWPA6rXWHTeUANkUkSyYy3Kvex",
+            "name": "JSONPath Query",
+            "title": "Extract workflow schema Id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extract workflow schema Id",
+              "input_json": "$activity.definition_activity_01ED3AGR8MNC16MUNwM5FAfLcLVw7GYCRHP.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$.[1].schema_id",
+                  "jsonpath_query_name": "workflow schema Id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AHJG9B4Y4ozAexxacLi3JBg1InEc28",
+            "name": "Generic CCS API Request",
+            "title": "GET Atomic Workflow Data Schema",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "GET",
+              "continue_on_failure": false,
+              "display_name": "GET Atomic Workflow Data Schema",
+              "relative_url": "be-console/api/v1/schemas/workflow.atomic_workflow?schema_type=data",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AHVBZC3E7WIvBRWVJvGzpq7r6UsdPS",
+            "name": "JSONPath Query",
+            "title": "Extract atomic workflow data schema Id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extract atomic workflow data schema Id",
+              "input_json": "$activity.definition_activity_01ED3AHJG9B4Y4ozAexxacLi3JBg1InEc28.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..schema_id",
+                  "jsonpath_query_name": "atomic-data-schema Id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AI9WZJNM5jOlkwcKPWJzOdgCSysufR",
+            "name": "Generic CCS API Request",
+            "title": "GET Atomic Workflow View Schema",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "GET",
+              "continue_on_failure": false,
+              "display_name": "GET Atomic Workflow View Schema",
+              "relative_url": "be-console/api/v1/schemas/workflow.atomic_workflow?schema_type=view",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AIM98KSR5tIAvplsafse0GRBHUIJVx",
+            "name": "JSONPath Query",
+            "title": "Extract atomic workflow view schema Id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extract atomic workflow view schema Id",
+              "input_json": "$activity.definition_activity_01ED3AI9WZJNM5jOlkwcKPWJzOdgCSysufR.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..schema_id",
+                  "jsonpath_query_name": "atomic-view-schema Id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AJ506V6H4ngzhnMbrnAMv21lIoKXMl",
+            "name": "Generic CCS API Request",
+            "title": "Create  Parent workflow",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n  \"name\" : \"Testing Atomic Workflow\",\n  \"title\" : \"Testing Atomic Workflow\",\n  \"schema_id\": \"$activity.definition_activity_01ED3AH3QXWPA6rXWHTeUANkUkSyYy3Kvex.output.jsonpath_queries.workflow schema Id$\",\n  \"properties\": {\n    \"display_name\": \"Testing Atomic Workflow\",\n    \"atomic\": {\n      \"is_atomic\": false\n    },\n    \"delete_workflow_instance\": false,\n    \"runtime_user\": {\n      \"override_target_runtime_user\": false,\n      \"specify_on_workflow_start\": false,\n      \"target_default\": true\n    },\n    \"target\": {\n      \"execute_on_target_group\": false,\n      \"execute_on_workflow_target\": false,\n      \"no_target\": true,\n      \"specify_on_workflow_start\": false\n    }\n  }\n}",
+              "api_call_method": "POST",
+              "continue_on_failure": false,
+              "display_name": "Create  Parent workflow",
+              "relative_url": "be-console/api/v1/workflows",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AJLBLF444JTNG5ocQUBle90otqBTOJ",
+            "name": "JSONPath Query",
+            "title": "Extract  Parent Workflow Id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extract  Parent Workflow Id",
+              "input_json": "$activity.definition_activity_01ED3AJ506V6H4ngzhnMbrnAMv21lIoKXMl.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "workflow_id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                },
+                {
+                  "jsonpath_query": "$..display_name",
+                  "jsonpath_query_name": "displayname",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3ALE7S7OL5yH9MsrmAOQy2zDPqRzI7d",
+            "name": "Generic CCS API Request",
+            "title": "Adding Atomic Workflow as an Action",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n  \"previous_action\":{\n\t    \"id\":\"$activity.definition_activity_01ED3AJLBLF444JTNG5ocQUBle90otqBTOJ.output.jsonpath_queries.workflow_id$\",\n    \t\"type\": \"generic.workflow\",     \n    \t\"base_type\": \"workflow\" }, \n\t\"action\":\n\t{\n\t\t\"schema_id\":\"$activity.definition_activity_01ED3AHVBZC3E7WIvBRWVJvGzpq7r6UsdPS.output.jsonpath_queries.atomic-data-schema Id$\",\n\t\t\"type\":\"workflow.atomic_workflow\",\n\t\t\"base_type\":\"subworkflow\",\n\t\t\"name\":\"insertatomic\",\n\t\t\"properties\":\n\t\t\t{\n\t\t\t\"display_name\":\"insertatomic\",\n\t\t\t\"workflow_id\":\"$activity.definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB.output.jsonpath_queries.workflow_id$\",\n\t\t\t\"input\": {\n            \"$activity.definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY.output.jsonpath_queries.DateID$\":\"$workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.start_time$\",\n            \"$activity.definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY.output.jsonpath_queries.SecStrID$\":\"test\"\n         \n       }\n},\n\t\"title\":\"insertatomic\"\n\t}\n}",
+              "api_call_method": "POST",
+              "continue_on_failure": false,
+              "display_name": "Adding Atomic Workflow as an Action",
+              "relative_url": "/be-console/api/v1/workflows/$activity.definition_activity_01ED3AJLBLF444JTNG5ocQUBle90otqBTOJ.output.jsonpath_queries.workflow_id$/actions",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3ALVZND7Q2eWTiFg2XLyr8qQZgF8Scw",
+            "name": "JSONPath Query",
+            "title": "Extracting  atomic action Id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extracting  atomic action Id",
+              "input_json": "$activity.definition_activity_01ED3ALE7S7OL5yH9MsrmAOQy2zDPqRzI7d.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "Atomic-action Id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AMB9G09B2ymimaXntnbs5eUsgQyHJa",
+            "name": "Generic CCS API Request",
+            "title": "GET Lower Action Schema",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "GET",
+              "continue_on_failure": true,
+              "display_name": "GET Lower Action Schema",
+              "relative_url": "be-console/api/v1/schemas/core.string2lower?schema_type=view",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AMPES8VG57HB9MpDnbri1Fq4nKu8t4",
+            "name": "JSONPath Query",
+            "title": "Extracting lower action schema id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extracting lower action schema id",
+              "input_json": "$activity.definition_activity_01ED3AMB9G09B2ymimaXntnbs5eUsgQyHJa.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..schema_id",
+                  "jsonpath_query_name": "Lower Action schema Id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AN4CEYDM7SmAoG90eVf5QdnIRoLuGT",
+            "name": "Generic CCS API Request",
+            "title": "Adding Lower Action",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n  \"previous_action\": {\n    \"id\": \"$activity.definition_activity_01ED3ALVZND7Q2eWTiFg2XLyr8qQZgF8Scw.output.jsonpath_queries.Atomic-action Id$\",\n    \"schema_id\": \"$activity.definition_activity_01ED3AIM98KSR5tIAvplsafse0GRBHUIJVx.output.jsonpath_queries.atomic-view-schema Id$\",\n    \"type\":\"workflow.atomic_workflow\",\n\t\t\"base_type\":\"subworkflow\"\n  },\n  \"action\": {\n    \"schema_id\": \"$activity.definition_activity_01ED3AMPES8VG57HB9MpDnbri1Fq4nKu8t4.output.jsonpath_queries.Lower Action schema Id$\",\n    \"type\": \"core.string2lower\",\n    \"base_type\": \"activity\",\n    \"name\": \"To Lower\",\n    \"properties\": {\n      \"continue_on_failure\": false,\n      \"display_name\": \"To Lower\",\n      \"source\": \"$activity.$activity.definition_activity_01ED3ALVZND7Q2eWTiFg2XLyr8qQZgF8Scw.output.jsonpath_queries.Atomic-action Id$.output.$activity.definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY.output.jsonpath_queries.StringID$$\"\n    },\n    \"title\": \"To Lower\"\n  }\n}",
+              "api_call_method": "POST",
+              "continue_on_failure": false,
+              "display_name": "Adding Lower Action",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3AJLBLF444JTNG5ocQUBle90otqBTOJ.output.jsonpath_queries.workflow_id$/actions",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3ANKTR7381OqgAEQkKq8zqmTykWpXeg",
+            "name": "JSONPath Query",
+            "title": "Extracting  Lower action Id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extracting  Lower action Id",
+              "input_json": "$activity.definition_activity_01ED3AN4CEYDM7SmAoG90eVf5QdnIRoLuGT.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "Lower-action Id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AO0MHY6U7b7gLyt08CYnhKqPUdhBrf",
+            "name": "Generic CCS API Request",
+            "title": "Adding Python Action",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_body": "{\n  \"previous_action\": {\n    \"id\": \"$activity.definition_activity_01ED3ANKTR7381OqgAEQkKq8zqmTykWpXeg.output.jsonpath_queries.Lower-action Id$\",\n    \"schema_id\": \"$activity.definition_activity_01ED3AMPES8VG57HB9MpDnbri1Fq4nKu8t4.output.jsonpath_queries.Lower Action schema Id$\",\n    \"type\": \"core.string2lower\",\n    \"base_type\": \"activity\"\n  },\n  \"action\": {\n    \"schema_id\": \"$activity.definition_activity_01ED3A7Q4UWHI6gMZ25Lp4n2UxjPhYbXhyR.output.jsonpath_queries.Python schema Id$\",\n    \"type\": \"python3.script\",\n    \"base_type\": \"activity\",\n    \"name\": \"Python script to Print output values\",\n    \"properties\": {\n      \"action_timeout\": 180,\n      \"continue_on_failure\": false,\n      \"display_name\": \"Execute Python Script\",\n      \"script\": \"num1 = $activity.$activity.definition_activity_01ED3ALVZND7Q2eWTiFg2XLyr8qQZgF8Scw.output.jsonpath_queries.Atomic-action Id$.output.$activity.definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY.output.jsonpath_queries.NumberID$$ \\nbool1 = '$activity.$activity.definition_activity_01ED3ALVZND7Q2eWTiFg2XLyr8qQZgF8Scw.output.jsonpath_queries.Atomic-action Id$.output.$activity.definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY.output.jsonpath_queries.BooleanID$$' \\nstr1 = '$activity.$activity.definition_activity_01ED3ALVZND7Q2eWTiFg2XLyr8qQZgF8Scw.output.jsonpath_queries.Atomic-action Id$.output.$activity.definition_activity_01ED3AATKQAN860EK0BtxtP15NTBysGhQeY.output.jsonpath_queries.StringID$$' \\nprint('Output variables from atomic Worflow are Number: {0}, Boolean: {1}, String: {2}'.format(num1,bool1,str1))\",\n      \"skip_execution\": false,\n      \"description\": \"test\"\n    }\n  }\n}",
+              "api_call_method": "POST",
+              "continue_on_failure": false,
+              "display_name": "Adding Python Action",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3AJLBLF444JTNG5ocQUBle90otqBTOJ.output.jsonpath_queries.workflow_id$/actions",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AOLJQQ2A6IkS8rszttxxH9qE3p8rLX",
+            "name": "JSONPath Query",
+            "title": "Extracting Python action id",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extracting Python action id",
+              "input_json": "$activity.definition_activity_01ED3AO0MHY6U7b7gLyt08CYnhKqPUdhBrf.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "Python action id",
+                  "jsonpath_query_type": "string",
+                  "zdate_type_format": ""
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AP051H0B2rNEYzjvXpD3TjsFufhrdt",
+            "name": "Generic CCS API Request",
+            "title": "Validate worklfow",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "POST",
+              "continue_on_failure": false,
+              "display_name": "Validate worklfow",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3AJLBLF444JTNG5ocQUBle90otqBTOJ.output.jsonpath_queries.workflow_id$/validate",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3APGPDG8L7bnQJ3EHXjzaOwJy853DJc",
+            "name": "Generic CCS API Request",
+            "title": "Run Workflow",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "POST",
+              "continue_on_failure": true,
+              "display_name": "Run Workflow",
+              "relative_url": "be-console/api/v1/workflows/ui/start?workflow_id=$activity.definition_activity_01ED3AJLBLF444JTNG5ocQUBle90otqBTOJ.output.jsonpath_queries.workflow_id$\u0026sync=true",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3APRI0CG64eQUen4zBzeQIuWxbkYrNy",
+            "name": "Condition Block",
+            "title": "All Actions Results",
+            "type": "logic.if_else",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": true,
+              "display_name": "All Actions Results",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "blocks": [
+              {
+                "unique_name": "definition_activity_01ED3AQ0URG9O5VItGETUp3910QRHFfamkL",
+                "name": "Condition Branch",
+                "title": "Pass == 200",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": {
+                      "left_operand": {
+                        "left_operand": {
+                          "left_operand": {
+                            "left_operand": {
+                              "left_operand": "$activity.definition_activity_01ED3AJ506V6H4ngzhnMbrnAMv21lIoKXMl.output.succeeded$",
+                              "operator": "eq",
+                              "right_operand": true
+                            },
+                            "operator": "and",
+                            "right_operand": {
+                              "left_operand": "$activity.definition_activity_01ED3ALE7S7OL5yH9MsrmAOQy2zDPqRzI7d.output.succeeded$",
+                              "operator": "eq",
+                              "right_operand": true
+                            }
+                          },
+                          "operator": "and",
+                          "right_operand": {
+                            "left_operand": "$activity.definition_activity_01ED3AN4CEYDM7SmAoG90eVf5QdnIRoLuGT.output.succeeded$",
+                            "operator": "eq",
+                            "right_operand": true
+                          }
+                        },
+                        "operator": "and",
+                        "right_operand": {
+                          "left_operand": "$activity.definition_activity_01ED3AP051H0B2rNEYzjvXpD3TjsFufhrdt.output.succeeded$",
+                          "operator": "eq",
+                          "right_operand": true
+                        }
+                      },
+                      "operator": "and",
+                      "right_operand": {
+                        "left_operand": "$activity.definition_activity_01ED3A9T3W5JJ1YbW5T4ah7mlRip4oHXBpK.output.succeeded$",
+                        "operator": "eq",
+                        "right_operand": true
+                      }
+                    },
+                    "operator": "and",
+                    "right_operand": {
+                      "left_operand": "$activity.definition_activity_01ED3APGPDG8L7bnQJ3EHXjzaOwJy853DJc.output.succeeded$",
+                      "operator": "eq",
+                      "right_operand": true
+                    }
+                  },
+                  "continue_on_failure": true,
+                  "display_name": "Pass == 200",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED3AQEOE9TY3A8kJVyRHQrRum6qVlZaC6",
+                    "name": "Set Variables",
+                    "title": "All Actions Should Pass",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": true,
+                      "display_name": "All Actions Should Pass",
+                      "skip_execution": false,
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.variable_workflow_01ED39RIKY3JN46vGUznfc3mPhnVVY4ekKI$",
+                          "variable_value_new": "All Parent workflow Actions Passed"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01ED3AQODSJMR5TBhLt1QelFU44dzUe6bZZ",
+                "name": "Condition Branch",
+                "title": "Fail == 400",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": {
+                      "left_operand": {
+                        "left_operand": {
+                          "left_operand": {
+                            "left_operand": "$activity.definition_activity_01ED3AJ506V6H4ngzhnMbrnAMv21lIoKXMl.output.succeeded$",
+                            "operator": "eq",
+                            "right_operand": false
+                          },
+                          "operator": "or",
+                          "right_operand": {
+                            "left_operand": "$activity.definition_activity_01ED3ALE7S7OL5yH9MsrmAOQy2zDPqRzI7d.output.succeeded$",
+                            "operator": "eq",
+                            "right_operand": false
+                          }
+                        },
+                        "operator": "or",
+                        "right_operand": {
+                          "left_operand": "$activity.definition_activity_01ED3AN4CEYDM7SmAoG90eVf5QdnIRoLuGT.output.succeeded$",
+                          "operator": "eq",
+                          "right_operand": false
+                        }
+                      },
+                      "operator": "or",
+                      "right_operand": {
+                        "left_operand": "$activity.definition_activity_01ED3AP051H0B2rNEYzjvXpD3TjsFufhrdt.output.succeeded$",
+                        "operator": "eq",
+                        "right_operand": false
+                      }
+                    },
+                    "operator": "or",
+                    "right_operand": {
+                      "left_operand": "$activity.definition_activity_01ED3APGPDG8L7bnQJ3EHXjzaOwJy853DJc.output.succeeded$",
+                      "operator": "eq",
+                      "right_operand": false
+                    }
+                  },
+                  "continue_on_failure": true,
+                  "display_name": "Fail == 400",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED3AQYCSSW861rax7UXrSOOcRo8iS4RCK",
+                    "name": "Set Variables",
+                    "title": "IF any Action fails",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": true,
+                      "display_name": "IF any Action fails",
+                      "skip_execution": false,
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.variable_workflow_01ED39RIKY3JN46vGUznfc3mPhnVVY4ekKI$",
+                          "variable_value_new": "Some Atomcic Workflow Actions Failed Please check the Instance : $workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.instance_id$"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01ED3AR7LS2IW4wMXRrvpggeKqkPtvrVVev",
+            "name": "Set Variables",
+            "title": "Output Results Table Email",
+            "type": "core.set_multiple_variables",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": true,
+              "display_name": "Output Results Table Email",
+              "skip_execution": false,
+              "variables_to_update": [
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.variable_workflow_01ED39RIKYQ021PXUwgQxjs484M1uqkhkAx$",
+                  "variable_value_new": "\u003ch2\u003eParent Workflow\u003c/h2\u003e\n\n\u003ctable\u003e\n\u003ctr\u003e\n\u003cth\u003eActivity Name\u003c/th\u003e\n\u003cth\u003eTrue/False\u003c/th\u003e\n\u003cth\u003eError Code\u003c/th\u003e\n\u003cth\u003eError Message\u003c/th\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eCreate Parent Workflow\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3AJ506V6H4ngzhnMbrnAMv21lIoKXMl.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eAdding Atomic Workflow as Action\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3ALE7S7OL5yH9MsrmAOQy2zDPqRzI7d.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eAdding To Lower Action with Atomic WF Output \u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3AN4CEYDM7SmAoG90eVf5QdnIRoLuGT.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eAdding Pythonr Action with Atomic WF Output \u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3AO0MHY6U7b7gLyt08CYnhKqPUdhBrf.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eValidate Workflow\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3AP051H0B2rNEYzjvXpD3TjsFufhrdt.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eRun Workflow\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3APGPDG8L7bnQJ3EHXjzaOwJy853DJc.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003c/table\u003e"
+                }
+              ]
+            },
+            "object_type": "definition_activity"
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01ED3ARLJQP5R6KSyZU8sYOFShomiLYt9sd",
+        "name": "Group",
+        "title": "Step 4 Execute parent WF, Validate then delete instances",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "description": "Delete Parent, Child Instances and remove atomic WF",
+          "display_name": "Step 4 Execute parent WF, Validate then delete instances",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01ED3AS14HLC80WuY6gjYkmn0d9MCWGJ5Wg",
+            "name": "Generic CCS API Request",
+            "title": "Get Instance ID",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "GET",
+              "continue_on_failure": false,
+              "display_name": "Get Instance ID",
+              "relative_url": "be-console/api/v1/instances?workflow_id=$activity.definition_activity_01ED3AJLBLF444JTNG5ocQUBle90otqBTOJ.output.jsonpath_queries.workflow_id$",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3ASIBHTEM6WfWFaGhTt8b3QTpUiYDt6",
+            "name": "JSONPath Query",
+            "title": "Extract Instance ID",
+            "type": "corejava.jsonpathquery",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Extract Instance ID",
+              "input_json": "$activity.definition_activity_01ED3AS14HLC80WuY6gjYkmn0d9MCWGJ5Wg.output.response_body$",
+              "jsonpath_queries": [
+                {
+                  "jsonpath_query": "$..id",
+                  "jsonpath_query_name": "instance-id",
+                  "jsonpath_query_type": "string"
+                }
+              ],
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AT28MF8R14I4dqN1sUBETvY9zZ7IGc",
+            "name": "Generic CCS API Request",
+            "title": "Delete Parent Workflow Instance",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "DELETE",
+              "continue_on_failure": false,
+              "display_name": "Delete Parent Workflow Instance",
+              "relative_url": "be-console/api/v1/instances/$activity.definition_activity_01ED3ASIBHTEM6WfWFaGhTt8b3QTpUiYDt6.output.jsonpath_queries.instance-id$",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3ATJMLA5O13FtJoDdLByIsIc9dDDDM4",
+            "name": "Generic CCS API Request",
+            "title": "Delete Parent Workflow",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "DELETE",
+              "continue_on_failure": false,
+              "display_name": "Delete Parent Workflow",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3AJLBLF444JTNG5ocQUBle90otqBTOJ.output.jsonpath_queries.workflow_id$",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AU0B2YQM1S3lz1nYeg0L1aqDkHHzK6",
+            "name": "Generic CCS API Request",
+            "title": "Delete Child Atomic Workflow",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "DELETE",
+              "continue_on_failure": false,
+              "display_name": "Delete Child Atomic Workflow",
+              "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01ED3A28E1RJX3SQdPWfreXkzvldDsyDzmB.output.jsonpath_queries.workflow_id$",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AUHOMME87lw3Q3f9NROtC5GvOZfjhQ",
+            "name": "Generic CCS API Request",
+            "title": "Delete SMTP Target",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "DELETE",
+              "continue_on_failure": false,
+              "display_name": "Delete SMTP Target",
+              "relative_url": "be-console/api/v1/targets/$activity.definition_activity_01ED3A3XQ0MG63ceeHOziRqWCIS5xApq9Sf.output.jsonpath_queries.Target_id$",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AV2SN8MO7BuDh6J9M4O390eVVo7TGi",
+            "name": "Generic CCS API Request",
+            "title": "Delete SMTP Account Key",
+            "type": "ccs.api_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "api_call_method": "DELETE",
+              "continue_on_failure": false,
+              "display_name": "Delete SMTP Account Key",
+              "relative_url": "be-console/api/v1/runtime_users/$activity.definition_activity_01ED3A30SV8K6210edcUdETSNwj4OduLOm5.output.jsonpath_queries.account_key_id$",
+              "runtime_user": {
+                "override_target_runtime_user": false,
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "override_workflow_target": true,
+                "target_id": "definition_target_01f9IQgvQRJv3tvlqwR145Bbrye0toH0Q"
+              }
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01ED3AVOBPV4J4REuba33BRN9Bcm7JEe4PC",
+            "name": "Condition Block",
+            "title": "All Actions Results",
+            "type": "logic.if_else",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": true,
+              "display_name": "All Actions Results",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "blocks": [
+              {
+                "unique_name": "definition_activity_01ED3AVWVR6TB5N0nhZwiakLwwH8P5ulfN9",
+                "name": "Condition Branch",
+                "title": "Pass == 200",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": {
+                      "left_operand": {
+                        "left_operand": "$activity.definition_activity_01ED3AT28MF8R14I4dqN1sUBETvY9zZ7IGc.output.succeeded$",
+                        "operator": "eq",
+                        "right_operand": true
+                      },
+                      "operator": "and",
+                      "right_operand": {
+                        "left_operand": "$activity.definition_activity_01ED3ATJMLA5O13FtJoDdLByIsIc9dDDDM4.output.succeeded$",
+                        "operator": "eq",
+                        "right_operand": true
+                      }
+                    },
+                    "operator": "and",
+                    "right_operand": {
+                      "left_operand": "$activity.definition_activity_01ED3AU0B2YQM1S3lz1nYeg0L1aqDkHHzK6.output.succeeded$",
+                      "operator": "eq",
+                      "right_operand": true
+                    }
+                  },
+                  "continue_on_failure": true,
+                  "display_name": "Pass == 200",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED3AW6VKSRP7ldQ0VatAOHT3ANl4srZFv",
+                    "name": "Set Variables",
+                    "title": "All Actions Should Pass",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": true,
+                      "display_name": "All Actions Should Pass",
+                      "skip_execution": false,
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.variable_workflow_01ED39RIKY3JN46vGUznfc3mPhnVVY4ekKI$",
+                          "variable_value_new": "All Parent workflow Actions Passed"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01ED3AWLBH4TD1ISB9oa94rtd9GFEkULZWA",
+                "name": "Condition Branch",
+                "title": "Fail == 400",
+                "type": "logic.condition_block",
+                "base_type": "activity",
+                "properties": {
+                  "condition": {
+                    "left_operand": {
+                      "left_operand": {
+                        "left_operand": "$activity.definition_activity_01ED3AT28MF8R14I4dqN1sUBETvY9zZ7IGc.output.succeeded$",
+                        "operator": "eq",
+                        "right_operand": false
+                      },
+                      "operator": "or",
+                      "right_operand": {
+                        "left_operand": "$activity.definition_activity_01ED3ATJMLA5O13FtJoDdLByIsIc9dDDDM4.output.succeeded$",
+                        "operator": "eq",
+                        "right_operand": false
+                      }
+                    },
+                    "operator": "or",
+                    "right_operand": {
+                      "left_operand": "$activity.definition_activity_01ED3AU0B2YQM1S3lz1nYeg0L1aqDkHHzK6.output.succeeded$",
+                      "operator": "eq",
+                      "right_operand": false
+                    }
+                  },
+                  "continue_on_failure": true,
+                  "display_name": "Fail == 400",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01ED3AWWB9VLW5EAi7qtsjhMqU2HvMw1Xva",
+                    "name": "Set Variables",
+                    "title": "IF any Action fails",
+                    "type": "core.set_multiple_variables",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": true,
+                      "display_name": "IF any Action fails",
+                      "skip_execution": false,
+                      "variables_to_update": [
+                        {
+                          "variable_to_update": "$workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.variable_workflow_01ED39RIKY3JN46vGUznfc3mPhnVVY4ekKI$",
+                          "variable_value_new": "Some Atomcic Workflow Actions Failed Please check the Instance : $workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.instance_id$"
+                        }
+                      ]
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01ED3AX5VI7UN5DatLy0HkfyipdMRtXxscU",
+            "name": "Set Variables",
+            "title": "Output Results Table Email",
+            "type": "core.set_multiple_variables",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": true,
+              "display_name": "Output Results Table Email",
+              "skip_execution": false,
+              "variables_to_update": [
+                {
+                  "variable_to_update": "$workflow.definition_workflow_01ED39RIW940U6Hho35Y6vBvQ2Ch2WIG3EQ.output.variable_workflow_01ED39RIKYU8M5Q5W6bQF9WXn3DKMK70Xbj$",
+                  "variable_value_new": "\u003ch2\u003eAtomic Workflow\u003c/h2\u003e\n\n\u003ctable\u003e\n\u003ctr\u003e\n\u003cth\u003eActivity Name\u003c/th\u003e\n\u003cth\u003eTrue/False\u003c/th\u003e\n\u003cth\u003eError Code\u003c/th\u003e\n\u003cth\u003eError Message\u003c/th\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eDeleting Parent Instances\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3AT28MF8R14I4dqN1sUBETvY9zZ7IGc.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eDeleting Parent Workflow\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3ATJMLA5O13FtJoDdLByIsIc9dDDDM4.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eDeleting Child Workflow\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3AU0B2YQM1S3lz1nYeg0L1aqDkHHzK6.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eDeleting  SMTP Target\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3AUHOMME87lw3Q3f9NROtC5GvOZfjhQ.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003ctr\u003e\n\u003ctd\u003eDeleting SMTP Account Key\u003c/td\u003e\n\u003ctd\u003e$activity.definition_activity_01ED3AV2SN8MO7BuDh6J9M4O390eVVo7TGi.output.succeeded$\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\n\u003c/table\u003e"
+                }
+              ]
+            },
+            "object_type": "definition_activity"
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_01A6G0DX5INHM6ldk8Lqix0oZCVNmTckhEd"
+    ]
+  },
+  "categories": {
+    "category_01A6G0DX5INHM6ldk8Lqix0oZCVNmTckhEd": {
+      "unique_name": "category_01A6G0DX5INHM6ldk8Lqix0oZCVNmTckhEd",
+      "name": "Regression",
+      "title": "Regression",
+      "type": "basic.category",
+      "base_type": "category",
+      "category_type": "custom",
+      "object_type": "category"
+    }
+  }
+}
