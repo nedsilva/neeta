@@ -9,6 +9,18 @@
       {
         "schema_id": "datatype.string",
         "properties": {
+          "value": "-----BEGIN CERTIFICATE-----\\nMIIEATCCAukCAQQwDQYJKoZIhvcNAQELBQAwMTEgMB4GA1UEAwwXVExTR2VuU2Vs\\nZlNpZ25lZHRSb290Q0ExDTALBgNVBAcMBCQkJCQwHhcNMjAwMjE5MjAxODAxWhcN\\nMzAwMjE2MjAxODAxWjBcMQswCQYDVQQGEwJVUzELMAkGA1UECAwCVFgxEzARBgNV\\nBAcMClJpY2hhcmRzb24xDjAMBgNVBAoMBUNpc2NvMQswCQYDVQQLDAJBTzEOMAwG\\nA1UEAwwFYWRtaW4wggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCZlJNk\\nbsH5hybgsxEdl+5qFGtnGVrQf0vTdEuCI4HrZz0lby/uVcRGW/d//DdS2R6XyQDM\\nPgT0KoyYwvWh4SyFQDFKs2P/5hOtNTKwti59NClG4zqOnvOUxtRDc+sHZSj0VlVF\\nc2i8vm7KFw0e+lcN6vQvs+ia7l3XsUX2VyKjfO6yodgS5cL46nXmPLmOXoFNFgpX\\nA6/MrYAOvf/GzZLoEP4MHsWG2/dMTgVua6Cybs834q5OyvLF8Bjmg5dIrwtTKqEz\\nRGnYOtOfDSshRSNryKn/lIWYCtcG53ZwSobNZwRmiYEF6iSZKO0Q3wKB9+Rgczr3\\nP+3KI98hws1LT2z9YP/Ox+XklV2gYQDHylGl9cblsIyJYSgl4s4FoMC7/6Hv7caP\\nZHnoLEUXQB0El17xHdliJ8jjfS7bH+IvOd72xMa0atxJFV/CwWabmIAiX8BU1rFw\\nSyWtZ50jfwbnDp8dhofoK6HS2Ydu93MTD3iAMOm41YZ04Kbh1th0mnDiKJgCPiCd\\nEMYCZt5i6TdRuWDhvFVdZ89o8PmyiVziDKiRtOccA+AKoAtLcNJbdEFpUyv12eed\\nT1YGHYJ6CIMsWly711lTE2OqtLYApGkXdIYy4HnUZ9I5KrH7MUz3i0UfiXVaRHUa\\nd57ZmWY26xxNty3BqEO6RZSM2544alyjey46SQIDAQABMA0GCSqGSIb3DQEBCwUA\\nA4IBAQDAoGgd08uMqz/llyIqv/40o18YTSh4kP53taQu0cActVdN1eNUa08ndFUU\\nrxfsc3wT2lbTlZCpB1ghmVqsmx+2aNl76jdmioOD/v2Nr3CeayC9XRx3tT6HMXNS\\nXnxDXWOd8jypZn8qEpJcB9eD7f/X5az/Shdu0n6Fq7B0828RJeYYeZRuomjTezXn\\nhzaqVloEN6CCeFGBZV+FqLIwtV8amKU5LtACtrZ2NMC9m7RLwcXjek2wfxHVbHKh\\n70h1ofl/wioVKvz8O9SWnq3lYYD+QTboxLcWyphzpSBQuFwtkBIakmU8GRbDeXDh\\nWGeGxia8UdZZT+lxHwgrR8CeaR3D\\n-----END CERTIFICATE-----",
+          "scope": "local",
+          "name": "crt",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01GLS8QVKGA40017IHEfhFJfS0BZQPGnwE2",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
           "value": "-----BEGIN RSA PRIVATE KEY-----\\nMIIJKQIBAAKCAgEAmZSTZG7B+Ycm4LMRHZfuahRrZxla0H9L03RLgiOB62c9JW8v\\n7lXERlv3f/w3Utkel8kAzD4E9CqMmML1oeEshUAxSrNj/+YTrTUysLYufTQpRuM6\\njp7zlMbUQ3PrB2Uo9FZVRXNovL5uyhcNHvpXDer0L7Pomu5d17FF9lcio3zusqHY\\nEuXC+Op15jy5jl6BTRYKVwOvzK2ADr3/xs2S6BD+DB7Fhtv3TE4Fbmugsm7PN+Ku\\nTsryxfAY5oOXSK8LUyqhM0Rp2DrTnw0rIUUja8ip/5SFmArXBud2cEqGzWcEZomB\\nBeokmSjtEN8CgffkYHM69z/tyiPfIcLNS09s/WD/zsfl5JVdoGEAx8pRpfXG5bCM\\niWEoJeLOBaDAu/+h7+3Gj2R56CxFF0AdBJde8R3ZYifI430u2x/iLzne9sTGtGrc\\nSRVfwsFmm5iAIl/AVNaxcEslrWedI38G5w6fHYaH6Cuh0tmHbvdzEw94gDDpuNWG\\ndOCm4dbYdJpw4iiYAj4gnRDGAmbeYuk3Ublg4bxVXWfPaPD5solc4gyokbTnHAPg\\nCqALS3DSW3RBaVMr9dnnnU9WBh2CegiDLFpcu9dZUxNjqrS2AKRpF3SGMuB51GfS\\nOSqx+zFM94tFH4l1WkR1Gnee2ZlmNuscTbctwahDukWUjNueOGpco3suOkkCAwEA\\nAQKCAgEAkZuq7qKP5/s6YfmENbGRSiPX/GSulFTMWEu/N0Bg8gXslCxJnkbUkvyo\\nuEAxV6wgdDoPNpVqbvBUYpUc+4CYjDFjSnawTbMeXq68Q4xGoVAt/lZ7czLCsACe\\nyOEDKPzBCn8701/rIl/OfG3Ec+VXWguzvfJti06JzHD3auoMHkLZsKT/TlNmOkdY\\nxpQ2PQPexW4rGXqWV5D7g36iHSNUsA9EPcuC7Sxp1391aM5ECkhC0LJrHqsN55qO\\nkSab7T6AlzYopYmsbGTBtN9wT9fUEGGsw3NWAePtIE+dHDOcgOu14V1m5WurjUaf\\nFMrK/tw/Oy6k7jw/P9IowEKID2nbYxtei3Ho4DSbM0iFZ4nedVJfGGF/oJn/NTY/\\njgWNXu0YQrGHf60Zm1lLkk0PBrrOXYN3vPrx5u1CXYs8H05vqOYfIR8pqO3mrr2+\\nh67ZuGSfh10uqux6Np3uhocyX4y0mRV91CtY1Dub1GMUt2/jduu5aJWX7errr7XG\\nK+YR+oij9HdYPRDVJUsm2FLYkXYUIW6OalJifug7Mn3aSwpnKooiXSw8AwFOBJJd\\nAKsd9vq+geSEkS/mMlRTbR7rkPAjov2rWNkAJREPhQknCOyqog6pjan3il0j499i\\nyfWqKjRnGOIkkffeg0J6nhj+Jj8sGAqH4RtkZvTZk2JCyE4MkXECggEBAMpRkei8\\npm0qHjQuEbMOQ78fOUzFO/XHVtlbTs+yVs7UEJ0V8s2x39hd3Li3VSIBrERPPPxw\\njSphLNK+RQr0GbgWNpFRsS9We6PSWsZgPRq8N17oft6X0OHR2f5WmrG2GQBNKNko\\noaQA6WgOvf9IQObMtGGtAYwzlGBIkNi7CVTHtr481MN3EoZh2WtCqpYGEcnei0W5\\nuSF+BmSlg/u9sZGq3TAsp4SnPh6BHZ6wOsk1ToVJfQfvb0JreKM57B7w4pjNB9x+\\n0VJ/qp1khKRURdzLwjRCIxQYC5CT8kA4yRU/to17UhjKs9LiBLgHKu0u9ZC1P+C2\\ndX43QLMnwpTCkM0CggEBAMJUeYq4GOKN1DTnYJT9s0SmK6wn1cUyPz+/Uklks0nh\\n2fOlUEmADq1arbPeKCb3qJ8xxJ3y/QQu6Ck2+NHN35N5FYINgxTrhjEhvhogB9Gq\\nw23li0mBFKIWAbQactcA5f6LOuLddbL9RBnYnWBFP3punByqs8KQldvkLvBFi0K1\\nC12O+0zAUx+zMzkr9IfhvPJagRBDF76IYT2Rwo0vmCJbsD7jMgHFrnfKguPdgFxE\\nESRP65kPC5drOuKzvAZRzy2BjPkpwLY9DSUXA7qYadrp31hpbSecq/V0BDdIo7Pn\\niMoGZuiX5CFsA1kKJ6p2i8JBUKHH0iahziYmn/kE320CggEBALhyjTdFZeT4FPk1\\nVuWLB7BiYvbeib+UsFUQrVUlHYcKRusva2Cj3ZOAXw339iE+rTLJmqv6YHhWh2rK\\nFF/cEuaFOdJaS9MAYVAFIsTgUFTjaweXprKAbeqySq9ZfUau4TQpJCh2pobCXgiE\\nCCuIT8MatQinlVWgYJE3Fva/7c3hFXVyN/bLw5PH+VOUP7juZ6FGxmoW2/Tw1BtF\\n2oHTeuN2hpi43TBO2I8u3zYhLDbr5l4VlWt6mlBPcng9AktjCPKNWbFn3KX9xiof\\nzd2TBu44xSCnexuCoGh6uMxb+Nbqcx+hYkM/6ZlEfVDZGAWMXkxDMa1IKu2aqd2r\\nTfYZO7ECggEAHSLRPk0v3ffp0yzFvFD1aduIPL2UPYa1GPe0fLCOeQtVxEQK75o1\\nmSQ5Wvh6CK2lKIkrs4rVCKWHxXYqhDpbxR6obOFdv+s4KXGnsP8QbQ0vU/DQm2qx\\nD0RBaSF2CmpmEW4KnC0cEoQKi92Aawi25cJjwaCOZyOKdHeX2gpzQMMoOxTO9Mj5\\nLY2OponClgTwcV3EcA2/J6AHBFYwVz7FjpE0sZkazE05RVilm0iAkFTcRRd+eWpa\\nEI/ROmA8Vq45Y9dCrbDm5evtZpw2wOlNJbde90CHTyMcXSbR4wAPG1AhoDipgUIU\\nwDYTomv1Wod/mNZ2Imt1RLmJ0QqFfa6PWQKCAQAHY3rGL7Q6LeQyubwmA9sF40eM\\nmShe1wY2EVsPcJMmTqAQormg0SiYf2J7A11h6g68LhwGX6/N72INab0yGt252ERM\\n5y8CDDIX5YQ/AwvrPUMxdoH1ARpNAtGxtin4p60QjAeqnd1uvGuTVrbUQM41Usna\\nyW4A6dtaeGxinj4B/FGTzgbqLAM8Lu490JyVlUyC9T9T6IwW+H8ciSJJLt1x8iHV\\nFqTBNYru0AJHrhfdxap9JkFAUmdPy9w/2ZKWeGSYoT9Sc1XNXoWVTQxbyNbN94Gv\\nacAo+T2SpmGvbB12KPFZUtzbSFFsd/2HeYeamHAz51FyWSXx/hExISPsSKFl\\n-----END RSA PRIVATE KEY-----",
           "scope": "local",
           "name": "key",
@@ -88,18 +100,6 @@
           "is_required": false
         },
         "unique_name": "variable_workflow_01GLS8CGVH1TU6gXH22yn6pUMRqNBcOU0rb",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "-----BEGIN CERTIFICATE-----\\nMIIEATCCAukCAQQwDQYJKoZIhvcNAQELBQAwMTEgMB4GA1UEAwwXVExTR2VuU2Vs\\nZlNpZ25lZHRSb290Q0ExDTALBgNVBAcMBCQkJCQwHhcNMjAwMjE5MjAxODAxWhcN\\nMzAwMjE2MjAxODAxWjBcMQswCQYDVQQGEwJVUzELMAkGA1UECAwCVFgxEzARBgNV\\nBAcMClJpY2hhcmRzb24xDjAMBgNVBAoMBUNpc2NvMQswCQYDVQQLDAJBTzEOMAwG\\nA1UEAwwFYWRtaW4wggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCZlJNk\\nbsH5hybgsxEdl+5qFGtnGVrQf0vTdEuCI4HrZz0lby/uVcRGW/d//DdS2R6XyQDM\\nPgT0KoyYwvWh4SyFQDFKs2P/5hOtNTKwti59NClG4zqOnvOUxtRDc+sHZSj0VlVF\\nc2i8vm7KFw0e+lcN6vQvs+ia7l3XsUX2VyKjfO6yodgS5cL46nXmPLmOXoFNFgpX\\nA6/MrYAOvf/GzZLoEP4MHsWG2/dMTgVua6Cybs834q5OyvLF8Bjmg5dIrwtTKqEz\\nRGnYOtOfDSshRSNryKn/lIWYCtcG53ZwSobNZwRmiYEF6iSZKO0Q3wKB9+Rgczr3\\nP+3KI98hws1LT2z9YP/Ox+XklV2gYQDHylGl9cblsIyJYSgl4s4FoMC7/6Hv7caP\\nZHnoLEUXQB0El17xHdliJ8jjfS7bH+IvOd72xMa0atxJFV/CwWabmIAiX8BU1rFw\\nSyWtZ50jfwbnDp8dhofoK6HS2Ydu93MTD3iAMOm41YZ04Kbh1th0mnDiKJgCPiCd\\nEMYCZt5i6TdRuWDhvFVdZ89o8PmyiVziDKiRtOccA+AKoAtLcNJbdEFpUyv12eed\\nT1YGHYJ6CIMsWly711lTE2OqtLYApGkXdIYy4HnUZ9I5KrH7MUz3i0UfiXVaRHUa\\nd57ZmWY26xxNty3BqEO6RZSM2544alyjey46SQIDAQABMA0GCSqGSIb3DQEBCwUA\\nA4IBAQDAoGgd08uMqz/llyIqv/40o18YTSh4kP53taQu0cActVdN1eNUa08ndFUU\\nrxfsc3wT2lbTlZCpB1ghmVqsmx+2aNl76jdmioOD/v2Nr3CeayC9XRx3tT6HMXNS\\nXnxDXWOd8jypZn8qEpJcB9eD7f/X5az/Shdu0n6Fq7B0828RJeYYeZRuomjTezXn\\nhzaqVloEN6CCeFGBZV+FqLIwtV8amKU5LtACtrZ2NMC9m7RLwcXjek2wfxHVbHKh\\n70h1ofl/wioVKvz8O9SWnq3lYYD+QTboxLcWyphzpSBQuFwtkBIakmU8GRbDeXDh\\nWGeGxia8UdZZT+lxHwgrR8CeaR3D\\n-----END CERTIFICATE-----",
-          "scope": "local",
-          "name": "crt",
-          "type": "datatype.string",
-          "is_required": false
-        },
-        "unique_name": "variable_workflow_01GLS8QVKGA40017IHEfhFJfS0BZQPGnwE2",
         "object_type": "variable_workflow"
       }
     ],
@@ -842,11 +842,38 @@
                       "continue_on_failure": false,
                       "display_name": "Sleep",
                       "skip_execution": false,
-                      "sleep_interval": 10
+                      "sleep_interval": 5
                     },
                     "object_type": "definition_activity"
                   }
                 ]
+              },
+              {
+                "unique_name": "definition_activity_01G9QPUV0B9C4702ErWnjfJzr6BlHsABjEi",
+                "name": "\u003c--ND-Delete Workflow-Components--\u003e",
+                "title": "\u003c--ND-Delete Workflow-Components--\u003e",
+                "type": "workflow.sub_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "\u003c--ND-Delete Workflow-Components--\u003e",
+                  "input": {
+                    "variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1": "\"$activity.definition_activity_01G5HNVU0YNX74g5qm6ygW6xPniEuIBz7Td.output.jsonpath_queries.wf_id$\",\"$activity.definition_activity_01GKS9HBOOY6P1VavysCGqkyCRwWU8gjkv6.output.jsonpath_queries.wf_id$\"",
+                    "variable_workflow_01FSQUJ00XAED36oGpRaJgdLvpCdkMLMZt1": "$activity.definition_activity_01G5HNTVIJ6TD0WnUShElsQg9iXWcC3GU8V.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$",
+                    "variable_workflow_01FSQUQR0S0BX0i2t1fOe1yqW8HCuawLTch": "$activity.definition_activity_01G5HNTVIJ6TD0WnUShElsQg9iXWcC3GU8V.output.variable_workflow_01G5HN3AHKWM43a2KLfhYikofajpWPQwswz$",
+                    "variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL": "$activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$",
+                    "variable_workflow_01GA0SW6UVQFV6Wr8aklBZjase4F9E8Ac08": "$activity.definition_activity_01GA0VDF02OYA1fxTAwhnn68XlCbWOIvQFK.output.jsonpath_queries.event_id$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "no_target": true
+                  },
+                  "workflow_id": "definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe"
+                },
+                "object_type": "definition_activity"
               }
             ]
           },
@@ -1254,7 +1281,7 @@
                     "properties": {
                       "action_timeout": 180,
                       "allow_auto_redirect": true,
-                      "body": "{\n  \"previous_action\": {\n    \"id\": \"$activity.definition_activity_01GLP32XY1ZA81HjFyYgyLeARhFs2Q2S2wo.output.jsonpath_queries.wf_id$\"\n  },\n  \"action\": {\n    \"schema_id\": \"$activity.definition_activity_01GBOTP2DYJ2T5ssJPudnMFdqNcZjCwMEqj.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n    \"type\": \"amqp.publish_message\",\n    \"base_type\": \"activity\",\n    \"name\": \"Publish AMQP Message\",\n    \"properties\": {\n      \"continue_on_failure\": false,\n      \"display_name\": \"Publish AMQP Message\",\n      \"exchange_name\": \"nd_exchange\",\n      \"routing_key\": \"nd_route_direct1\",\n      \"body\": \"Test message for password based AMQP\",\n      \"app_id\": \"App-ID123\",\n      \"content_encoding\": \"content-encoding\",\n      \"content_type\": \"content-type\",\n      \"runtime_user\": {\n        \"override_target_runtime_user\": true,\n        \"runtime_user_id\": \"$activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.variable_workflow_01G5HN3AHKWM43a2KLfhYikofajpWPQwswz$\"\n      },\n      \"target\": {\n        \"override_workflow_target\": true,\n        \"target_id\": \"$activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\"\n      },\n      \"skip_execution\": false,\n      \"action_timeout\":180,\n      \"delivery_mode\":1\n      },\n    \"title\": \"Publish AMQP Message\"    \n  }\n}\n",
+                      "body": "{\n  \"previous_action\": {\n    \"id\": \"$activity.definition_activity_01GLP32XY1ZA81HjFyYgyLeARhFs2Q2S2wo.output.jsonpath_queries.wf_id$\"\n  },\n  \"action\": {\n    \"schema_id\": \"$activity.definition_activity_01GBOTP2DYJ2T5ssJPudnMFdqNcZjCwMEqj.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n    \"type\": \"amqp.publish_message\",\n    \"base_type\": \"activity\",\n    \"name\": \"Publish AMQP Message\",\n    \"properties\": {\n      \"continue_on_failure\": false,\n      \"display_name\": \"Publish AMQP Message\",\n      \"exchange_name\": \"nd_exchange_fanout\",\n      \"routing_key\": \"nd_route_fanout_1\",\n      \"body\": \"Test message for cert based AMQP\",\n      \"app_id\": \"App-ID345\",\n      \"content_encoding\": \"content-encoding\",\n      \"content_type\": \"content-type\",\n      \"runtime_user\": {\n        \"override_target_runtime_user\": true,\n        \"runtime_user_id\": \"$activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.variable_workflow_01G5HN3AHKWM43a2KLfhYikofajpWPQwswz$\"\n      },\n      \"target\": {\n        \"override_workflow_target\": true,\n        \"target_id\": \"$activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\"\n      },\n      \"skip_execution\": false,\n      \"action_timeout\":180,\n      \"delivery_mode\":1\n      },\n    \"title\": \"Publish AMQP Message\"    \n  }\n}\n",
                       "content_type": "application/json",
                       "continue_on_error_status_code": false,
                       "continue_on_failure": false,
@@ -1397,42 +1424,27 @@
                       "continue_on_failure": false,
                       "display_name": "Sleep",
                       "skip_execution": false,
-                      "sleep_interval": 10
+                      "sleep_interval": 5
                     },
                     "object_type": "definition_activity"
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "unique_name": "definition_activity_01G5HNZ5XT1JD5esZhFLDtDyL1lObJX0L4g",
-            "name": "Parallel Branch",
-            "title": "%--Certificate-Based--%",
-            "type": "logic.parallel_block",
-            "base_type": "activity",
-            "properties": {
-              "continue_on_failure": false,
-              "display_name": "%--Certificate-Based--%",
-              "skip_execution": true
-            },
-            "object_type": "definition_activity",
-            "actions": [
+              },
               {
-                "unique_name": "definition_activity_01G5HNZL0CG8H1o9DVJ3DzJcHoVU0pDFSDP",
-                "name": "%--Certificate-Based--%",
-                "title": "%--Certificate-Based--%",
+                "unique_name": "definition_activity_01GLW9H4XYPCK1Cc4TMUDuMjVIdiQu1dcDS",
+                "name": "\u003c--ND-Delete Workflow-Components--\u003e",
+                "title": "\u003c--ND-Delete Workflow-Components--\u003e",
                 "type": "workflow.sub_workflow",
                 "base_type": "subworkflow",
                 "properties": {
                   "continue_on_failure": false,
-                  "display_name": "%--Certificate-Based--%",
+                  "display_name": "\u003c--ND-Delete Workflow-Components--\u003e",
                   "input": {
-                    "variable_workflow_01G5HN3AHK97J3M2wKlVtSmON7rQnZMkKG3": "amqp_certificate_credentials",
-                    "variable_workflow_01G5HN3AHKFL25S33DOpnNYmQjtKriJqgHH": "amqp.endpoint",
-                    "variable_workflow_01G5HN3AHKJAO4xw1xq4TvrlGnDqjer1BvF": "{\n\"schema_id\":\"Tar_Schema_ID\",\n\"name\": \"amqp_CBC\",\n\"type\": \"amqp.endpoint\",\n\"base_type\": \"target\",\n\"valid\": true,\n\"def_access_meta\": {\n\"is_internal\": false\n},\n\"title\": \"amqp_CBC\",\n\"properties\": {\n\"default_runtime_user_id\": \"AK_ID\",\n\"display_name\": \"amqp_CBC\",\n\"no_runtime_user\": false,\n\"port\": 5672,\n\"host\": \"10.88.38.124\",\n\"vhost\": \"/\",\n\"description\": \"test\"\n}\n}",
-                    "variable_workflow_01G5HN3AHKMKV6Du1vq6Nx5rWQrivIe0wPj": "{\n\"schema_id\": \"AK_Schema_ID\",\n\"name\":\"AMQP Certificate Account Key\",\n\"title\":\"AMQP Certificate Account Key\",\n\"properties\":\n{\n\"display_name\":\"AMQP Certificate Account Key\",\n\"crt\":\"\",\n\"key\":\"\",\n\"password\":\"admin\",\n\"username\":\"admin\",\n\"description\":\"test\"\n}\n}",
-                    "variable_workflow_01G5HN3AHKPYX3cIVOceTONDV3CG7mo3le4": "$activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                    "variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1": "\"$activity.definition_activity_01GLP31RC1RKZ3msNb6WDm6WaTaqZltr9ej.output.jsonpath_queries.wf_id$\",\"$activity.definition_activity_01GLP32XY1ZA81HjFyYgyLeARhFs2Q2S2wo.output.jsonpath_queries.wf_id$\"",
+                    "variable_workflow_01FSQUJ00XAED36oGpRaJgdLvpCdkMLMZt1": "$activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$",
+                    "variable_workflow_01FSQUQR0S0BX0i2t1fOe1yqW8HCuawLTch": "$activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.variable_workflow_01G5HN3AHKWM43a2KLfhYikofajpWPQwswz$",
+                    "variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL": "$activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$",
+                    "variable_workflow_01GA0SW6UVQFV6Wr8aklBZjase4F9E8Ac08": "$activity.definition_activity_01GLP31KI7CJK0QLWs5d8CoypvTNd7oTGyo.output.jsonpath_queries.event_id$"
                   },
                   "runtime_user": {
                     "target_default": true
@@ -1441,245 +1453,595 @@
                   "target": {
                     "no_target": true
                   },
-                  "workflow_id": "definition_workflow_01G5HN3BQSK3V1i4wKQIy0mYsGiW1soIL4J"
-                },
-                "object_type": "definition_activity"
-              },
-              {
-                "unique_name": "definition_activity_01G5HO043CPHC4aRLFivgFDcz2dMB4hDQm6",
-                "name": "HTTP Request",
-                "title": "Cert Event Target",
-                "type": "web-service.http_request",
-                "base_type": "activity",
-                "properties": {
-                  "action_timeout": 180,
-                  "allow_auto_redirect": true,
-                  "body": "{\n  \"title\": \"amqpevent\",\n  \"target_id\": \"$activity.definition_activity_01G5HNZL0CG8H1o9DVJ3DzJcHoVU0pDFSDP.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\",\n  \"schema_id\": \"$activity.definition_activity_01G5HNR82SBKB0OU4xQrmfNmIqxNlCdsT3v.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n  \"properties\": {\n    \"title\": \"amqpevent\",\n    \"target_id\": \"$activity.definition_activity_01G5HNZL0CG8H1o9DVJ3DzJcHoVU0pDFSDP.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\",\n    \"queue_name\": \"test\"\n  }\n}",
-                  "content_type": "application/json",
-                  "continue_on_error_status_code": false,
-                  "continue_on_failure": true,
-                  "custom_headers": [
-                    {
-                      "name": "Authorization",
-                      "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
-                    }
-                  ],
-                  "display_name": "Cert Event Target",
-                  "method": "POST",
-                  "relative_url": "be-console/api/v1/events",
-                  "runtime_user": {
-                    "override_target_runtime_user": false,
-                    "target_default": true
-                  },
-                  "skip_execution": false,
-                  "target": {
-                    "override_workflow_target": false,
-                    "override_workflow_target_group_criteria": false,
-                    "use_workflow_target": true,
-                    "use_workflow_target_group": false
-                  }
-                },
-                "object_type": "definition_activity"
-              },
-              {
-                "unique_name": "definition_activity_01G5HO0P3EV3L3uoOW6sLtSXOJBbORayj0s",
-                "name": "HTTP Request",
-                "title": "Create Workflow",
-                "type": "web-service.http_request",
-                "base_type": "activity",
-                "properties": {
-                  "action_timeout": 180,
-                  "allow_auto_redirect": true,
-                  "body": "{\n  \"name\" : \"Testing AMQP Trigger Workflow\",\n  \"title\" : \"Testing AMQP Trigger Workflow\",\n  \"schema_id\": \"$activity.definition_activity_01G5HNOKOF3026ADmpWFoVwSnWnHMxEVCl1.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n  \"properties\": {\n    \"display_name\": \"Testing AMQP Trigger Workflow\",\n    \"atomic\": {\n      \"is_atomic\": false\n    },\n    \"delete_workflow_instance\": false,\n    \"runtime_user\": {\n      \"override_target_runtime_user\": false,\n      \"specify_on_workflow_start\": false,\n      \"target_default\": true\n    },\n    \"target\": {\n      \"execute_on_target_group\": false,\n      \"execute_on_workflow_target\": false,\n      \"no_target\": true,\n      \"specify_on_workflow_start\": false\n    }\n  }\n}",
-                  "content_type": "application/json",
-                  "continue_on_error_status_code": false,
-                  "continue_on_failure": false,
-                  "custom_headers": [
-                    {
-                      "name": "Authorization",
-                      "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
-                    }
-                  ],
-                  "display_name": "Create Workflow",
-                  "method": "POST",
-                  "relative_url": "be-console/api/v1/workflows",
-                  "runtime_user": {
-                    "override_target_runtime_user": false,
-                    "target_default": true
-                  },
-                  "skip_execution": false,
-                  "target": {
-                    "override_workflow_target": false,
-                    "override_workflow_target_group_criteria": false,
-                    "use_workflow_target": true,
-                    "use_workflow_target_group": false
-                  }
-                },
-                "object_type": "definition_activity"
-              },
-              {
-                "unique_name": "definition_activity_01G5HO148JN521dMAsrIEn8WLFlpzP16NrT",
-                "name": "JSONPath Query",
-                "title": "Extract Workflow ID",
-                "type": "corejava.jsonpathquery",
-                "base_type": "activity",
-                "properties": {
-                  "action_timeout": 180,
-                  "continue_on_failure": false,
-                  "display_name": "Extract Workflow ID",
-                  "input_json": "$activity.definition_activity_01G5HO0P3EV3L3uoOW6sLtSXOJBbORayj0s.output.response_body$",
-                  "jsonpath_queries": [
-                    {
-                      "jsonpath_query": "$..id",
-                      "jsonpath_query_name": "wf_id",
-                      "jsonpath_query_type": "string"
-                    },
-                    {
-                      "jsonpath_query": "$..display_name",
-                      "jsonpath_query_name": "display_name",
-                      "jsonpath_query_type": "string"
-                    }
-                  ],
-                  "skip_execution": false
-                },
-                "object_type": "definition_activity"
-              },
-              {
-                "unique_name": "definition_activity_01G5HO1J211324hPGoj2Q1zkTYENdYGR7uN",
-                "name": "HTTP Request",
-                "title": "Add To Upper",
-                "type": "web-service.http_request",
-                "base_type": "activity",
-                "properties": {
-                  "action_timeout": 180,
-                  "allow_auto_redirect": true,
-                  "body": "{\n  \"previous_action\": {\n    \"id\": \"$activity.definition_activity_01G5HO148JN521dMAsrIEn8WLFlpzP16NrT.output.jsonpath_queries.wf_id$\"\n  },\n  \"action\": {\n    \"schema_id\": \"$activity.definition_activity_01G5HNPUAOYTQ3iywgvHDsoGQ3lwGTzSEEK.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n    \"type\": \"core.string2upper\",\n    \"base_type\": \"activity\",\n    \"name\": \"To Upper\",\n    \"properties\": {\n      \"continue_on_failure\": false,\n      \"display_name\": \"To Upper\"\n    },\n    \"title\": \"To Upper\"\n  }\n}",
-                  "content_type": "application/json",
-                  "continue_on_error_status_code": false,
-                  "continue_on_failure": false,
-                  "custom_headers": [
-                    {
-                      "name": "Authorization",
-                      "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
-                    }
-                  ],
-                  "display_name": "Add To Upper",
-                  "method": "POST",
-                  "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01G5HO148JN521dMAsrIEn8WLFlpzP16NrT.output.jsonpath_queries.wf_id$/actions",
-                  "runtime_user": {
-                    "override_target_runtime_user": false,
-                    "target_default": true
-                  },
-                  "skip_execution": false,
-                  "target": {
-                    "override_workflow_target": false,
-                    "override_workflow_target_group_criteria": false,
-                    "use_workflow_target": true,
-                    "use_workflow_target_group": false
-                  }
-                },
-                "object_type": "definition_activity"
-              },
-              {
-                "unique_name": "definition_activity_01G5HO1ZUJN4Z6GM6rguvoHZUqqyKw8XTze",
-                "name": "JSONPath Query",
-                "title": "Extract Upper Action ID",
-                "type": "corejava.jsonpathquery",
-                "base_type": "activity",
-                "properties": {
-                  "action_timeout": 180,
-                  "continue_on_failure": false,
-                  "display_name": "Extract Upper Action ID",
-                  "input_json": "$activity.definition_activity_01G5HO1J211324hPGoj2Q1zkTYENdYGR7uN.output.response_body$",
-                  "jsonpath_queries": [
-                    {
-                      "jsonpath_query": "$..id",
-                      "jsonpath_query_name": "up_id",
-                      "jsonpath_query_type": "string"
-                    }
-                  ],
-                  "skip_execution": false
-                },
-                "object_type": "definition_activity"
-              },
-              {
-                "unique_name": "definition_activity_01G5HO2G13Q651zfxYJ7hnUk8C6oK1zdZ9Z",
-                "name": "HTTP Request",
-                "title": "Validate Workflow",
-                "type": "web-service.http_request",
-                "base_type": "activity",
-                "properties": {
-                  "action_timeout": 180,
-                  "allow_auto_redirect": true,
-                  "content_type": "application/json",
-                  "continue_on_error_status_code": false,
-                  "continue_on_failure": false,
-                  "custom_headers": [
-                    {
-                      "name": "Authorization",
-                      "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
-                    }
-                  ],
-                  "display_name": "Validate Workflow",
-                  "method": "POST",
-                  "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01G5HO148JN521dMAsrIEn8WLFlpzP16NrT.output.jsonpath_queries.wf_id$/validate",
-                  "runtime_user": {
-                    "override_target_runtime_user": false,
-                    "target_default": true
-                  },
-                  "skip_execution": false,
-                  "target": {
-                    "override_workflow_target": false,
-                    "override_workflow_target_group_criteria": false,
-                    "use_workflow_target": true,
-                    "use_workflow_target_group": false
-                  }
+                  "workflow_id": "definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe"
                 },
                 "object_type": "definition_activity"
               }
             ]
           },
           {
-            "unique_name": "definition_activity_01G5HO2U3L0O34uUqZu3m4cxJgeEFi218D1",
+            "unique_name": "definition_activity_01GLWONMZ5EY048dK7Hq70j8YFX5Y45BV8Y",
             "name": "Parallel Branch",
-            "title": "Parallel Branch",
+            "title": "%--Passwordless Cert--%",
             "type": "logic.parallel_block",
             "base_type": "activity",
             "properties": {
               "continue_on_failure": false,
-              "display_name": "Parallel Branch",
+              "display_name": "%--Passwordless Cert--%",
               "skip_execution": false
             },
-            "object_type": "definition_activity"
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01GLWONSGEQBH3wv7aOj5VIqRogPTGVeDn4",
+                "name": "Group",
+                "title": "Trigger Workflow",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Trigger Workflow",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK",
+                    "name": "%--Passwordless Cert--%",
+                    "title": "%--Passwordless Cert--%",
+                    "type": "workflow.sub_workflow",
+                    "base_type": "subworkflow",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "%--Passwordless Cert--%",
+                      "input": {
+                        "variable_workflow_01G5HN3AHK97J3M2wKlVtSmON7rQnZMkKG3": "amqp_certificate_credentials",
+                        "variable_workflow_01G5HN3AHKFL25S33DOpnNYmQjtKriJqgHH": "amqp.endpoint",
+                        "variable_workflow_01G5HN3AHKJAO4xw1xq4TvrlGnDqjer1BvF": "{\n\"schema_id\":\"Tar_Schema_ID\",\n\"name\": \"amqp_CBC\",\n\"type\": \"amqp.endpoint\",\n\"base_type\": \"target\",\n\"valid\": true,\n\"def_access_meta\": {\n\"is_internal\": false\n},\n\"title\": \"amqp_CBC\",\n\"properties\": {\n\"default_runtime_user_id\": \"AK_ID\",\n\"display_name\": \"amqp_CBC\",\n\"no_runtime_user\": false,\n\"port\": 5671,\n\"host\": \"10.88.38.124\",\n\"vhost\": \"/\",\n\"ssl_enabled\":true,\n\"ignore_certificate_errors\":true,\n\"description\": \"test\"\n}\n}",
+                        "variable_workflow_01G5HN3AHKMKV6Du1vq6Nx5rWQrivIe0wPj": "{\n\"schema_id\": \"AK_Schema_ID\",\n\"name\":\"AMQP Cert Based Account Key\",\n\"title\":\"AMQP Cert Based Account Key\",\n\"properties\":\n{\n\"display_name\":\"AMQP Cert Based Account Key\",\n\"password\":\"admin\",\n\"username\":\"admin\",\n\"cacrt\":\"$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GLS8CGVH1TU6gXH22yn6pUMRqNBcOU0rb$\",\n\"crt\": \"$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GLS8QVKGA40017IHEfhFJfS0BZQPGnwE2$\",\n\"key\":\"$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GLS92NXT3IU46oB9nDYjImQ4ovAlVpPr3$\",\n\"description\":\"test\"\n}\n}",
+                        "variable_workflow_01G5HN3AHKPYX3cIVOceTONDV3CG7mo3le4": "$activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                      },
+                      "runtime_user": {
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "no_target": true
+                      },
+                      "workflow_id": "definition_workflow_01G5HN3BQSK3V1i4wKQIy0mYsGiW1soIL4J"
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOO2Z0A7C4Pos9WHiqSC5tEB4AZT63A",
+                    "name": "HTTP Request",
+                    "title": "Pwdless Cert Event Target ",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "body": "{\n  \"title\": \"amqpevent\",\n  \"target_id\": \"$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\",\n  \"schema_id\": \"$activity.definition_activity_01G5HNR82SBKB0OU4xQrmfNmIqxNlCdsT3v.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n  \"properties\": {\n    \"title\": \"amqpevent\",\n    \"target_id\": \"$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\",\n    \"queue_name\": \"nd_queue_fanout_1\"\n  }\n}",
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": true,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                        }
+                      ],
+                      "display_name": "Pwdless Cert Event Target ",
+                      "method": "POST",
+                      "relative_url": "be-console/api/v1/events",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": false,
+                        "override_workflow_target_group_criteria": false,
+                        "use_workflow_target": true,
+                        "use_workflow_target_group": false
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOO6L73PV2YURxuNdNCxnmk6TINY4yG",
+                    "name": "JSONPath Query",
+                    "title": "Extract Event ID",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Event ID",
+                      "input_json": "$activity.definition_activity_01GLWOO2Z0A7C4Pos9WHiqSC5tEB4AZT63A.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..id",
+                          "jsonpath_query_name": "event_id",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOOB0NAX123dBcGfCaTuiiIUZGBoLT0",
+                    "name": "HTTP Request",
+                    "title": "Create Workflow",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "body": "{\n  \"name\" : \"AMQP Trigger Workflow-Passwordless Cert\",\n  \"title\" : \"AMQP Trigger Workflow-Passwordless Cert\",\n  \"schema_id\": \"$activity.definition_activity_01G5HNOKOF3026ADmpWFoVwSnWnHMxEVCl1.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n  \"properties\": {\n    \"display_name\": \"AMQP Trigger Workflow-Passwordless Cert\",\n    \"atomic\": {\n      \"is_atomic\": false\n    },\n    \"delete_workflow_instance\": false,\n    \"runtime_user\": {\n      \"override_target_runtime_user\": false,\n      \"specify_on_workflow_start\": false,\n      \"target_default\": true\n    },\n    \"target\": {\n      \"execute_on_target_group\": false,\n      \"execute_on_workflow_target\": false,\n      \"no_target\": true,\n      \"specify_on_workflow_start\": false\n    }\n  }\n}",
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                        }
+                      ],
+                      "display_name": "Create Workflow",
+                      "method": "POST",
+                      "relative_url": "be-console/api/v1/workflows",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": false,
+                        "override_workflow_target_group_criteria": false,
+                        "use_workflow_target": true,
+                        "use_workflow_target_group": false
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOODXK6C53eOXlQ73ICbiCFRaiLpqld",
+                    "name": "JSONPath Query",
+                    "title": "Extract Workflow ID",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Workflow ID",
+                      "input_json": "$activity.definition_activity_01GLWOOB0NAX123dBcGfCaTuiiIUZGBoLT0.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..id",
+                          "jsonpath_query_name": "wf_id",
+                          "jsonpath_query_type": "string"
+                        },
+                        {
+                          "jsonpath_query": "$..display_name",
+                          "jsonpath_query_name": "display_name",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOOHWULH95angf8l3GcYnI0cZoOCV2d",
+                    "name": "HTTP Request",
+                    "title": "Add Trigger",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "body": "{\n  \"type\": \"event\",\n  \"disabled\": false,\n  \"name\": \"trigger1\",\n  \"ref_id\": \"$activity.definition_activity_01GLWOO6L73PV2YURxuNdNCxnmk6TINY4yG.output.jsonpath_queries.event_id$\",\n  \"title\": \"ND-PwdlessBC-Trigger\"\n}",
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                        }
+                      ],
+                      "display_name": "Add Trigger",
+                      "method": "POST",
+                      "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01GLWOODXK6C53eOXlQ73ICbiCFRaiLpqld.output.jsonpath_queries.wf_id$/triggers",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": false,
+                        "override_workflow_target_group_criteria": false,
+                        "use_workflow_target": true,
+                        "use_workflow_target_group": false
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOOLL5XQ83rwuYfp16i2OC4vXas9wFT",
+                    "name": "HTTP Request",
+                    "title": "Add To Upper",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "body": "{\n  \"previous_action\": {\n    \"id\": \"$activity.definition_activity_01GLWOODXK6C53eOXlQ73ICbiCFRaiLpqld.output.jsonpath_queries.wf_id$\"\n  },\n  \"action\": {\n    \"schema_id\": \"$activity.definition_activity_01G5HNPUAOYTQ3iywgvHDsoGQ3lwGTzSEEK.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n    \"type\": \"core.string2upper\",\n    \"base_type\": \"activity\",\n    \"name\": \"To Upper\",\n    \"properties\": {\n      \"continue_on_failure\": false,\n      \"display_name\": \"To Upper\",\n      \"source\": \"This workflow is created by AMQP automation\"\n    },\n    \"title\": \"To Upper\"\n  }\n}",
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                        }
+                      ],
+                      "display_name": "Add To Upper",
+                      "method": "POST",
+                      "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01GLWOODXK6C53eOXlQ73ICbiCFRaiLpqld.output.jsonpath_queries.wf_id$/actions",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": false,
+                        "override_workflow_target_group_criteria": false,
+                        "use_workflow_target": true,
+                        "use_workflow_target_group": false
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOOS2XCNB0ju6nM8t1wH5f9IM81su9b",
+                    "name": "JSONPath Query",
+                    "title": "Extract Upper Action ID",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Upper Action ID",
+                      "input_json": "$activity.definition_activity_01GLWOOLL5XQ83rwuYfp16i2OC4vXas9wFT.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..id",
+                          "jsonpath_query_name": "up_id",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOOW2I0FZ4JGyOq5oAeD58YPPBntslH",
+                    "name": "HTTP Request",
+                    "title": "Validate Workflow",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                        }
+                      ],
+                      "display_name": "Validate Workflow",
+                      "method": "POST",
+                      "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01GLWOODXK6C53eOXlQ73ICbiCFRaiLpqld.output.jsonpath_queries.wf_id$/validate",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": false,
+                        "override_workflow_target_group_criteria": false,
+                        "use_workflow_target": true,
+                        "use_workflow_target_group": false
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOOZZQLMO06ZL2BahrXr4TzVBcwEiAM",
+                    "name": "Sleep",
+                    "title": "Sleep",
+                    "type": "core.sleep",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Sleep",
+                      "skip_execution": false,
+                      "sleep_interval": 1
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01GLWOP50NLLO6MIo7ToLGU4pGMjoRQYDIH",
+                "name": "Group",
+                "title": "Publish amqp workflow",
+                "type": "logic.group",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Publish amqp workflow",
+                  "skip_execution": false
+                },
+                "object_type": "definition_activity",
+                "actions": [
+                  {
+                    "unique_name": "definition_activity_01GLWOPCN5MIU2o6rCrQwNkIQ7uU8ZDYgg4",
+                    "name": "HTTP Request",
+                    "title": "Create Main Workflow",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "body": "{\n  \"name\" : \"Publish AMQP Cert based Workflow\",\n  \"title\" : \"Publish AMQP Cert based Workflow\",\n  \"schema_id\": \"$activity.definition_activity_01G5HNOKOF3026ADmpWFoVwSnWnHMxEVCl1.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n  \"properties\": {\n    \"display_name\": \"Publish AMQP Cert based Workflow\",\n    \"atomic\": {\n      \"is_atomic\": false\n    },\n    \"delete_workflow_instance\": false,\n    \"runtime_user\": {\n      \"override_target_runtime_user\": false,\n      \"specify_on_workflow_start\": false,\n      \"target_default\": true\n    },\n    \"target\": {\n      \"execute_on_target_group\": false,\n      \"execute_on_workflow_target\": false,\n      \"no_target\": true,\n      \"specify_on_workflow_start\": false\n    }\n  }\n}",
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                        }
+                      ],
+                      "display_name": "Create Main Workflow",
+                      "method": "POST",
+                      "relative_url": "be-console/api/v1/workflows",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": false,
+                        "override_workflow_target_group_criteria": false,
+                        "use_workflow_target": true,
+                        "use_workflow_target_group": false
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOPGI56XD4114rgE4HzHby63Oz6VcaN",
+                    "name": "JSONPath Query",
+                    "title": "Extract Workflow ID",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Workflow ID",
+                      "input_json": "$activity.definition_activity_01GLWOPCN5MIU2o6rCrQwNkIQ7uU8ZDYgg4.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..id",
+                          "jsonpath_query_name": "wf_id",
+                          "jsonpath_query_type": "string"
+                        },
+                        {
+                          "jsonpath_query": "$..display_name",
+                          "jsonpath_query_name": "display_name",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOPL9L0HT407Sv7Wfpx2fQ7EtYtcquv",
+                    "name": "HTTP Request",
+                    "title": "Publish AMQP Message",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "body": "{\n  \"previous_action\": {\n    \"id\": \"$activity.definition_activity_01GLWOPGI56XD4114rgE4HzHby63Oz6VcaN.output.jsonpath_queries.wf_id$\"\n  },\n  \"action\": {\n    \"schema_id\": \"$activity.definition_activity_01GBOTP2DYJ2T5ssJPudnMFdqNcZjCwMEqj.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n    \"type\": \"amqp.publish_message\",\n    \"base_type\": \"activity\",\n    \"name\": \"Publish AMQP Message\",\n    \"properties\": {\n      \"continue_on_failure\": false,\n      \"display_name\": \"Publish AMQP Message\",\n      \"exchange_name\": \"nd_exchange_fanout\",\n      \"routing_key\": \"nd_route_fanout_1\",\n      \"body\": \"Test message for Passwordless cert based AMQP\",\n      \"app_id\": \"App-ID345\",\n      \"content_encoding\": \"content-encoding\",\n      \"content_type\": \"content-type\",\n      \"runtime_user\": {\n        \"override_target_runtime_user\": true,\n        \"runtime_user_id\": \"$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKWM43a2KLfhYikofajpWPQwswz$\"\n      },\n      \"target\": {\n        \"override_workflow_target\": true,\n        \"target_id\": \"$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\"\n      },\n      \"skip_execution\": false,\n      \"action_timeout\":180,\n      \"delivery_mode\":1\n      },\n    \"title\": \"Publish AMQP Message\"    \n  }\n}\n",
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                        }
+                      ],
+                      "display_name": "Publish AMQP Message",
+                      "method": "POST",
+                      "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01GLWOPGI56XD4114rgE4HzHby63Oz6VcaN.output.jsonpath_queries.wf_id$/actions",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": false,
+                        "override_workflow_target_group_criteria": false,
+                        "use_workflow_target": true,
+                        "use_workflow_target_group": false
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOPOZFJ4A1a3Wn8VZnwx6PKagIS1ZN0",
+                    "name": "JSONPath Query",
+                    "title": "Extract Action ID",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Action ID",
+                      "input_json": "$activity.definition_activity_01GLWOPL9L0HT407Sv7Wfpx2fQ7EtYtcquv.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..id",
+                          "jsonpath_query_name": "pub_id",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOPT92XT81E96wS8WuU9bc7oiQFrBOg",
+                    "name": "HTTP Request",
+                    "title": "Validate Workflow",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                        }
+                      ],
+                      "display_name": "Validate Workflow",
+                      "method": "POST",
+                      "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01GLWOPGI56XD4114rgE4HzHby63Oz6VcaN.output.jsonpath_queries.wf_id$/validate",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": false,
+                        "override_workflow_target_group_criteria": false,
+                        "use_workflow_target": true,
+                        "use_workflow_target_group": false
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOPWUPGO66mXLCMusMlfYbJKubnN7h5",
+                    "name": "Sleep",
+                    "title": "Sleep",
+                    "type": "core.sleep",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Sleep",
+                      "skip_execution": false,
+                      "sleep_interval": 1
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOQ17IZV82xHfVWPRDcEn8uQ6vhQELo",
+                    "name": "HTTP Request",
+                    "title": "Run Workflow",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                        }
+                      ],
+                      "display_name": "Run Workflow",
+                      "method": "POST",
+                      "relative_url": "be-console/api/v1/workflows/ui/start?workflow_id=$activity.definition_activity_01GLWOPGI56XD4114rgE4HzHby63Oz6VcaN.output.jsonpath_queries.wf_id$\u0026sync=true",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": false,
+                        "override_workflow_target_group_criteria": false,
+                        "use_workflow_target": true,
+                        "use_workflow_target_group": false
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLWOQ56V50A07oMDHfsO9r05qT9MqnVyv",
+                    "name": "Sleep",
+                    "title": "Sleep",
+                    "type": "core.sleep",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Sleep",
+                      "skip_execution": false,
+                      "sleep_interval": 5
+                    },
+                    "object_type": "definition_activity"
+                  }
+                ]
+              },
+              {
+                "unique_name": "definition_activity_01GLWOQA3ZBXL2hcUUPWa8yg5PQsf18Y8un",
+                "name": "\u003c--ND-Delete Workflow-Components--\u003e",
+                "title": "\u003c--ND-Delete Workflow-Components--\u003e",
+                "type": "workflow.sub_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "\u003c--ND-Delete Workflow-Components--\u003e",
+                  "input": {
+                    "variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1": "\"$activity.definition_activity_01GLWOODXK6C53eOXlQ73ICbiCFRaiLpqld.output.jsonpath_queries.wf_id$\",\"$activity.definition_activity_01GLWOPGI56XD4114rgE4HzHby63Oz6VcaN.output.jsonpath_queries.wf_id$\"",
+                    "variable_workflow_01FSQUJ00XAED36oGpRaJgdLvpCdkMLMZt1": "$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$",
+                    "variable_workflow_01FSQUQR0S0BX0i2t1fOe1yqW8HCuawLTch": "$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKWM43a2KLfhYikofajpWPQwswz$",
+                    "variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL": "$activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$",
+                    "variable_workflow_01GA0SW6UVQFV6Wr8aklBZjase4F9E8Ac08": "$activity.definition_activity_01GLWOO6L73PV2YURxuNdNCxnmk6TINY4yG.output.jsonpath_queries.event_id$"
+                  },
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "skip_execution": false,
+                  "target": {
+                    "no_target": true
+                  },
+                  "workflow_id": "definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe"
+                },
+                "object_type": "definition_activity"
+              }
+            ]
           }
         ]
-      },
-      {
-        "unique_name": "definition_activity_01G9QPUV0B9C4702ErWnjfJzr6BlHsABjEi",
-        "name": "\u003c--ND-Delete Workflow-Components--\u003e",
-        "title": "\u003c--ND-Delete Workflow-Components--\u003e",
-        "type": "workflow.sub_workflow",
-        "base_type": "subworkflow",
-        "properties": {
-          "continue_on_failure": false,
-          "display_name": "\u003c--ND-Delete Workflow-Components--\u003e",
-          "input": {
-            "variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1": "$activity.definition_activity_01GKS9HBOOY6P1VavysCGqkyCRwWU8gjkv6.output.jsonpath_queries.wf_id$",
-            "variable_workflow_01FSQUJ00XAED36oGpRaJgdLvpCdkMLMZt1": "$activity.definition_activity_01G5HNTVIJ6TD0WnUShElsQg9iXWcC3GU8V.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$",
-            "variable_workflow_01FSQUQR0S0BX0i2t1fOe1yqW8HCuawLTch": "$activity.definition_activity_01G5HNTVIJ6TD0WnUShElsQg9iXWcC3GU8V.output.variable_workflow_01G5HN3AHKWM43a2KLfhYikofajpWPQwswz$",
-            "variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL": "$activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$",
-            "variable_workflow_01GA0SW6UVQFV6Wr8aklBZjase4F9E8Ac08": "$activity.definition_activity_01GA0VDF02OYA1fxTAwhnn68XlCbWOIvQFK.output.jsonpath_queries.event_id$"
-          },
-          "runtime_user": {
-            "target_default": true
-          },
-          "skip_execution": false,
-          "target": {
-            "no_target": true
-          },
-          "workflow_id": "definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe"
-        },
-        "object_type": "definition_activity"
       }
     ],
     "categories": [
@@ -1951,6 +2313,18 @@
             "schema_id": "datatype.string",
             "properties": {
               "value": "",
+              "scope": "output",
+              "name": "AccountKey_ID",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01G5HN3AHKWM43a2KLfhYikofajpWPQwswz",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
               "scope": "input",
               "name": "AK_schema_url",
               "type": "datatype.string",
@@ -2017,18 +2391,6 @@
               "is_required": false
             },
             "unique_name": "variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu",
-            "object_type": "variable_workflow"
-          },
-          {
-            "schema_id": "datatype.string",
-            "properties": {
-              "value": "",
-              "scope": "output",
-              "name": "AccountKey_ID",
-              "type": "datatype.string",
-              "is_required": false
-            },
-            "unique_name": "variable_workflow_01G5HN3AHKWM43a2KLfhYikofajpWPQwswz",
             "object_type": "variable_workflow"
           }
         ],
@@ -2465,18 +2827,6 @@
             "properties": {
               "value": "",
               "scope": "input",
-              "name": "WorkflowID",
-              "type": "datatype.string",
-              "is_required": true
-            },
-            "unique_name": "variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1",
-            "object_type": "variable_workflow"
-          },
-          {
-            "schema_id": "datatype.string",
-            "properties": {
-              "value": "",
-              "scope": "input",
               "name": "TargetID",
               "type": "datatype.string",
               "is_required": false
@@ -2518,6 +2868,18 @@
               "is_required": false
             },
             "unique_name": "variable_workflow_01GA0SW6UVQFV6Wr8aklBZjase4F9E8Ac08",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "WorkflowID",
+              "type": "datatype.string",
+              "is_required": true
+            },
+            "unique_name": "variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1",
             "object_type": "variable_workflow"
           }
         ],
@@ -2625,6 +2987,7 @@
                       "accept": "application/json",
                       "action_timeout": 180,
                       "allow_auto_redirect": true,
+                      "body": "{\n  \"workflow_ids\": [\n    $workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1$\n  ]\n}",
                       "content_type": "application/json",
                       "continue_on_error_status_code": false,
                       "continue_on_failure": false,
@@ -2636,8 +2999,8 @@
                       ],
                       "description": "\u003c--ND-Delete Workflow-Components--\u003e",
                       "display_name": "Get Workflow Instances",
-                      "method": "GET",
-                      "relative_url": "be-console/api/v1/instances?workflow_id=$workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1$",
+                      "method": "POST",
+                      "relative_url": "be-console/api/v1.1/instances?limit=10",
                       "runtime_user": {
                         "override_target_runtime_user": false,
                         "target_default": true
@@ -2823,38 +3186,103 @@
                     ]
                   },
                   {
-                    "unique_name": "definition_activity_01FSQ6YIP36XA6Cp5Y9Xk5YG2csJUdnlY2S",
-                    "name": "HTTP Request",
-                    "title": "Delete Workflow",
-                    "type": "web-service.http_request",
+                    "unique_name": "definition_activity_01GLW2XSNAHBY7CFlZyzirgavmKg3HJx1aE",
+                    "name": "Replace String",
+                    "title": "Replace String",
+                    "type": "core.replacestring",
                     "base_type": "activity",
                     "properties": {
-                      "accept": "application/json",
-                      "action_timeout": 180,
-                      "allow_auto_redirect": true,
-                      "content_type": "application/json",
-                      "continue_on_error_status_code": false,
-                      "continue_on_failure": false,
-                      "custom_headers": [
+                      "continue_on_failure": true,
+                      "description": "\u003c--ND-Delete Workflow-Components--\u003e",
+                      "display_name": "Replace String",
+                      "input_string": "$workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1$",
+                      "replace_list": [
                         {
-                          "name": "Authorization",
-                          "value": "Bearer $workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL$"
+                          "replaced_string": "[\"",
+                          "replacement_string": ""
+                        },
+                        {
+                          "replaced_string": "\"]",
+                          "replacement_string": ""
+                        },
+                        {
+                          "replaced_string": "\"",
+                          "replacement_string": ""
                         }
                       ],
-                      "display_name": "Delete Workflow",
-                      "method": "DELETE",
-                      "relative_url": "be-console/api/v1/workflows/$workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1$",
-                      "runtime_user": {
-                        "override_target_runtime_user": false,
-                        "target_default": true
-                      },
-                      "skip_execution": false,
-                      "target": {
-                        "override_workflow_target": true,
-                        "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa"
-                      }
+                      "skip_execution": false
                     },
                     "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLW36RYP4YC1NtUDY5s78oaiIKuemRA8z",
+                    "name": "Split String",
+                    "title": "Split String",
+                    "type": "core.splitstring",
+                    "base_type": "activity",
+                    "properties": {
+                      "boundaries": [
+                        {
+                          "boundary": ","
+                        }
+                      ],
+                      "continue_on_failure": false,
+                      "description": "\u003c--ND-Delete Workflow-Components--\u003e",
+                      "display_name": "Split String",
+                      "input_string": "$activity.definition_activity_01GLW2XSNAHBY7CFlZyzirgavmKg3HJx1aE.output.result_string$",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GLW4YRRJXO644CNeYdLWsFeLt1ITugadl",
+                    "name": "For Each",
+                    "title": "For Each",
+                    "type": "logic.for_each",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "For Each",
+                      "skip_execution": false,
+                      "source_array": "$activity.definition_activity_01GLW36RYP4YC1NtUDY5s78oaiIKuemRA8z.output.parts$"
+                    },
+                    "object_type": "definition_activity",
+                    "actions": [
+                      {
+                        "unique_name": "definition_activity_01FSQ6YIP36XA6Cp5Y9Xk5YG2csJUdnlY2S",
+                        "name": "HTTP Request",
+                        "title": "Delete Workflow",
+                        "type": "web-service.http_request",
+                        "base_type": "activity",
+                        "properties": {
+                          "accept": "application/json",
+                          "action_timeout": 180,
+                          "allow_auto_redirect": true,
+                          "content_type": "application/json",
+                          "continue_on_error_status_code": false,
+                          "continue_on_failure": false,
+                          "custom_headers": [
+                            {
+                              "name": "Authorization",
+                              "value": "Bearer $workflow.definition_workflow_01FSPX5IQ8A2V3WNcHPmSK5y6vJTR13cyfe.input.variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL$"
+                            }
+                          ],
+                          "display_name": "Delete Workflow",
+                          "method": "DELETE",
+                          "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01GLW4YRRJXO644CNeYdLWsFeLt1ITugadl.input.source_array[@]$",
+                          "runtime_user": {
+                            "override_target_runtime_user": false,
+                            "target_default": true
+                          },
+                          "skip_execution": false,
+                          "target": {
+                            "override_workflow_target": true,
+                            "target_id": "definition_target_01FJJO16XAYIW3ehfvV7SmrGw9ko2d9XzHa"
+                          }
+                        },
+                        "object_type": "definition_activity"
+                      }
+                    ]
                   },
                   {
                     "unique_name": "definition_activity_01FSQ9YJBJ8W74CLAVWkJMnRC0n77RcMlZC",
