@@ -9,25 +9,49 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "-----BEGIN CERTIFICATE-----\\nMIIEATCCAukCAQQwDQYJKoZIhvcNAQELBQAwMTEgMB4GA1UEAwwXVExTR2VuU2Vs\\nZlNpZ25lZHRSb290Q0ExDTALBgNVBAcMBCQkJCQwHhcNMjAwMjE5MjAxODAxWhcN\\nMzAwMjE2MjAxODAxWjBcMQswCQYDVQQGEwJVUzELMAkGA1UECAwCVFgxEzARBgNV\\nBAcMClJpY2hhcmRzb24xDjAMBgNVBAoMBUNpc2NvMQswCQYDVQQLDAJBTzEOMAwG\\nA1UEAwwFYWRtaW4wggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCZlJNk\\nbsH5hybgsxEdl+5qFGtnGVrQf0vTdEuCI4HrZz0lby/uVcRGW/d//DdS2R6XyQDM\\nPgT0KoyYwvWh4SyFQDFKs2P/5hOtNTKwti59NClG4zqOnvOUxtRDc+sHZSj0VlVF\\nc2i8vm7KFw0e+lcN6vQvs+ia7l3XsUX2VyKjfO6yodgS5cL46nXmPLmOXoFNFgpX\\nA6/MrYAOvf/GzZLoEP4MHsWG2/dMTgVua6Cybs834q5OyvLF8Bjmg5dIrwtTKqEz\\nRGnYOtOfDSshRSNryKn/lIWYCtcG53ZwSobNZwRmiYEF6iSZKO0Q3wKB9+Rgczr3\\nP+3KI98hws1LT2z9YP/Ox+XklV2gYQDHylGl9cblsIyJYSgl4s4FoMC7/6Hv7caP\\nZHnoLEUXQB0El17xHdliJ8jjfS7bH+IvOd72xMa0atxJFV/CwWabmIAiX8BU1rFw\\nSyWtZ50jfwbnDp8dhofoK6HS2Ydu93MTD3iAMOm41YZ04Kbh1th0mnDiKJgCPiCd\\nEMYCZt5i6TdRuWDhvFVdZ89o8PmyiVziDKiRtOccA+AKoAtLcNJbdEFpUyv12eed\\nT1YGHYJ6CIMsWly711lTE2OqtLYApGkXdIYy4HnUZ9I5KrH7MUz3i0UfiXVaRHUa\\nd57ZmWY26xxNty3BqEO6RZSM2544alyjey46SQIDAQABMA0GCSqGSIb3DQEBCwUA\\nA4IBAQDAoGgd08uMqz/llyIqv/40o18YTSh4kP53taQu0cActVdN1eNUa08ndFUU\\nrxfsc3wT2lbTlZCpB1ghmVqsmx+2aNl76jdmioOD/v2Nr3CeayC9XRx3tT6HMXNS\\nXnxDXWOd8jypZn8qEpJcB9eD7f/X5az/Shdu0n6Fq7B0828RJeYYeZRuomjTezXn\\nhzaqVloEN6CCeFGBZV+FqLIwtV8amKU5LtACtrZ2NMC9m7RLwcXjek2wfxHVbHKh\\n70h1ofl/wioVKvz8O9SWnq3lYYD+QTboxLcWyphzpSBQuFwtkBIakmU8GRbDeXDh\\nWGeGxia8UdZZT+lxHwgrR8CeaR3D\\n-----END CERTIFICATE-----",
+          "value": "",
           "scope": "local",
-          "name": "crt",
+          "name": "PLBC-Trigger",
           "type": "datatype.string",
           "is_required": false
         },
-        "unique_name": "variable_workflow_01GLS8QVKGA40017IHEfhFJfS0BZQPGnwE2",
+        "unique_name": "variable_workflow_01GMMFWUSF1NW3HpE6ZZvCrAc9D5cL1levP",
         "object_type": "variable_workflow"
       },
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "-----BEGIN RSA PRIVATE KEY-----\\n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\\n-----END RSA PRIVATE KEY-----",
+          "value": "-----BEGIN CERTIFICATE-----\\nMIIDRTCCAi2gAwIBAgIJAOvS6QnSJtpjMA0GCSqGSIb3DQEBCwUAMDExIDAeBgNV\\nBAMMF1RMU0dlblNlbGZTaWduZWR0Um9vdENBMQ0wCwYDVQQHDAQkJCQkMB4XDTIw\\nMDIxNDIyMDQwMFoXDTMwMDIxMTIyMDQwMFowMTEgMB4GA1UEAwwXVExTR2VuU2Vs\\nZlNpZ25lZHRSb290Q0ExDTALBgNVBAcMBCQkJCQwggEiMA0GCSqGSIb3DQEBAQUA\\nA4IBDwAwggEKAoIBAQDlX7MXmcFzB3KjS9mjJfXia5TCuQfBNr9+1edCSf2UdL1d\\neq2BnUQ/ns9zpRhviOGdTRxb4BVXdBcx6ezy8bzcS0eVYkjW0lvzntfksPKYDzTS\\ndhO3TO+A0aqaSAN2NsQg1RsMrICmmwiXjWW9Apkb286X7ThyG0eSirUxn522TxrW\\nPIgPmGqKcRIf4LCfq65QOPQriL2wcosnp5EUuLPOQIwTKfMw6CGY19dGyxIjRU6k\\ngsj7UwPz1tnigD9Ima+leA+R/dGMTRjidzJVYokfuoDlbhIVzuWD91l6+nYSe0Bq\\nDHTtsWVcif/1kfWiZKUZmksEdvWNde/gcgGHoG+JAgMBAAGjYDBeMAsGA1UdDwQE\\nAwIBBjAdBgNVHQ4EFgQUV/IE8b6PR14SFPVDk6ZLG41CYxUwHwYDVR0jBBgwFoAU\\nV/IE8b6PR14SFPVDk6ZLG41CYxUwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0B\\nAQsFAAOCAQEAUbFkNBlfuHy1uRlwkJvXffEBfa3XkufI7Qx1frpihOu0suuKh1N7\\noieg6aUecfcc0HfNVXFfgp/DjVI0xPh/wTCkC36bjBsiteTS5EcRIit0f0V98Obp\\niEViMupKmmCkszGpLVYMNju+ILwcCLEVCY1Gng6EqH5At2FG6Oo3XmnUB8CTgFXm\\nm45+CZHRt2JLYL+q7gd7RWQEzs7a2d8aD1as0BCl+fpvmFnIXMqV32+OqvErKEyP\\nMQKaddn9WfTgphK+s1H0h5C5dzm4XPbSCSOlD9vjQJRoE1njIOj8bYKAvCgTX/lX\\nGYQSZgvug8Zicw979XpjmeOdTpY8EYVa5A==\\n-----END CERTIFICATE-----",
           "scope": "local",
-          "name": "key",
+          "name": "cacrt",
           "type": "datatype.string",
           "is_required": false
         },
-        "unique_name": "variable_workflow_01GLS92NXT3IU46oB9nDYjImQ4ovAlVpPr3",
+        "unique_name": "variable_workflow_01GLS8CGVH1TU6gXH22yn6pUMRqNBcOU0rb",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "PBC-Trigger",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01GMMFI1M63YO71OqLYPo95lYrsnM0vPpx6",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "AMQP Target Creation",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01G5HN1P8JTQF1IUiwNyMSUwK3W4iffcjhl",
         "object_type": "variable_workflow"
       },
       {
@@ -47,35 +71,11 @@
         "properties": {
           "value": "",
           "scope": "output",
-          "name": "Email  AtomicTable Results",
-          "type": "datatype.string",
-          "is_required": false
-        },
-        "unique_name": "variable_workflow_01G5HN1P8JTQF1IUiwNyMSUwK3W4iffcjhl",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "Email Parent Table Results",
+          "name": "Trigger Started Polling",
           "type": "datatype.string",
           "is_required": false
         },
         "unique_name": "variable_workflow_01G5HN1P8JX5046rJkTZzTRxhk8OSmdtZE6",
-        "object_type": "variable_workflow"
-      },
-      {
-        "schema_id": "datatype.string",
-        "properties": {
-          "value": "",
-          "scope": "output",
-          "name": "Email Deletion Table",
-          "type": "datatype.string",
-          "is_required": false
-        },
-        "unique_name": "variable_workflow_01G5HN1P8K0GR4YgpyrUtxY79C061Rj3qlW",
         "object_type": "variable_workflow"
       },
       {
@@ -93,13 +93,49 @@
       {
         "schema_id": "datatype.string",
         "properties": {
-          "value": "-----BEGIN CERTIFICATE-----\\nMIIDRTCCAi2gAwIBAgIJAOvS6QnSJtpjMA0GCSqGSIb3DQEBCwUAMDExIDAeBgNV\\nBAMMF1RMU0dlblNlbGZTaWduZWR0Um9vdENBMQ0wCwYDVQQHDAQkJCQkMB4XDTIw\\nMDIxNDIyMDQwMFoXDTMwMDIxMTIyMDQwMFowMTEgMB4GA1UEAwwXVExTR2VuU2Vs\\nZlNpZ25lZHRSb290Q0ExDTALBgNVBAcMBCQkJCQwggEiMA0GCSqGSIb3DQEBAQUA\\nA4IBDwAwggEKAoIBAQDlX7MXmcFzB3KjS9mjJfXia5TCuQfBNr9+1edCSf2UdL1d\\neq2BnUQ/ns9zpRhviOGdTRxb4BVXdBcx6ezy8bzcS0eVYkjW0lvzntfksPKYDzTS\\ndhO3TO+A0aqaSAN2NsQg1RsMrICmmwiXjWW9Apkb286X7ThyG0eSirUxn522TxrW\\nPIgPmGqKcRIf4LCfq65QOPQriL2wcosnp5EUuLPOQIwTKfMw6CGY19dGyxIjRU6k\\ngsj7UwPz1tnigD9Ima+leA+R/dGMTRjidzJVYokfuoDlbhIVzuWD91l6+nYSe0Bq\\nDHTtsWVcif/1kfWiZKUZmksEdvWNde/gcgGHoG+JAgMBAAGjYDBeMAsGA1UdDwQE\\nAwIBBjAdBgNVHQ4EFgQUV/IE8b6PR14SFPVDk6ZLG41CYxUwHwYDVR0jBBgwFoAU\\nV/IE8b6PR14SFPVDk6ZLG41CYxUwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0B\\nAQsFAAOCAQEAUbFkNBlfuHy1uRlwkJvXffEBfa3XkufI7Qx1frpihOu0suuKh1N7\\noieg6aUecfcc0HfNVXFfgp/DjVI0xPh/wTCkC36bjBsiteTS5EcRIit0f0V98Obp\\niEViMupKmmCkszGpLVYMNju+ILwcCLEVCY1Gng6EqH5At2FG6Oo3XmnUB8CTgFXm\\nm45+CZHRt2JLYL+q7gd7RWQEzs7a2d8aD1as0BCl+fpvmFnIXMqV32+OqvErKEyP\\nMQKaddn9WfTgphK+s1H0h5C5dzm4XPbSCSOlD9vjQJRoE1njIOj8bYKAvCgTX/lX\\nGYQSZgvug8Zicw979XpjmeOdTpY8EYVa5A==\\n-----END CERTIFICATE-----",
+          "value": "-----BEGIN CERTIFICATE-----\\nMIIEATCCAukCAQQwDQYJKoZIhvcNAQELBQAwMTEgMB4GA1UEAwwXVExTR2VuU2Vs\\nZlNpZ25lZHRSb290Q0ExDTALBgNVBAcMBCQkJCQwHhcNMjAwMjE5MjAxODAxWhcN\\nMzAwMjE2MjAxODAxWjBcMQswCQYDVQQGEwJVUzELMAkGA1UECAwCVFgxEzARBgNV\\nBAcMClJpY2hhcmRzb24xDjAMBgNVBAoMBUNpc2NvMQswCQYDVQQLDAJBTzEOMAwG\\nA1UEAwwFYWRtaW4wggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCZlJNk\\nbsH5hybgsxEdl+5qFGtnGVrQf0vTdEuCI4HrZz0lby/uVcRGW/d//DdS2R6XyQDM\\nPgT0KoyYwvWh4SyFQDFKs2P/5hOtNTKwti59NClG4zqOnvOUxtRDc+sHZSj0VlVF\\nc2i8vm7KFw0e+lcN6vQvs+ia7l3XsUX2VyKjfO6yodgS5cL46nXmPLmOXoFNFgpX\\nA6/MrYAOvf/GzZLoEP4MHsWG2/dMTgVua6Cybs834q5OyvLF8Bjmg5dIrwtTKqEz\\nRGnYOtOfDSshRSNryKn/lIWYCtcG53ZwSobNZwRmiYEF6iSZKO0Q3wKB9+Rgczr3\\nP+3KI98hws1LT2z9YP/Ox+XklV2gYQDHylGl9cblsIyJYSgl4s4FoMC7/6Hv7caP\\nZHnoLEUXQB0El17xHdliJ8jjfS7bH+IvOd72xMa0atxJFV/CwWabmIAiX8BU1rFw\\nSyWtZ50jfwbnDp8dhofoK6HS2Ydu93MTD3iAMOm41YZ04Kbh1th0mnDiKJgCPiCd\\nEMYCZt5i6TdRuWDhvFVdZ89o8PmyiVziDKiRtOccA+AKoAtLcNJbdEFpUyv12eed\\nT1YGHYJ6CIMsWly711lTE2OqtLYApGkXdIYy4HnUZ9I5KrH7MUz3i0UfiXVaRHUa\\nd57ZmWY26xxNty3BqEO6RZSM2544alyjey46SQIDAQABMA0GCSqGSIb3DQEBCwUA\\nA4IBAQDAoGgd08uMqz/llyIqv/40o18YTSh4kP53taQu0cActVdN1eNUa08ndFUU\\nrxfsc3wT2lbTlZCpB1ghmVqsmx+2aNl76jdmioOD/v2Nr3CeayC9XRx3tT6HMXNS\\nXnxDXWOd8jypZn8qEpJcB9eD7f/X5az/Shdu0n6Fq7B0828RJeYYeZRuomjTezXn\\nhzaqVloEN6CCeFGBZV+FqLIwtV8amKU5LtACtrZ2NMC9m7RLwcXjek2wfxHVbHKh\\n70h1ofl/wioVKvz8O9SWnq3lYYD+QTboxLcWyphzpSBQuFwtkBIakmU8GRbDeXDh\\nWGeGxia8UdZZT+lxHwgrR8CeaR3D\\n-----END CERTIFICATE-----",
           "scope": "local",
-          "name": "cacrt",
+          "name": "crt",
           "type": "datatype.string",
           "is_required": false
         },
-        "unique_name": "variable_workflow_01GLS8CGVH1TU6gXH22yn6pUMRqNBcOU0rb",
+        "unique_name": "variable_workflow_01GLS8QVKGA40017IHEfhFJfS0BZQPGnwE2",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "CBC-Trigger",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01GMMFNCT7EX07gSdHBcvG5UtCFub1TBLnV",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "output",
+          "name": "AMQP Delete components",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01G5HN1P8K0GR4YgpyrUtxY79C061Rj3qlW",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "-----BEGIN RSA PRIVATE KEY-----\\nMIIJKQIBAAKCAgEAmZSTZG7B+Ycm4LMRHZfuahRrZxla0H9L03RLgiOB62c9JW8v\\n7lXERlv3f/w3Utkel8kAzD4E9CqMmML1oeEshUAxSrNj/+YTrTUysLYufTQpRuM6\\njp7zlMbUQ3PrB2Uo9FZVRXNovL5uyhcNHvpXDer0L7Pomu5d17FF9lcio3zusqHY\\nEuXC+Op15jy5jl6BTRYKVwOvzK2ADr3/xs2S6BD+DB7Fhtv3TE4Fbmugsm7PN+Ku\\nTsryxfAY5oOXSK8LUyqhM0Rp2DrTnw0rIUUja8ip/5SFmArXBud2cEqGzWcEZomB\\nBeokmSjtEN8CgffkYHM69z/tyiPfIcLNS09s/WD/zsfl5JVdoGEAx8pRpfXG5bCM\\niWEoJeLOBaDAu/+h7+3Gj2R56CxFF0AdBJde8R3ZYifI430u2x/iLzne9sTGtGrc\\nSRVfwsFmm5iAIl/AVNaxcEslrWedI38G5w6fHYaH6Cuh0tmHbvdzEw94gDDpuNWG\\ndOCm4dbYdJpw4iiYAj4gnRDGAmbeYuk3Ublg4bxVXWfPaPD5solc4gyokbTnHAPg\\nCqALS3DSW3RBaVMr9dnnnU9WBh2CegiDLFpcu9dZUxNjqrS2AKRpF3SGMuB51GfS\\nOSqx+zFM94tFH4l1WkR1Gnee2ZlmNuscTbctwahDukWUjNueOGpco3suOkkCAwEA\\nAQKCAgEAkZuq7qKP5/s6YfmENbGRSiPX/GSulFTMWEu/N0Bg8gXslCxJnkbUkvyo\\nuEAxV6wgdDoPNpVqbvBUYpUc+4CYjDFjSnawTbMeXq68Q4xGoVAt/lZ7czLCsACe\\nyOEDKPzBCn8701/rIl/OfG3Ec+VXWguzvfJti06JzHD3auoMHkLZsKT/TlNmOkdY\\nxpQ2PQPexW4rGXqWV5D7g36iHSNUsA9EPcuC7Sxp1391aM5ECkhC0LJrHqsN55qO\\nkSab7T6AlzYopYmsbGTBtN9wT9fUEGGsw3NWAePtIE+dHDOcgOu14V1m5WurjUaf\\nFMrK/tw/Oy6k7jw/P9IowEKID2nbYxtei3Ho4DSbM0iFZ4nedVJfGGF/oJn/NTY/\\njgWNXu0YQrGHf60Zm1lLkk0PBrrOXYN3vPrx5u1CXYs8H05vqOYfIR8pqO3mrr2+\\nh67ZuGSfh10uqux6Np3uhocyX4y0mRV91CtY1Dub1GMUt2/jduu5aJWX7errr7XG\\nK+YR+oij9HdYPRDVJUsm2FLYkXYUIW6OalJifug7Mn3aSwpnKooiXSw8AwFOBJJd\\nAKsd9vq+geSEkS/mMlRTbR7rkPAjov2rWNkAJREPhQknCOyqog6pjan3il0j499i\\nyfWqKjRnGOIkkffeg0J6nhj+Jj8sGAqH4RtkZvTZk2JCyE4MkXECggEBAMpRkei8\\npm0qHjQuEbMOQ78fOUzFO/XHVtlbTs+yVs7UEJ0V8s2x39hd3Li3VSIBrERPPPxw\\njSphLNK+RQr0GbgWNpFRsS9We6PSWsZgPRq8N17oft6X0OHR2f5WmrG2GQBNKNko\\noaQA6WgOvf9IQObMtGGtAYwzlGBIkNi7CVTHtr481MN3EoZh2WtCqpYGEcnei0W5\\nuSF+BmSlg/u9sZGq3TAsp4SnPh6BHZ6wOsk1ToVJfQfvb0JreKM57B7w4pjNB9x+\\n0VJ/qp1khKRURdzLwjRCIxQYC5CT8kA4yRU/to17UhjKs9LiBLgHKu0u9ZC1P+C2\\ndX43QLMnwpTCkM0CggEBAMJUeYq4GOKN1DTnYJT9s0SmK6wn1cUyPz+/Uklks0nh\\n2fOlUEmADq1arbPeKCb3qJ8xxJ3y/QQu6Ck2+NHN35N5FYINgxTrhjEhvhogB9Gq\\nw23li0mBFKIWAbQactcA5f6LOuLddbL9RBnYnWBFP3punByqs8KQldvkLvBFi0K1\\nC12O+0zAUx+zMzkr9IfhvPJagRBDF76IYT2Rwo0vmCJbsD7jMgHFrnfKguPdgFxE\\nESRP65kPC5drOuKzvAZRzy2BjPkpwLY9DSUXA7qYadrp31hpbSecq/V0BDdIo7Pn\\niMoGZuiX5CFsA1kKJ6p2i8JBUKHH0iahziYmn/kE320CggEBALhyjTdFZeT4FPk1\\nVuWLB7BiYvbeib+UsFUQrVUlHYcKRusva2Cj3ZOAXw339iE+rTLJmqv6YHhWh2rK\\nFF/cEuaFOdJaS9MAYVAFIsTgUFTjaweXprKAbeqySq9ZfUau4TQpJCh2pobCXgiE\\nCCuIT8MatQinlVWgYJE3Fva/7c3hFXVyN/bLw5PH+VOUP7juZ6FGxmoW2/Tw1BtF\\n2oHTeuN2hpi43TBO2I8u3zYhLDbr5l4VlWt6mlBPcng9AktjCPKNWbFn3KX9xiof\\nzd2TBu44xSCnexuCoGh6uMxb+Nbqcx+hYkM/6ZlEfVDZGAWMXkxDMa1IKu2aqd2r\\nTfYZO7ECggEAHSLRPk0v3ffp0yzFvFD1aduIPL2UPYa1GPe0fLCOeQtVxEQK75o1\\nmSQ5Wvh6CK2lKIkrs4rVCKWHxXYqhDpbxR6obOFdv+s4KXGnsP8QbQ0vU/DQm2qx\\nD0RBaSF2CmpmEW4KnC0cEoQKi92Aawi25cJjwaCOZyOKdHeX2gpzQMMoOxTO9Mj5\\nLY2OponClgTwcV3EcA2/J6AHBFYwVz7FjpE0sZkazE05RVilm0iAkFTcRRd+eWpa\\nEI/ROmA8Vq45Y9dCrbDm5evtZpw2wOlNJbde90CHTyMcXSbR4wAPG1AhoDipgUIU\\nwDYTomv1Wod/mNZ2Imt1RLmJ0QqFfa6PWQKCAQAHY3rGL7Q6LeQyubwmA9sF40eM\\nmShe1wY2EVsPcJMmTqAQormg0SiYf2J7A11h6g68LhwGX6/N72INab0yGt252ERM\\n5y8CDDIX5YQ/AwvrPUMxdoH1ARpNAtGxtin4p60QjAeqnd1uvGuTVrbUQM41Usna\\nyW4A6dtaeGxinj4B/FGTzgbqLAM8Lu490JyVlUyC9T9T6IwW+H8ciSJJLt1x8iHV\\nFqTBNYru0AJHrhfdxap9JkFAUmdPy9w/2ZKWeGSYoT9Sc1XNXoWVTQxbyNbN94Gv\\nacAo+T2SpmGvbB12KPFZUtzbSFFsd/2HeYeamHAz51FyWSXx/hExISPsSKFl\\n-----END RSA PRIVATE KEY-----",
+          "scope": "local",
+          "name": "key",
+          "type": "datatype.string",
+          "is_required": false
+        },
+        "unique_name": "variable_workflow_01GLS92NXT3IU46oB9nDYjImQ4ovAlVpPr3",
         "object_type": "variable_workflow"
       }
     ],
@@ -304,7 +340,7 @@
             "properties": {
               "continue_on_failure": false,
               "display_name": "%--Password-Based--%",
-              "skip_execution": true
+              "skip_execution": false
             },
             "object_type": "definition_activity",
             "actions": [
@@ -506,6 +542,28 @@
                     "object_type": "definition_activity"
                   },
                   {
+                    "unique_name": "definition_activity_01GMR3VYO9ZL61SJy2ztxPYODFOug2mNzTQ",
+                    "name": "JSONPath Query",
+                    "title": "Extract Trigger ID",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Trigger ID",
+                      "input_json": "$activity.definition_activity_01GBOILKFTMZE0n4xeIKNnrsPpw2REKXOx4.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..id",
+                          "jsonpath_query_name": "trig_id",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
                     "unique_name": "definition_activity_01G5HNWBY2DPX0G5q5txlxq4y0kuQL1UHwY",
                     "name": "HTTP Request",
                     "title": "Add To Upper",
@@ -608,9 +666,120 @@
                       "continue_on_failure": false,
                       "display_name": "Sleep",
                       "skip_execution": false,
-                      "sleep_interval": 1
+                      "sleep_interval": 15
                     },
                     "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GMR2ZRP6Y0T1WmqaAFnVhk5epQENF7VGm",
+                    "name": "HTTP Request",
+                    "title": "Validate Trigger",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                        }
+                      ],
+                      "display_name": "Validate Trigger",
+                      "method": "GET",
+                      "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01G5HNVU0YNX74g5qm6ygW6xPniEuIBz7Td.output.jsonpath_queries.wf_id$/triggers/$activity.definition_activity_01GMR3VYO9ZL61SJy2ztxPYODFOug2mNzTQ.output.jsonpath_queries.trig_id$",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": false,
+                        "override_workflow_target_group_criteria": false,
+                        "use_workflow_target": true,
+                        "use_workflow_target_group": false
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GMR4IKX48H12PtapIeCRntLqJk0XnKhL4",
+                    "name": "JSONPath Query",
+                    "title": "Extract Trigger Status",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Trigger Status",
+                      "input_json": "$activity.definition_activity_01GMR2ZRP6Y0T1WmqaAFnVhk5epQENF7VGm.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..state",
+                          "jsonpath_query_name": "status_text",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GMR4RL0S7OG31XwPz5otgv0pjZaOecx1w",
+                    "name": "Condition Block",
+                    "title": "Is Started-Polling",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Is Started-Polling",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01GMR4RP35NDO3XZ0Fxp62czkMI1OE7ZhgH",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01GMR4IKX48H12PtapIeCRntLqJk0XnKhL4.output.jsonpath_queries.status_text$",
+                            "operator": "mw",
+                            "right_operand": "*started-polling*"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "Condition Branch",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01GMR4RRZX6OO0hlVhzBmZOU8pHVShCBkoR",
+                            "name": "Set Variables",
+                            "title": "Trigger State",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Trigger State",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GMMFI1M63YO71OqLYPo95lYrsnM0vPpx6$",
+                                  "variable_value_new": "$activity.definition_activity_01GMR4IKX48H12PtapIeCRntLqJk0XnKhL4.output.jsonpath_queries.status_text$"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               },
@@ -939,7 +1108,7 @@
                     "properties": {
                       "action_timeout": 180,
                       "allow_auto_redirect": true,
-                      "body": "{\n  \"title\": \"amqpevent\",\n  \"target_id\": \"$activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\",\n  \"schema_id\": \"$activity.definition_activity_01G5HNR82SBKB0OU4xQrmfNmIqxNlCdsT3v.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n  \"properties\": {\n    \"title\": \"amqpevent\",\n    \"target_id\": \"$activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\",\n    \"queue_name\": \"nd_queue_fanout_1\"\n  }\n}",
+                      "body": "{\n  \"title\": \"amqp-cert-based-event\",\n  \"target_id\": \"$activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\",\n  \"schema_id\": \"$activity.definition_activity_01G5HNR82SBKB0OU4xQrmfNmIqxNlCdsT3v.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n  \"properties\": {\n    \"title\": \"amqp-cert-based-event\",\n    \"target_id\": \"$activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\",\n    \"queue_name\": \"nd_queue_fanout_1\"\n  }\n}",
                       "content_type": "application/json",
                       "continue_on_error_status_code": false,
                       "continue_on_failure": true,
@@ -1088,6 +1257,28 @@
                     "object_type": "definition_activity"
                   },
                   {
+                    "unique_name": "definition_activity_01GMM7AMYVYMI7CHBq6kqRUiv3i0qGSoFUU",
+                    "name": "JSONPath Query",
+                    "title": "Extract Trigger ID",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Trigger ID",
+                      "input_json": "$activity.definition_activity_01GLP31W1HFD9398SbXMuRBYZpI8x8ci1wQ.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..id",
+                          "jsonpath_query_name": "trig_id",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
                     "unique_name": "definition_activity_01GLP3207CP6K1gTRKx4BB7SL0suWdfbB1j",
                     "name": "HTTP Request",
                     "title": "Add To Upper",
@@ -1190,9 +1381,120 @@
                       "continue_on_failure": false,
                       "display_name": "Sleep",
                       "skip_execution": false,
-                      "sleep_interval": 1
+                      "sleep_interval": 15
                     },
                     "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GMM8I48URDD5RhIPhOYT19TItdxIJ5LMe",
+                    "name": "HTTP Request",
+                    "title": "Validate Trigger",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                        }
+                      ],
+                      "display_name": "Validate Trigger",
+                      "method": "GET",
+                      "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01GLP31RC1RKZ3msNb6WDm6WaTaqZltr9ej.output.jsonpath_queries.wf_id$/triggers/$activity.definition_activity_01GMM7AMYVYMI7CHBq6kqRUiv3i0qGSoFUU.output.jsonpath_queries.trig_id$",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": false,
+                        "override_workflow_target_group_criteria": false,
+                        "use_workflow_target": true,
+                        "use_workflow_target_group": false
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GMQU1MWPFNM2wSUSt8Ha4RXiOumIWE0on",
+                    "name": "JSONPath Query",
+                    "title": "Extract Trigger Status",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Trigger Status",
+                      "input_json": "$activity.definition_activity_01GMM8I48URDD5RhIPhOYT19TItdxIJ5LMe.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..state",
+                          "jsonpath_query_name": "status_text",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GMMAJ9LJQRN1aBe73nXKVMG7OjSGdcEqd",
+                    "name": "Condition Block",
+                    "title": "Is Started-Polling",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Is Started-Polling",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01GMMAJHSUAT36H5oco4FbBdq88W5YL7ON2",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01GMQU1MWPFNM2wSUSt8Ha4RXiOumIWE0on.output.jsonpath_queries.status_text$",
+                            "operator": "mw",
+                            "right_operand": "*started-polling*"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "Condition Branch",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01GMMG0ZE4FXP3P7Tfg0TLdLtmck1PO3Yln",
+                            "name": "Set Variables",
+                            "title": "Trigger State",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Trigger State",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GMMFNCT7EX07gSdHBcvG5UtCFub1TBLnV$",
+                                  "variable_value_new": "$activity.definition_activity_01GMQU1MWPFNM2wSUSt8Ha4RXiOumIWE0on.output.jsonpath_queries.status_text$"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               },
@@ -1495,10 +1797,10 @@
                       "continue_on_failure": false,
                       "display_name": "%--Passwordless Cert--%",
                       "input": {
-                        "variable_workflow_01G5HN3AHK97J3M2wKlVtSmON7rQnZMkKG3": "amqp_certificate_credentials",
+                        "variable_workflow_01G5HN3AHK97J3M2wKlVtSmON7rQnZMkKG3": "amqp_passwordless_certificate_credentials",
                         "variable_workflow_01G5HN3AHKFL25S33DOpnNYmQjtKriJqgHH": "amqp.endpoint",
-                        "variable_workflow_01G5HN3AHKJAO4xw1xq4TvrlGnDqjer1BvF": "{\n\"schema_id\":\"Tar_Schema_ID\",\n\"name\": \"amqp_CBC\",\n\"type\": \"amqp.endpoint\",\n\"base_type\": \"target\",\n\"valid\": true,\n\"def_access_meta\": {\n\"is_internal\": false\n},\n\"title\": \"amqp_CBC\",\n\"properties\": {\n\"default_runtime_user_id\": \"AK_ID\",\n\"display_name\": \"amqp_CBC\",\n\"no_runtime_user\": false,\n\"port\": 5671,\n\"host\": \"10.88.38.124\",\n\"vhost\": \"/\",\n\"ssl_enabled\":true,\n\"ignore_certificate_errors\":true,\n\"description\": \"test\"\n}\n}",
-                        "variable_workflow_01G5HN3AHKMKV6Du1vq6Nx5rWQrivIe0wPj": "{\n\"schema_id\": \"AK_Schema_ID\",\n\"name\":\"AMQP Cert Based Account Key\",\n\"title\":\"AMQP Cert Based Account Key\",\n\"properties\":\n{\n\"display_name\":\"AMQP Cert Based Account Key\",\n\"password\":\"admin\",\n\"username\":\"admin\",\n\"cacrt\":\"$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GLS8CGVH1TU6gXH22yn6pUMRqNBcOU0rb$\",\n\"crt\": \"$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GLS8QVKGA40017IHEfhFJfS0BZQPGnwE2$\",\n\"key\":\"$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GLS92NXT3IU46oB9nDYjImQ4ovAlVpPr3$\",\n\"description\":\"test\"\n}\n}",
+                        "variable_workflow_01G5HN3AHKJAO4xw1xq4TvrlGnDqjer1BvF": "{\n\"schema_id\":\"Tar_Schema_ID\",\n\"name\": \"amqp_PwdlessBC\",\n\"type\": \"amqp.endpoint\",\n\"base_type\": \"target\",\n\"valid\": true,\n\"def_access_meta\": {\n\"is_internal\": false\n},\n\"title\": \"amqp_PwdlessBC\",\n\"properties\": {\n\"default_runtime_user_id\": \"AK_ID\",\n\"display_name\": \"amqp_PwdlessBC\",\n\"no_runtime_user\": false,\n\"port\": 5671,\n\"host\": \"10.88.38.124\",\n\"vhost\": \"/\",\n\"ssl_enabled\":true,\n\"ignore_certificate_errors\":true,\n\"description\": \"test\"\n}\n}",
+                        "variable_workflow_01G5HN3AHKMKV6Du1vq6Nx5rWQrivIe0wPj": "{\n\"schema_id\": \"AK_Schema_ID\",\n\"name\":\"AMQP Pwdless Cert Account Key\",\n\"title\":\"AMQP Pwdless Cert Account Key\",\n\"properties\":\n{\n\"display_name\":\"AMQP Pwdless Cert Account Key\",\n\"cacrt\":\"$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GLS8CGVH1TU6gXH22yn6pUMRqNBcOU0rb$\",\n\"crt\": \"$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GLS8QVKGA40017IHEfhFJfS0BZQPGnwE2$\",\n\"key\":\"$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GLS92NXT3IU46oB9nDYjImQ4ovAlVpPr3$\",\n\"description\":\"test\"\n}\n}",
                         "variable_workflow_01G5HN3AHKPYX3cIVOceTONDV3CG7mo3le4": "$activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
                       },
                       "runtime_user": {
@@ -1521,7 +1823,7 @@
                     "properties": {
                       "action_timeout": 180,
                       "allow_auto_redirect": true,
-                      "body": "{\n  \"title\": \"amqpevent\",\n  \"target_id\": \"$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\",\n  \"schema_id\": \"$activity.definition_activity_01G5HNR82SBKB0OU4xQrmfNmIqxNlCdsT3v.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n  \"properties\": {\n    \"title\": \"amqpevent\",\n    \"target_id\": \"$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\",\n    \"queue_name\": \"nd_queue_fanout_1\"\n  }\n}",
+                      "body": "{\n  \"title\": \"amqp-pwdless-cert-event\",\n  \"target_id\": \"$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\",\n  \"schema_id\": \"$activity.definition_activity_01G5HNR82SBKB0OU4xQrmfNmIqxNlCdsT3v.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n  \"properties\": {\n    \"title\": \"amqp-pwdless-cert-event\",\n    \"target_id\": \"$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\",\n    \"queue_name\": \"nd_queue_topic_1\"\n  }\n}",
                       "content_type": "application/json",
                       "continue_on_error_status_code": false,
                       "continue_on_failure": true,
@@ -1670,6 +1972,28 @@
                     "object_type": "definition_activity"
                   },
                   {
+                    "unique_name": "definition_activity_01GMRSCIP46JR50bvicDyslmVCzlFW8n4Yf",
+                    "name": "JSONPath Query",
+                    "title": "Extract Trigger ID",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Trigger ID",
+                      "input_json": "$activity.definition_activity_01GLWOOHWULH95angf8l3GcYnI0cZoOCV2d.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..id",
+                          "jsonpath_query_name": "trig_id",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
                     "unique_name": "definition_activity_01GLWOOLL5XQ83rwuYfp16i2OC4vXas9wFT",
                     "name": "HTTP Request",
                     "title": "Add To Upper",
@@ -1772,9 +2096,120 @@
                       "continue_on_failure": false,
                       "display_name": "Sleep",
                       "skip_execution": false,
-                      "sleep_interval": 1
+                      "sleep_interval": 15
                     },
                     "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GMRM7L6TSE84bhakOgrNxkIDaxhx0J8Ym",
+                    "name": "HTTP Request",
+                    "title": "Validate Trigger",
+                    "type": "web-service.http_request",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "allow_auto_redirect": true,
+                      "content_type": "application/json",
+                      "continue_on_error_status_code": false,
+                      "continue_on_failure": false,
+                      "custom_headers": [
+                        {
+                          "name": "Authorization",
+                          "value": "Bearer $activity.definition_activity_01G5HNKDPX5I865HxGcG2Ez9BDDwLl2I0AV.output.jsonpath_queries.token$"
+                        }
+                      ],
+                      "display_name": "Validate Trigger",
+                      "method": "GET",
+                      "relative_url": "be-console/api/v1/workflows/$activity.definition_activity_01GLWOODXK6C53eOXlQ73ICbiCFRaiLpqld.output.jsonpath_queries.wf_id$/triggers/$activity.definition_activity_01GMRSCIP46JR50bvicDyslmVCzlFW8n4Yf.output.jsonpath_queries.trig_id$",
+                      "runtime_user": {
+                        "override_target_runtime_user": false,
+                        "target_default": true
+                      },
+                      "skip_execution": false,
+                      "target": {
+                        "override_workflow_target": false,
+                        "override_workflow_target_group_criteria": false,
+                        "use_workflow_target": true,
+                        "use_workflow_target_group": false
+                      }
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GMRNAPYLNZK2S7uiSyg9eIRXzltxzqtJi",
+                    "name": "JSONPath Query",
+                    "title": "Extract Trigger Status",
+                    "type": "corejava.jsonpathquery",
+                    "base_type": "activity",
+                    "properties": {
+                      "action_timeout": 180,
+                      "continue_on_failure": false,
+                      "display_name": "Extract Trigger Status",
+                      "input_json": "$activity.definition_activity_01GMRM7L6TSE84bhakOgrNxkIDaxhx0J8Ym.output.response_body$",
+                      "jsonpath_queries": [
+                        {
+                          "jsonpath_query": "$..state",
+                          "jsonpath_query_name": "status_text",
+                          "jsonpath_query_type": "string"
+                        }
+                      ],
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity"
+                  },
+                  {
+                    "unique_name": "definition_activity_01GMRNJVY49HC1dZ2XOUDf74D8Dzd9VSE8T",
+                    "name": "Condition Block",
+                    "title": "Is Started-Polling",
+                    "type": "logic.if_else",
+                    "base_type": "activity",
+                    "properties": {
+                      "continue_on_failure": false,
+                      "display_name": "Is Started-Polling",
+                      "skip_execution": false
+                    },
+                    "object_type": "definition_activity",
+                    "blocks": [
+                      {
+                        "unique_name": "definition_activity_01GMRNKRLJH320owPMcJIcluM2gNmOvgpXq",
+                        "name": "Condition Branch",
+                        "title": "Condition Branch",
+                        "type": "logic.condition_block",
+                        "base_type": "activity",
+                        "properties": {
+                          "condition": {
+                            "left_operand": "$activity.definition_activity_01GMRNAPYLNZK2S7uiSyg9eIRXzltxzqtJi.output.jsonpath_queries.status_text$",
+                            "operator": "mw",
+                            "right_operand": "*started-polling*"
+                          },
+                          "continue_on_failure": false,
+                          "display_name": "Condition Branch",
+                          "skip_execution": false
+                        },
+                        "object_type": "definition_activity",
+                        "actions": [
+                          {
+                            "unique_name": "definition_activity_01GMRNKW9DHOM1ElPmzWqAOyKUKk0fPYjPO",
+                            "name": "Set Variables",
+                            "title": "Trigger State",
+                            "type": "core.set_multiple_variables",
+                            "base_type": "activity",
+                            "properties": {
+                              "continue_on_failure": false,
+                              "display_name": "Trigger State",
+                              "skip_execution": false,
+                              "variables_to_update": [
+                                {
+                                  "variable_to_update": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GMMFWUSF1NW3HpE6ZZvCrAc9D5cL1levP$",
+                                  "variable_value_new": "$activity.definition_activity_01GMRNAPYLNZK2S7uiSyg9eIRXzltxzqtJi.output.jsonpath_queries.status_text$"
+                                }
+                              ]
+                            },
+                            "object_type": "definition_activity"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               },
@@ -1863,7 +2298,7 @@
                     "properties": {
                       "action_timeout": 180,
                       "allow_auto_redirect": true,
-                      "body": "{\n  \"previous_action\": {\n    \"id\": \"$activity.definition_activity_01GLWOPGI56XD4114rgE4HzHby63Oz6VcaN.output.jsonpath_queries.wf_id$\"\n  },\n  \"action\": {\n    \"schema_id\": \"$activity.definition_activity_01GBOTP2DYJ2T5ssJPudnMFdqNcZjCwMEqj.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n    \"type\": \"amqp.publish_message\",\n    \"base_type\": \"activity\",\n    \"name\": \"Publish AMQP Message\",\n    \"properties\": {\n      \"continue_on_failure\": false,\n      \"display_name\": \"Publish AMQP Message\",\n      \"exchange_name\": \"nd_exchange_fanout\",\n      \"routing_key\": \"nd_route_fanout_1\",\n      \"body\": \"Test message for Passwordless cert based AMQP\",\n      \"app_id\": \"App-ID345\",\n      \"content_encoding\": \"content-encoding\",\n      \"content_type\": \"content-type\",\n      \"runtime_user\": {\n        \"override_target_runtime_user\": true,\n        \"runtime_user_id\": \"$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKWM43a2KLfhYikofajpWPQwswz$\"\n      },\n      \"target\": {\n        \"override_workflow_target\": true,\n        \"target_id\": \"$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\"\n      },\n      \"skip_execution\": false,\n      \"action_timeout\":180,\n      \"delivery_mode\":1\n      },\n    \"title\": \"Publish AMQP Message\"    \n  }\n}\n",
+                      "body": "{\n  \"previous_action\": {\n    \"id\": \"$activity.definition_activity_01GLWOPGI56XD4114rgE4HzHby63Oz6VcaN.output.jsonpath_queries.wf_id$\"\n  },\n  \"action\": {\n    \"schema_id\": \"$activity.definition_activity_01GBOTP2DYJ2T5ssJPudnMFdqNcZjCwMEqj.output.variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD$\",\n    \"type\": \"amqp.publish_message\",\n    \"base_type\": \"activity\",\n    \"name\": \"Publish AMQP Message\",\n    \"properties\": {\n      \"continue_on_failure\": false,\n      \"display_name\": \"Publish AMQP Message\",\n      \"exchange_name\": \"nd_exchange_topic\",\n      \"routing_key\": \"nd_route_topic_1\",\n      \"body\": \"Test message for Passwordless cert based AMQP\",\n      \"app_id\": \"App-ID345\",\n      \"content_encoding\": \"content-encoding\",\n      \"content_type\": \"content-type\",\n      \"runtime_user\": {\n        \"override_target_runtime_user\": true,\n        \"runtime_user_id\": \"$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKWM43a2KLfhYikofajpWPQwswz$\"\n      },\n      \"target\": {\n        \"override_workflow_target\": true,\n        \"target_id\": \"$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu$\"\n      },\n      \"skip_execution\": false,\n      \"action_timeout\":180,\n      \"delivery_mode\":1\n      },\n    \"title\": \"Publish AMQP Message\"    \n  }\n}\n",
                       "content_type": "application/json",
                       "continue_on_error_status_code": false,
                       "continue_on_failure": false,
@@ -2042,6 +2477,381 @@
             ]
           }
         ]
+      },
+      {
+        "unique_name": "definition_activity_01GMIAPRFV2J21XWUkEgYMDA73ucmPO3n0U",
+        "name": "Condition Block",
+        "title": "Target Creation Pass/Fail",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": true,
+          "display_name": "Target Creation Pass/Fail",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01GMIAQFWM6RL4qSJJZwZOq6cy1Xvuc7txG",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": {
+                    "left_operand": "$activity.definition_activity_01G5HNTVIJ6TD0WnUShElsQg9iXWcC3GU8V.output.succeeded$",
+                    "operator": "eq",
+                    "right_operand": true
+                  },
+                  "operator": "and",
+                  "right_operand": {
+                    "left_operand": "$activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.succeeded$",
+                    "operator": "eq",
+                    "right_operand": true
+                  }
+                },
+                "operator": "and",
+                "right_operand": {
+                  "left_operand": "$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.succeeded$",
+                  "operator": "eq",
+                  "right_operand": true
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01GMIDASQBA2P3bqBaVEy6XJS5fm1j6AZ0E",
+                "name": "Set Variables",
+                "title": "Target Creation Pass",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Target Creation Pass",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.output.variable_workflow_01G5HN1P8JTQF1IUiwNyMSUwK3W4iffcjhl$",
+                      "variable_value_new": "PASS"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01GMIAQICASUE2wFpNaYUP6XLHbdE54dVcZ",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": {
+                    "left_operand": "$activity.definition_activity_01G5HNTVIJ6TD0WnUShElsQg9iXWcC3GU8V.output.succeeded$",
+                    "operator": "eq",
+                    "right_operand": "false"
+                  },
+                  "operator": "or",
+                  "right_operand": {
+                    "left_operand": "$activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.succeeded$",
+                    "operator": "eq",
+                    "right_operand": false
+                  }
+                },
+                "operator": "or",
+                "right_operand": {
+                  "left_operand": "$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.succeeded$",
+                  "operator": "eq",
+                  "right_operand": false
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01GMKSOY3ZAN54ZOiGjTckoSVuW6Hb1M1Gw",
+                "name": "Set Variables",
+                "title": "Target Creation Fail",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "Target Creation Fail",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.output.variable_workflow_01G5HN1P8JTQF1IUiwNyMSUwK3W4iffcjhl$",
+                      "variable_value_new": "FAIL\nPassword Based Target Creation Error: $activity.definition_activity_01G5HNTVIJ6TD0WnUShElsQg9iXWcC3GU8V.output.error.message$\nCertificate Based Target Creation Error : $activity.definition_activity_01GLP31BFVZHZ6v7L2IFYxNYIXLk35U6ATK.output.error.message$\nPasswordless Cert Target creation Error :$activity.definition_activity_01GLWONYE79L00Ieevtw6vh9Q6iExnKhyfK.output.error.message$"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01GML3R63DT4L5WXAzeH3YXWVlLeOilEbvs",
+        "name": "Condition Block",
+        "title": "AMQP Trigger Pass/Fail",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "AMQP Trigger Pass/Fail",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01GML3R9TBWXW29JG57DMdPNWz0tWxAzJrX",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": {
+                    "left_operand": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GMMFI1M63YO71OqLYPo95lYrsnM0vPpx6$",
+                    "operator": "eq",
+                    "right_operand": "started-pollingstarted-polling"
+                  },
+                  "operator": "and",
+                  "right_operand": {
+                    "left_operand": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GMMFNCT7EX07gSdHBcvG5UtCFub1TBLnV$",
+                    "operator": "eq",
+                    "right_operand": "started-polling"
+                  }
+                },
+                "operator": "and",
+                "right_operand": {
+                  "left_operand": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GMMFWUSF1NW3HpE6ZZvCrAc9D5cL1levP$",
+                  "operator": "eq",
+                  "right_operand": "started-polling"
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01GML3RCXCYQ82r4VW5L7JP8WD1tpTxJODK",
+                "name": "Set Variables",
+                "title": "AMQP Trigger Pass",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "AMQP Trigger Pass",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.output.variable_workflow_01G5HN1P8JX5046rJkTZzTRxhk8OSmdtZE6$",
+                      "variable_value_new": "PASS"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01GML3RFRJKW265XlRiSCCt3QeVNLjY3apA",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": {
+                    "left_operand": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GMMFI1M63YO71OqLYPo95lYrsnM0vPpx6$",
+                    "operator": "ne",
+                    "right_operand": "started-polling"
+                  },
+                  "operator": "or",
+                  "right_operand": {
+                    "left_operand": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GMMFNCT7EX07gSdHBcvG5UtCFub1TBLnV$",
+                    "operator": "ne",
+                    "right_operand": "started-polling"
+                  }
+                },
+                "operator": "or",
+                "right_operand": {
+                  "left_operand": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.local.variable_workflow_01GMMFWUSF1NW3HpE6ZZvCrAc9D5cL1levP$",
+                  "operator": "ne",
+                  "right_operand": "started-polling"
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01GML3RKQPXJ00bPSHpujYzRq2J3WTZspwP",
+                "name": "Set Variables",
+                "title": "AMQP Trigger Fail",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "AMQP Trigger Fail",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.output.variable_workflow_01G5HN1P8JX5046rJkTZzTRxhk8OSmdtZE6$",
+                      "variable_value_new": "FAIL\nPassword Based Trigger Error:$activity.definition_activity_01GMR4IKX48H12PtapIeCRntLqJk0XnKhL4.output.jsonpath_queries.status_text$\nCertificate Based Trigger Error : $activity.definition_activity_01GMQU1MWPFNM2wSUSt8Ha4RXiOumIWE0on.output.jsonpath_queries.status_text$\nPasswordless Cert Trigger Error :$activity.definition_activity_01GMRNAPYLNZK2S7uiSyg9eIRXzltxzqtJi.output.jsonpath_queries.status_text$"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "unique_name": "definition_activity_01GMLA107UCV66Ttj63VOyMBpig2B8llw6i",
+        "name": "Condition Block",
+        "title": "AMQP Delete Components Pass/Fail",
+        "type": "logic.if_else",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "AMQP Delete Components Pass/Fail",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01GMLA15IRJXE7YCEwaegBhUAfmm8EFInQ9",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": {
+                    "left_operand": "$activity.definition_activity_01G9QPUV0B9C4702ErWnjfJzr6BlHsABjEi.output.succeeded$",
+                    "operator": "eq",
+                    "right_operand": true
+                  },
+                  "operator": "and",
+                  "right_operand": {
+                    "left_operand": "$activity.definition_activity_01GLW9H4XYPCK1Cc4TMUDuMjVIdiQu1dcDS.output.succeeded$",
+                    "operator": "eq",
+                    "right_operand": true
+                  }
+                },
+                "operator": "and",
+                "right_operand": {
+                  "left_operand": "$activity.definition_activity_01GLWOQA3ZBXL2hcUUPWa8yg5PQsf18Y8un.output.succeeded$",
+                  "operator": "eq",
+                  "right_operand": true
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01GMLA1AAVJCP07FCBkJOvlM9pAIyri3zsd",
+                "name": "Set Variables",
+                "title": "AMQP Delete Components Pass",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "AMQP Delete Components Pass",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.output.variable_workflow_01G5HN1P8K0GR4YgpyrUtxY79C061Rj3qlW$",
+                      "variable_value_new": "PASS"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01GMLA1CTFBCI5zZtQLqSjdtzTeE4wVYch3",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": {
+                  "left_operand": {
+                    "left_operand": "$activity.definition_activity_01G9QPUV0B9C4702ErWnjfJzr6BlHsABjEi.output.succeeded$",
+                    "operator": "eq",
+                    "right_operand": "false"
+                  },
+                  "operator": "or",
+                  "right_operand": {
+                    "left_operand": "$activity.definition_activity_01GLW9H4XYPCK1Cc4TMUDuMjVIdiQu1dcDS.output.succeeded$",
+                    "operator": "eq",
+                    "right_operand": false
+                  }
+                },
+                "operator": "or",
+                "right_operand": {
+                  "left_operand": "$activity.definition_activity_01GLWOQA3ZBXL2hcUUPWa8yg5PQsf18Y8un.output.succeeded$",
+                  "operator": "eq",
+                  "right_operand": false
+                }
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01GMLA1G76N1J4q3QbvdZD4hoRtNf46izlB",
+                "name": "Set Variables",
+                "title": "AMQP Delete Components Fail",
+                "type": "core.set_multiple_variables",
+                "base_type": "activity",
+                "properties": {
+                  "continue_on_failure": false,
+                  "display_name": "AMQP Delete Components Fail",
+                  "skip_execution": false,
+                  "variables_to_update": [
+                    {
+                      "variable_to_update": "$workflow.definition_workflow_01G5HN1Q76CQQ7NJkZbFEBzeNngqYI6EVVX.output.variable_workflow_01G5HN1P8K0GR4YgpyrUtxY79C061Rj3qlW$",
+                      "variable_value_new": "FAIL\nPassword Based Delete Componenets Error: $activity.definition_activity_01G9QPUV0B9C4702ErWnjfJzr6BlHsABjEi.output.error.message$\nCertificate Based Delete Componenets Error : $activity.definition_activity_01GLW9H4XYPCK1Cc4TMUDuMjVIdiQu1dcDS.output.error.message$\nPasswordless Cert Delete Componenets Error :$activity.definition_activity_01GLWOQA3ZBXL2hcUUPWa8yg5PQsf18Y8un.output.error.message$"
+                    }
+                  ]
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
       }
     ],
     "categories": [
@@ -2054,7 +2864,7 @@
       "name": "trigger1",
       "title": "",
       "lowercase_name": "event.trigger1",
-      "description": "test1",
+      "description": "test12",
       "type": "event",
       "base_type": "trigger",
       "ref_id": "event_01FXVDG3JT2C15TCoHIAFjieQd3779h6wWe",
@@ -2151,18 +2961,6 @@
             "schema_id": "datatype.string",
             "properties": {
               "value": "",
-              "scope": "output",
-              "name": "ExtractID",
-              "type": "datatype.string",
-              "is_required": false
-            },
-            "unique_name": "variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD",
-            "object_type": "variable_workflow"
-          },
-          {
-            "schema_id": "datatype.string",
-            "properties": {
-              "value": "",
               "scope": "input",
               "name": "BearerToken",
               "type": "datatype.string",
@@ -2193,6 +2991,18 @@
               "is_required": false
             },
             "unique_name": "variable_workflow_01G5HN3303TDL0evYPsu0CZHpnGHOucUeVP",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "output",
+              "name": "ExtractID",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01G5HN3303X782OVLNLWSBrlbNhGXAoyZKD",
             "object_type": "variable_workflow"
           }
         ],
@@ -2313,6 +3123,30 @@
             "schema_id": "datatype.string",
             "properties": {
               "value": "",
+              "scope": "input",
+              "name": "inToken",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01G5HN3AHKPYX3cIVOceTONDV3CG7mo3le4",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "output",
+              "name": "Target_ID",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
               "scope": "output",
               "name": "AccountKey_ID",
               "type": "datatype.string",
@@ -2367,30 +3201,6 @@
               "is_required": true
             },
             "unique_name": "variable_workflow_01G5HN3AHKMKV6Du1vq6Nx5rWQrivIe0wPj",
-            "object_type": "variable_workflow"
-          },
-          {
-            "schema_id": "datatype.string",
-            "properties": {
-              "value": "",
-              "scope": "input",
-              "name": "inToken",
-              "type": "datatype.string",
-              "is_required": false
-            },
-            "unique_name": "variable_workflow_01G5HN3AHKPYX3cIVOceTONDV3CG7mo3le4",
-            "object_type": "variable_workflow"
-          },
-          {
-            "schema_id": "datatype.string",
-            "properties": {
-              "value": "",
-              "scope": "output",
-              "name": "Target_ID",
-              "type": "datatype.string",
-              "is_required": false
-            },
-            "unique_name": "variable_workflow_01G5HN3AHKTBE22NF5k78LXn13FjvNrUTSu",
             "object_type": "variable_workflow"
           }
         ],
@@ -2827,6 +3637,30 @@
             "properties": {
               "value": "",
               "scope": "input",
+              "name": "EventID",
+              "type": "datatype.string",
+              "is_required": false
+            },
+            "unique_name": "variable_workflow_01GA0SW6UVQFV6Wr8aklBZjase4F9E8Ac08",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "WorkflowID",
+              "type": "datatype.string",
+              "is_required": true
+            },
+            "unique_name": "variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
               "name": "TargetID",
               "type": "datatype.string",
               "is_required": false
@@ -2856,30 +3690,6 @@
               "is_required": false
             },
             "unique_name": "variable_workflow_01FSXZ3YYWRK54KqeFpyEtBPqP0c76vHCPL",
-            "object_type": "variable_workflow"
-          },
-          {
-            "schema_id": "datatype.string",
-            "properties": {
-              "value": "",
-              "scope": "input",
-              "name": "EventID",
-              "type": "datatype.string",
-              "is_required": false
-            },
-            "unique_name": "variable_workflow_01GA0SW6UVQFV6Wr8aklBZjase4F9E8Ac08",
-            "object_type": "variable_workflow"
-          },
-          {
-            "schema_id": "datatype.string",
-            "properties": {
-              "value": "",
-              "scope": "input",
-              "name": "WorkflowID",
-              "type": "datatype.string",
-              "is_required": true
-            },
-            "unique_name": "variable_workflow_01FSPYN87D36Q0BjU6Zt6jsevy7xP4995N1",
             "object_type": "variable_workflow"
           }
         ],
